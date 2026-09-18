@@ -1,0 +1,11 @@
+00:01.092  blend            | Read blend: "/Users/jyxc-dz-0100378/TESTBMK/awesome-chinese-folk-game/src/forum_system/art/source/latest-set.blend"
+BlenderMCP: cannot start server in background mode (blender -b) - commands would never execute
+BlenderMCP: run Blender with a GUI, or use a virtual display: xvfb-run -a blender
+BlenderMCP addon registered
+FREEZE_BLEND_CHECK 743 objects 2 images external images: []
+camera Camera
+BlenderMCP server stopped
+BlenderMCP addon unregistered
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#11181b"/>
+  <path fill="#263337" d="M0 535h1200v165H0z"/>
+  <path fill="#7f5a4a" d="M160 535V220h880v315z"/>
+  <path fill="#c9b996" d="M230 275h740v190H230z"/>
+  <path fill="#182326" d="M275 305h650v125H275z"/>
+  <path fill="#b27c5f" d="M535 375q60-135 120 0l-15 44H550zM420 425q52-78 104 0zM676 425q52-78 104 0z"/>
+  <path fill="none" stroke="#bb8d68" stroke-width="5" d="M0 575q210-110 420 0t420 0 360 0"/>
+  <circle cx="600" cy="190" r="70" fill="#d2c4a0" opacity=".15"/>
+  <text x="55" y="70" fill="#c5b88f" font-size="24" font-family="serif" letter-spacing="8">JIANGNAN / THE LAST SHADOW</text>
+  <text x="55" y="110" fill="#8ea39c" font-size="15" font-family="monospace">THE PAPER FIGURE REMEMBERS THE WRONG NIGHT</text>
+</svg>

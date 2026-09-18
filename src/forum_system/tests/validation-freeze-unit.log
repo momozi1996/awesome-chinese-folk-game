@@ -1,0 +1,19 @@
+test_any_working_directory (test_launcher.LauncherTests) ... ok
+test_port_collision (test_launcher.LauncherTests) ... ok
+test_web_routes (test_launcher.LauncherTests) ... ok
+test_asset_escape (test_library.LibraryTests) ... ok
+test_bad_frontmatter (test_library.LibraryTests) ... ok
+test_counts_and_unique_titles (test_library.LibraryTests) ... ok
+test_deterministic_build (test_library.LibraryTests) ... ok
+test_graph_rejects_unknown_and_unreachable (test_library.LibraryTests) ... ok
+test_playable_sources_roundtrip (test_library.LibraryTests) ... ok
+test_unsafe_source (test_library.LibraryTests) ... ok
+test_private_history_and_generated_excluded (test_packaging.PackagingPolicyTests) ... ok
+test_required_sources_and_showcase_included (test_packaging.PackagingPolicyTests) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.021s
+
+OK
+PASS: shared engine gates, inferences, save normalization
+PASS: inherited object keys rejected in imported clue and chat IDs

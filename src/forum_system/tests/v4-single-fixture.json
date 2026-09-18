@@ -1,0 +1,74 @@
+{
+  "format": "weiming-case",
+  "version": 1,
+  "caseId": "homecoming",
+  "state": {
+    "version": 1,
+    "clues": [
+      "signal",
+      "custom",
+      "record",
+      "schedule",
+      "address",
+      "trace",
+      "register",
+      "contradiction",
+      "sealed",
+      "transfer",
+      "witness",
+      "echo"
+    ],
+    "read": [
+      "opening",
+      "customs",
+      "archive",
+      "watch",
+      "dispute",
+      "followup"
+    ],
+    "asked": {
+      "opening": [
+        0
+      ],
+      "customs": [
+        0
+      ],
+      "archive": [
+        0
+      ],
+      "watch": [
+        0
+      ]
+    },
+    "chats": {
+      "north": [
+        "archive"
+      ],
+      "rain": [
+        "identity"
+      ]
+    },
+    "links": [
+      "mechanism",
+      "meaning",
+      "timeline",
+      "testimony",
+      "correction",
+      "handoff"
+    ],
+    "notes": "",
+    "ending": "silence",
+    "endings": [
+      "truth",
+      "silence"
+    ],
+    "scene": [
+      "trace",
+      "register",
+      "sealed",
+      "transfer"
+    ],
+    "puzzle": true,
+    "reportChecked": true
+  }
+}

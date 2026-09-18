@@ -1,0 +1,30 @@
+EXPECTED NEGATIVE TEST: missing archive intentionally supplied; cleanup verified.
+AssertionError [ERR_ASSERTION]: Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 1256, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 1242, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 1110, in _opener
+    return self._accessor.open(self, flags, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/jyxc-dz-0100378/TESTBMK/awesome-chinese-folk-game/releases/does-not-exist.zip.sha256'
+
+
+1 !== 0
+
+    at /Users/jyxc-dz-0100378/TESTBMK/awesome-chinese-folk-game/tools/verify_package.cjs:34:9
+    at Object.<anonymous> (/Users/jyxc-dz-0100378/TESTBMK/awesome-chinese-folk-game/tools/verify_package.cjs:77:3)
+    at Module._compile (node:internal/modules/cjs/loader:1829:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1969:10)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}

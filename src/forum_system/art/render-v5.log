@@ -1,0 +1,7 @@
+/Users/jyxc-dz-0100378/TESTBMK/awesome-chinese-folk-game/src/forum_system/art/source/build_scenes.py:11: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name); m.diffuse_color=(*a,1); m.use_nodes=True
+/Users/jyxc-dz-0100378/TESTBMK/awesome-chinese-folk-game/src/forum_system/art/source/build_scenes.py:208: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world=bpy.data.worlds.new('blue hour');bpy.context.scene.world=world;world.use_nodes=True;world.node_tree.nodes['Background'].inputs[0].default_value=(.14,.2,.25,1);world.node_tree.nodes['Background'].inputs[1].default_value=.065
+02:45.962  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/awesome-chinese-folk-game/src/forum_system/assets/scenes/wall.jpg'
+05:33.410  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/awesome-chinese-folk-game/src/forum_system/assets/scenes/mirror.jpg'
+08:08.160  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/awesome-chinese-folk-game/src/forum_system/assets/scenes/wardrobe.jpg'

@@ -1,0 +1,617 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "theme-borrowed-years",
+      "title": "换命阴阳｜借寿夺命",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/borrowed-years.md"
+    },
+    {
+      "id": "theme-child-bride",
+      "title": "深宅童烬｜童养媳陋俗",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/child-bride.md"
+    },
+    {
+      "id": "theme-clan-fire",
+      "title": "土狗｜乡土祭祀悲歌",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/clan-fire.md"
+    },
+    {
+      "id": "theme-coffin-fortune",
+      "title": "枯棺换运｜棺中借运",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/coffin-fortune.md"
+    },
+    {
+      "id": "theme-embroidered-shoes",
+      "title": "绣花鞋｜绣花鬼娘",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/embroidered-shoes.md"
+    },
+    {
+      "id": "theme-false-sect",
+      "title": "玄门诡祭｜邪修禁术",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/false-sect.md"
+    },
+    {
+      "id": "theme-fate-prison",
+      "title": "命格囚笼｜八字锁魂",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/fate-prison.md"
+    },
+    {
+      "id": "theme-five-directions",
+      "title": "邪门｜道家风水五行",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/five-directions.md"
+    },
+    {
+      "id": "theme-fox-shrine",
+      "title": "深山中的悲鸣夜｜狐仙祠",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/fox-shrine.md"
+    },
+    {
+      "id": "theme-grave-contract",
+      "title": "荒冢寄灵｜坟头寄鬼",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/grave-contract.md"
+    },
+    {
+      "id": "theme-green-lantern",
+      "title": "青灯皮影｜诡灯索命",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/green-lantern.md"
+    },
+    {
+      "id": "theme-hidden-talisman",
+      "title": "镇物藏杀｜厌胜咒术",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/hidden-talisman.md"
+    },
+    {
+      "id": "theme-incense-fortune",
+      "title": "残香窃运｜香火夺福",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/incense-fortune.md"
+    },
+    {
+      "id": "theme-living-offering",
+      "title": "活祭墟村｜命祭赎灾",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/living-offering.md"
+    },
+    {
+      "id": "theme-midnight-feast",
+      "title": "子时已到｜夜半食祀",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/midnight-feast.md"
+    },
+    {
+      "id": "theme-mountain-belief",
+      "title": "众念成形｜山魈怪谈",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/mountain-belief.md"
+    },
+    {
+      "id": "theme-mountain-offering",
+      "title": "民间恐怖故事·村｜深山祭祀",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/mountain-offering.md"
+    },
+    {
+      "id": "theme-nursery-register",
+      "title": "育婴诡舍｜弃婴旧册",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/nursery-register.md"
+    },
+    {
+      "id": "theme-paper-bride",
+      "title": "纸妻｜冥婚古宅",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/paper-bride.md"
+    },
+    {
+      "id": "theme-paper-substitute",
+      "title": "纸替生人｜替身纸人",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/paper-substitute.md"
+    },
+    {
+      "id": "theme-returning-caravan",
+      "title": "赶尸人｜湘西归乡路",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/returning-caravan.md"
+    },
+    {
+      "id": "theme-returning-taboo",
+      "title": "阴胎归门｜回煞禁忌",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/returning-taboo.md"
+    },
+    {
+      "id": "theme-root-bound",
+      "title": "老树囚魂｜古树缚灵",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/root-bound.md"
+    },
+    {
+      "id": "theme-shadow-marriage",
+      "title": "阴缘｜山村阴亲",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/shadow-marriage.md"
+    },
+    {
+      "id": "theme-shadow-record",
+      "title": "影戏拘灵｜皮影摄魂",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/shadow-record.md"
+    },
+    {
+      "id": "theme-shared-nightmare",
+      "title": "梦魇回煞｜归魂托梦",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/shared-nightmare.md"
+    },
+    {
+      "id": "theme-snow-reunion",
+      "title": "雪乡连环杀人事件｜东北年俗",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/snow-reunion.md"
+    },
+    {
+      "id": "theme-water-opera",
+      "title": "葬花吟｜江南阴戏纸人",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "classic-folk-cases",
+      "path": "classic-folk-cases/water-opera.md"
+    },
+    {
+      "id": "theme-borrowed-child-name",
+      "title": "骨肉寄名",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/borrowed-child-name.md"
+    },
+    {
+      "id": "theme-borrowed-house",
+      "title": "借屋停灵",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/borrowed-house.md"
+    },
+    {
+      "id": "theme-borrowed-sleeves",
+      "title": "衣袖藏煞",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/borrowed-sleeves.md"
+    },
+    {
+      "id": "theme-buried-coins",
+      "title": "埋钱招灾",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/buried-coins.md"
+    },
+    {
+      "id": "theme-clay-countdown",
+      "title": "泥偶替死",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/clay-countdown.md"
+    },
+    {
+      "id": "theme-cold-fan",
+      "title": "旧扇引阴",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/cold-fan.md"
+    },
+    {
+      "id": "theme-falling-petals",
+      "title": "落花收魂",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/falling-petals.md"
+    },
+    {
+      "id": "theme-first-snow",
+      "title": "踏雪引魂",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/first-snow.md"
+    },
+    {
+      "id": "theme-funeral-rice",
+      "title": "食饭夺寿",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/funeral-rice.md"
+    },
+    {
+      "id": "theme-hair-net",
+      "title": "发丝缠命",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/hair-net.md"
+    },
+    {
+      "id": "theme-incense-prison",
+      "title": "烟香锁魄",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/incense-prison.md"
+    },
+    {
+      "id": "theme-leftover-rule",
+      "title": "果皮留怨",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/leftover-rule.md"
+    },
+    {
+      "id": "theme-letter-receipt",
+      "title": "书信招煞",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/letter-receipt.md"
+    },
+    {
+      "id": "theme-measured-opera",
+      "title": "听戏折寿",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/measured-opera.md"
+    },
+    {
+      "id": "theme-midnight-window",
+      "title": "开窗招阴",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/midnight-window.md"
+    },
+    {
+      "id": "theme-night-comb",
+      "title": "梳头招怨",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/night-comb.md"
+    },
+    {
+      "id": "theme-night-debt",
+      "title": "敲门索债",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/night-debt.md"
+    },
+    {
+      "id": "theme-night-route",
+      "title": "路引招煞",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/night-route.md"
+    },
+    {
+      "id": "theme-night-watch",
+      "title": "守夜招灾",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/night-watch.md"
+    },
+    {
+      "id": "theme-pillow-charm",
+      "title": "枕下藏符",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/pillow-charm.md"
+    },
+    {
+      "id": "theme-returning-lineage",
+      "title": "归宗认煞",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/returning-lineage.md"
+    },
+    {
+      "id": "theme-roof-cradle",
+      "title": "瓦棺藏婴",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/roof-cradle.md"
+    },
+    {
+      "id": "theme-sealed-well",
+      "title": "井中封喉",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/sealed-well.md"
+    },
+    {
+      "id": "theme-soul-lamp",
+      "title": "生魂点灯",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/soul-lamp.md"
+    },
+    {
+      "id": "theme-soul-mirror",
+      "title": "镜中藏魂",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/soul-mirror.md"
+    },
+    {
+      "id": "theme-stacked-coffins",
+      "title": "叠棺压运",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/stacked-coffins.md"
+    },
+    {
+      "id": "theme-stone-register",
+      "title": "石镇封魂",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/stone-register.md"
+    },
+    {
+      "id": "theme-swallow-omen",
+      "title": "归燕带丧",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/swallow-omen.md"
+    },
+    {
+      "id": "theme-wall-listener",
+      "title": "隔墙听鬼",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/wall-listener.md"
+    },
+    {
+      "id": "theme-white-shoes",
+      "title": "布鞋踏阴",
+      "kind": "theme",
+      "status": "planned",
+      "source": "user-provided-reference",
+      "batch": "exclusive-folk-cases",
+      "path": "exclusive-folk-cases/white-shoes.md"
+    },
+    {
+      "id": "bridal",
+      "title": "空轿照夜",
+      "kind": "playable",
+      "status": "playable",
+      "source": "case.json",
+      "theme": "冥婚古宅 · 女契 · 不该拜的一堂",
+      "series": "独立旧案",
+      "path": "playable/bridal/case.md"
+    },
+    {
+      "id": "caravan",
+      "title": "铃过无名关",
+      "kind": "playable",
+      "status": "playable",
+      "source": "case.json",
+      "theme": "湘西夜行传说 · 返乡路 · 错向的脚印",
+      "series": "独立旧案",
+      "path": "playable/caravan/case.md"
+    },
+    {
+      "id": "homecoming",
+      "title": "归宗空席",
+      "kind": "playable",
+      "status": "playable",
+      "source": "case.json",
+      "theme": "归宗认煞 · 瓦棺 · 叠档停灵",
+      "series": "寄名簿",
+      "path": "playable/homecoming/case.md"
+    },
+    {
+      "id": "lamplife",
+      "title": "灯灭之前",
+      "kind": "playable",
+      "status": "playable",
+      "source": "case.json",
+      "theme": "命灯 · 隔墙听声 · 守夜旧账",
+      "series": "寄名簿",
+      "path": "playable/lamplife/case.md"
+    },
+    {
+      "id": "lantern",
+      "title": "借灯人",
+      "kind": "playable",
+      "status": "playable",
+      "source": "case.json",
+      "theme": "河灯 · 旧闻 · 被漏记的人",
+      "series": "独立旧案",
+      "path": "playable/lantern/case.md"
+    },
+    {
+      "id": "mirrorname",
+      "title": "镜中无籍",
+      "kind": "playable",
+      "status": "playable",
+      "source": "case.json",
+      "theme": "骨肉寄名 · 古镜 · 旧衣身份",
+      "series": "寄名簿",
+      "path": "playable/mirrorname/case.md"
+    },
+    {
+      "id": "shadowplay",
+      "title": "最后一折",
+      "kind": "playable",
+      "status": "playable",
+      "source": "case.json",
+      "theme": "江南阴戏 · 纸人 · 水路上演过的旧案",
+      "series": "独立旧案",
+      "path": "playable/shadowplay/case.md"
+    },
+    {
+      "id": "snow",
+      "title": "年夜缺席",
+      "kind": "playable",
+      "status": "playable",
+      "source": "case.json",
+      "theme": "东北守岁 · 饺子 · 没有被写进座次的人",
+      "series": "独立旧案",
+      "path": "playable/snow/case.md"
+    },
+    {
+      "id": "wellpost",
+      "title": "井底回邮",
+      "kind": "playable",
+      "status": "playable",
+      "source": "case.json",
+      "theme": "封井 · 字纸引魂 · 镇石封口",
+      "series": "寄名簿",
+      "path": "playable/wellpost/case.md"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+/Users/jyxc-dz-0100378/TESTBMK/wanxiang-forum/art/source/build_scenes.py:11: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name); m.diffuse_color=(*a,1); m.use_nodes=True
+/Users/jyxc-dz-0100378/TESTBMK/wanxiang-forum/art/source/build_scenes.py:181: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world=bpy.data.worlds.new('blue hour');bpy.context.scene.world=world;world.use_nodes=True;world.node_tree.nodes['Background'].inputs[0].default_value=(.14,.2,.25,1);world.node_tree.nodes['Background'].inputs[1].default_value=.065
+00:39.789  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/wanxiang-forum/assets/scenes/lamp.jpg'
+01:20.413  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/wanxiang-forum/assets/scenes/wall.jpg'
+01:58.809  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/wanxiang-forum/assets/scenes/mirror.jpg'
+02:41.687  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/wanxiang-forum/assets/scenes/wardrobe.jpg'
+03:16.904  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/wanxiang-forum/assets/scenes/well.jpg'
+03:59.318  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/wanxiang-forum/assets/scenes/postroom.jpg'
+04:34.113  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/wanxiang-forum/assets/scenes/gate.jpg'
+05:12.122  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/wanxiang-forum/assets/scenes/attic.jpg'
+05:47.555  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/wanxiang-forum/assets/scenes/bridal.jpg'
+06:22.852  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/wanxiang-forum/assets/scenes/caravan.jpg'
+07:04.369  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/wanxiang-forum/assets/scenes/snow.jpg'
+07:39.615  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/wanxiang-forum/assets/scenes/shadowplay.jpg'
+BlenderMCP: cannot start server in background mode (blender -b) - commands would never execute
+BlenderMCP: run Blender with a GUI, or use a virtual display: xvfb-run -a blender
+BlenderMCP addon registered
+Info: Saved as "latest-set.blend"
+Info: Saved as "latest-set.blend"
+Info: Saved as "latest-set.blend"
+Info: Saved as "latest-set.blend"
+Info: Saved as "latest-set.blend"
+Info: Saved as "latest-set.blend"
+Info: Saved as "latest-set.blend"
+Info: Saved as "latest-set.blend"
+Info: Saved as "latest-set.blend"
+Info: Saved as "latest-set.blend"
+Info: Saved as "latest-set.blend"
+Info: Saved as "latest-set.blend"
+BlenderMCP server stopped
+BlenderMCP addon unregistered
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

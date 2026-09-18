@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#10191d"/>
+  <path fill="#d3d5ce" opacity=".18" d="M0 0h1200v700H0z"/>
+  <path fill="#27363a" d="M0 470h1200v230H0zM85 470l170-160 125 160zM640 470l160-190 190 190z"/>
+  <path fill="#9d6e50" d="M235 360h140v110H235zM210 350h190v18H210z"/>
+  <path fill="#c3b88f" d="M535 445h160v25H535zM560 380h110v65H560z"/>
+  <path fill="none" stroke="#d7d5c4" stroke-width="4" d="M115 540q80-80 160 0t160 0M730 545q75-90 150 0t170 0"/>
+  <circle cx="950" cy="120" r="60" fill="#d9d4b9" opacity=".22"/>
+  <text x="55" y="70" fill="#c5b88f" font-size="24" font-family="serif" letter-spacing="8">BEIFENG / NEW YEAR TABLE</text>
+  <text x="55" y="110" fill="#8ea39c" font-size="15" font-family="monospace">SOMEONE IS MISSING FROM THE SEAT PLAN</text>
+</svg>

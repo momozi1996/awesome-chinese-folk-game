@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'/>
+    <title>頭七</title>
+    <meta name='viewport'
+          content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
+    />
+
+    <meta name='apple-mobile-web-app-capable' content='yes'/>
+    <meta name='full-screen' content='true'/>
+    <meta name='screen-orientation' content='portrait'/>
+    <meta name='x5-fullscreen' content='true'/>
+    <meta name='360-fullscreen' content='true
+	'/>
+	<meta name="referrer" content="no-referrer-when-downgrade">
+    <meta http-equiv='expires' content='0'/>
+	    <!-- 360浏览器默认开启极速模式 -->
+    <meta name=”renderer” content=”webkit”>
+	    <!-- UC默认竖屏 ，UC强制全屏 -->
+    <meta name="browsermode" content="application"/>
+    <!-- QQ强制全屏 -->
+    <meta name="x5-page-mode" content="app"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="renderer" content="webkit">
+	<script src="//c2.cgyouxi.com/website/hfplayer/v3/lib/utfx.min.js?v=202609070003"></script>
+    <link type="text/css" rel="stylesheet" href="//c3.cgyouxi.com/website/hfplayer/v2/bin/css/public.css?v=202609070003"/>
+	<script type="text/javascript">
+        // var debug = false;
+        // var log = console.log;
+        // console.log = function(){
+        //     if(debug){
+        //         log(arguments);
+        //     }
+        // }
+        //截取?Path
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return (r[2]);
+            return null;
+        }
+        var base64Canvas;
+        function GetImageBase64(src,w,h,callback) {
+            var base64Image = document.createElement('img'); 
+            base64Image.setAttribute('crossOrigin', 'anonymous');
+            base64Image.src = src; 
+            base64Image.onload =function() { 
+                base64Image.width=w;
+                base64Image.height=h;
+                var data = getBase64(base64Image); 
+				callback(data);
+				base64Image=null;
+            } 
+        }
+        function getBase64(img) {
+            var dataURL="";
+            try {
+                if(!base64Canvas){
+                    base64Canvas = document.createElement("canvas");
+                }
+                base64Canvas.width = img.width;
+                base64Canvas.height = img.height;
+                var ctx = base64Canvas.getContext("2d");
+                ctx.drawImage(img, 0, 0, img.width, img.height);
+                dataURL = base64Canvas.toDataURL("image/png");
+            } catch (error) {
+                console.log(error);
+            }
+            return dataURL // return dataURL.replace("data:image/png;base64,", ""); 
+        }
+		var isM = false;
+        if (window.location.href.indexOf("m.66rpg.com") > -1) {
+            isM = true;
+        }
+        var testPath = window.location.href.indexOf("testPath=true") > -1;
+
+        document.onkeydown = function(event) {
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+            OnKeyDown(e);
+        };
+        document.onkeyup = function(event) {
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+            OnKeyUp(e);
+        };
+        window.addEventListener('offline',  function(){
+            console.log("offline");
+            setWindowLine(false);
+        });
+        window.addEventListener('online', function(){
+            console.log("online");
+            setWindowLine(true);
+        });
+        window["GetImageBase64"]= GetImageBase64;          
+		//eruda.init();
+        var pmode = "0";
+        var webUrl = '//www.66rpg.com';  //=> '//www.66rpg.com',
+        var passUrl = "//passport.66rpg.com"; //=> '//passport.66rpg.com'
+        var cgUrl = "//cg.66rpg.com";  // => 'cg.66rpg.com'
+        var cgv2Url = "//cgv2.66rpg.com";  // => 'cgv2.66rpg.com'
+        var bbsUrl = "//bbs.66rpg.com";  //=> 'bbs.66rpg.com'
+        var picUrl = "//pic.cgyouxi.com"; //=> '//pic.cgyouxi.com'
+        var cdnUrl = "//c2.cgyouxi.com"; //=> '//c2.cgyouxi.com'
+        var wsUrl = "ws://bd.66rpg.com:6970";  // => 'http -> ws://bd.66rpg.com:6970 'https -> wss://bd.66rpg.com:6971'暂未确定
+        var mUrl = "//m.66rpg.com";   //=> '//m.66rpg.com'
+        var cUrl = "//c.66rpg.com"; //=> '//c.66rpg.com',       //上报地址路径
+        //	hfplayer资源
+        var hfJsUrl = "//c2.cgyouxi.com/website/hfplayer/js";//=> STATIC_PATH . 'hfplayer/js',    // h5专用JS资源
+        var hfCssUrl = "//c2.cgyouxi.com/website/hfplayer/css";    // => STATIC_PATH . 'hfplayer/css',   // h5专用CSS资源
+        var hfIMGUrl = "//c2.cgyouxi.com/website/hfplayer/img";     //=> STATIC_PATH . 'hfplayer/img',   // h5专用IMG资源
+        var hfSWFUrl = "__HFSWF__";     //=> STATIC_PATH . 'hfplayer/swf',   // h5专用的SWF
+		var reportUrl = "//report.66rpg.com";
+
+        var channel_id = GetQueryString("channel_id")||"";//平台判断
+        var guid = "0e9c0cce140f779ded783e3279693e37";
+        var ver = '866';
+        var gamefv_times = "780245"; //收藏数目
+        var platMark = GetQueryString("mark") || '';
+        var isWxXcx = String(platMark).toUpperCase() === "WX_XCX";
+        var aspect_ratio = '1'; //屏幕比例；
+        var quality = '32';
+        var gamePath = window.location.href;
+        window["author_uid"] ='36781508';
+        window["author_uname"] ='华砂';
+        window["check_level"] = '3';
+        window["flower_unlock"] = "42";
+    </script>
+    <script language=javascript src="//c2.cgyouxi.com/website/hfplayer/v3/lib/jquery-2.1.4.min.js?v=202609070003"></script>
+    <script language=javascript src="//c2.cgyouxi.com/website/hfplayer/v3/lib/spine-core.js?v=202609070003"></script>
+    <script language=javascript src='//c2.cgyouxi.com/website/hfplayer/v3/common/OrgWeb.js?v=202609070003'></script>
+    <script language=javascript src='//c2.cgyouxi.com/website/hfplayer/v3/common/InfoTool.js?v=202609070003'></script>
+    <script language=javascript src='//c2.cgyouxi.com/website/hfplayer/v3/common/GameInfoData.js?v=202609070003'></script>
+    <script language=javascript src="//c2.cgyouxi.com/website/hfplayer/v3/common/Common.js?v=202609070003"></script>
+    <script>
+        if (isWxXcx) {
+            document.write('<script src="//c2.cgyouxi.com/website/hfplayer/v3/common/h5-pay-model.js?v=202609070003"><\/script>');
+            document.write('<script src="//c2.cgyouxi.com/website/hfplayer/v3/common/h5-close-webview.js?v=202609070003"><\/script>');
+        }
+    </script>
+
+    <!-- 登录相关js  初始化-->
+    <!--如果是web引用-->
+        
+        <!--如果是H5引用-->
+            <script src="//c2.cgyouxi.com/website/mobile/js/ssologin.js?v=202609070003 "></script>        <script>
+            if(channel_id == ""){
+                if(platMark != "isFlash" && !isWxXcx){
+                    document.domain = "66rpg.com";
+                }
+                if (!isWxXcx && platMark.indexOf("wxorg")==-1&&platMark != "wxmini"&&platMark != "android" && (!platMark || platMark.toLowerCase() != "ios") && platMark.indexOf("light")==-1) {
+                    ssoLogin.setConf({
+                        whetherMinLogin: false,
+                        loginCall: [{obj: {}, callback: loginSuc, args: ""}],
+                        logoutCall: [{obj: {}, callback: loginOut, args: ""}],
+                        ajaxLoginCall: [{obj: {}, callback: ajaxLoginCall, args: ""}],
+                        notLoginCall : [{obj: {}, callback: notLoginCall, args: ""}],
+                        minIframeSrc: window.location.href,
+                        isAjax: true,
+                        dataKey: "user",
+						isGamePage:!platMark,
+                        openNotic: false
+                    });
+                    var user = $.parseJSON('false');
+                    $("#data").data("user", user);
+                    var errFun = function (data) {
+                        console.log(data);
+                    }
+                }
+            }
+
+        </script>
+        <!--如果是H5引用-->
+    <script src="//c2.cgyouxi.com/website/hfplayer/v3/bin/official/lib/webGLLib.js?v=202609070003"></script>
+    <script src="//c2.cgyouxi.com/website/hfplayer/v3/bin/official/lib/SALInterface.js?v=202609070003"></script>
+			<script src="//c2.cgyouxi.com/website/hfplayer/v3/bin/official/game.js?v=202609070003" integrity="sha384-65ry1W5MJ2/WG+gDEuyrpZv1+O3DnseIHNSTDKjkIbALgyHg5yob+uBharSgEWNi" crossorigin="anonymous"></script>
+    <script>
+        var isInit = false;
+
+        function checkIE() {
+            var userAgent = navigator.userAgent;
+            var ie = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器
+            var edge = userAgent.indexOf("Edge") > -1 && !isIE; //判断是否IE的Edge浏览器
+            var ie11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
+            //available in Edge
+            return ie || ie11;
+        }
+        function initGame() {
+            if(isInit){
+                return;
+            }
+            if(!isInit){
+                isInit = true;
+            }
+            if (!isM) {
+                isIE = checkIE();
+            }
+            isCgMenu = window.location.href.indexOf("isCgMenu=true") > -1;
+            channelFlag = GetQueryString("flag");
+            outterSeValue = GetQueryString("se");
+            outterBgmValue = GetQueryString("bgm");
+            outterVoiceValue = GetQueryString("voice");
+            var publishView = window.location.href.indexOf("timer_publish=true") > -1;
+            var actVer = GetQueryString("publish_version");
+			if (!actVer || actVer == "null") {
+				actVer = null;
+			}
+			GlobalData.getInstance().autoReverseCoordinate = GlobalData.getInstance().isMobile();
+
+            var screen_width = '960';
+            var screen_height = '540';
+			var pmode=window.location.pathname.indexOf("debug")>-1;
+            var info = {
+                index: '1632199',
+                aGuid: '0e9c0cce140f779ded783e3279693e37',
+                aVer: '866',
+                q: '32',
+                canvasWidth: parseInt(screen_width),
+                canvasHeight: parseInt(screen_height),
+                gid: "",
+                gver: "",
+				extra: {
+					is_play_actor: publishView,
+					actor_version: actVer
+				},
+				isM: isM,
+                testPath: testPath,
+				pmode:pmode
+            };
+            var branch = "";
+            let m = window.location.host.indexOf("m.");
+            var branchIndex = (m>-1)?m:window.location.host.indexOf("www.");
+            if (branchIndex > 0) {
+                branch = window.location.host.substring(0, branchIndex);
+            }
+            startEngine(info, null, branch);
+            window.parent["NewGame"] && window.parent["NewGame"].canvasGameLoadComplete && window.parent["NewGame"].canvasGameLoadComplete();
+        }
+         (function () {
+            var tempServer = "//c2.cgyouxi.com/website/hfplayer/v3/bin/official",engineEnable = false;
+            document.querySelectorAll('script').forEach(function (el) {
+                if(el.src.indexOf(tempServer)>-1){
+                    var tempParams = el.src.split("/"),tempName=tempParams[tempParams.length-1];
+                    if (tempName.indexOf("game.js")>-1||tempName.indexOf("gameV.js")>-1||tempName.indexOf("lmcode.js")>-1){
+                        engineEnable = true;
+                        if (tempName.indexOf("game.js")>-1 && (!el.integrity || el.integrity !== "sha384-65ry1W5MJ2/WG+gDEuyrpZv1+O3DnseIHNSTDKjkIbALgyHg5yob+uBharSgEWNi")) {
+                            window.location.replace('about:blank');
+                        }
+                    }
+                }
+            });
+            if (!engineEnable) {
+                window.location.replace('about:blank');
+            }
+        })();
+        if(isWxXcx){
+            if (document.body) {
+                initGame();
+            } else {
+                document.addEventListener("DOMContentLoaded", function () {
+                    initGame();
+                }, false);
+            }
+        }else if(platMark.toLowerCase() == "wxmini"){
+            getWXminiGindex(function(isFrGame){
+                if(isFrGame){
+                    initGame();
+                }else{
+                    alert("当前不是免费游戏,请下载橙光APP,浏览更多精彩游戏")
+                }
+            })
+        }else if (platMark.indexOf("wxorg")!==-1) {
+            var uid = utils.GetQueryString("xcx_uid");
+            var uName = utils.GetQueryString("username");
+            if (uid) {
+                commonPlayer.userInfos.uid = uid;
+                if (uName) {
+                    commonPlayer.userInfos.uname = base64.decoder(uName);
+                }
+                commonPlayer.loginStatus = true;
+            }
+            commonPlayer.goWXShare = goWXShare;
+            commonPlayer.goWXMainPage = goWXMainPage;
+            initGame();
+        }else if(platMark.indexOf("light")!==-1){
+            initGame();
+        }else{
+            //todo 用户需要单独抽出
+            if(mark.IOS){
+                initGame();
+            }
+            if (channel_id.length>0) {
+                window.parent.sdkLogin.init(function (data) {
+                    if(parseInt(data.uid)>0){
+                        THRPLAN = data;
+                        commonPlayer.userInfos = data;
+                        commonPlayer.channel_id = data.channel_id;
+                        commonPlayer.platform = data.channel_type;
+                        commonPlayer.loginStatus = true;
+                        commonPlayer.countServer.getServerTime(function(){
+                            initGame();
+                        })
+                    }
+                });
+            }
+        }
+        function gameMainBlur(){
+            window["gameMain"].stageBlur()
+        }
+        function gameMainFocus(){
+            window["gameMain"].stageFocus();
+        }
+    </script>
+
+</head>
+
+<body style="background-color: black;">
+<div id="EngineVer" style="background-color: black;color: white;position: absolute;z-index: 100;right: 0;bottom: 0">
+</div>
+<video id="videos" class="video-js" preload="auto" style="display: none; width: 1px;height: 1px"></video>
+<!--用户信息着陆点-->
+<div id="data"></div>
+    <button class="ssologin" style="display:none"></button>
+    <button class="logout" style="display:none"></button><!-- 我是手机站的SSO模态框 BEGIN -->
+<div id="sso_login_modal" class="modal hide fade in"  aria-hidden="false" style="display:none; position:absolute; height:100%; width:100%; z-index:11;">
+  <iframe id="js-cross-login-iframe" class="iframepage_h"  name="iframepage" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="yes" allowtransparency="yes"  data-src="/sso/minilogin?curUrl=https%3A%2F%2Fm.66rpg.com%2Fh5%2F1632199%3Fohp%3Dv3%26quality%3D32" src="" style="height:100%; width:100%;">
+  </iframe>
+</div>
+<!-- 未登录时候才进行后台检测 -->
+
+<iframe id="sso_cross_check_login_modal" style="display:none;" frameborder="no" border="0" marginwidth="0" marginheight="0"scrolling="yes" allowtransparency="yes" width="2" height="2" src="/sso/minicheck">
+</iframe>
+<!--登录相关end-->
+
+<!--分享-->
+<div class="share-mask"></div>
+<div class="share-modal share-modal-sp" id="share-modal">
+    <div class="share-modal-box">
+        <div class="share-modal-colse"></div>
+        <div class="box1 clearfix">
+            <div>本次分享：</div>
+            <div id="shareCon">
+                <div>为本作品送<img class="icon" src="//c1.cgyouxi.com/website/orange/img/common/f3.png" /><span class="btnBFlower">0</span>朵花</div>
+                <div>您获得<img class="icon" src="//pic.cgyouxi.com/orange/common/list/icon_color_leaf.png" /><span class="btnBNum">0</span>积分</div>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="title">每日奖励</div>
+            <div class="tr clearfix">
+                <div class="arrow_icon">&rarr;</div>
+                <div class="sharenum">首 <i></i>次 </div>
+            </div>
+            <div class="tr clearfix">
+                <div class="arrow_icon">&rarr;</div>
+                <div class="sharenum">再 <i></i>次 </div>
+                <!--<div><img class="icon" src="//c1.cgyouxi.com/website/orange/img/common/f3.png" />鲜花<span class="btnAFlower2">0</span>朵</div>-->
+                <!--<div><img class="icon" src="//pic.cgyouxi.com/orange/common/list/icon_color_leaf.png" />积分<span class="btnANum2">0</span>分</div>-->
+            </div>
+            <div class="tr clearfix">
+                <div class="arrow_icon">&rarr;</div>
+                <div class="sharenum">第三次</div>
+                <!--<div><img class="icon" src="//c1.cgyouxi.com/website/orange/img/common/f3.png" />鲜花<span class="btnAFlower3">0</span>朵</div>-->
+                <!--<div><img class="icon" src="//pic.cgyouxi.com/orange/common/list/icon_color_leaf.png" />积分<span class="btnANum3">0</span>分</div>-->
+            </div>
+        </div>
+        <div class="box3">
+            <ul class="clearfix share-modal-itemlist">
+                <li data-share="weibo">
+                    <img src="//c1.cgyouxi.com/website/orange/img/common/share/weibo.png" />
+                    <div>微博</div>
+                </li>
+                <li data-share="qzone">
+                    <img src="//c1.cgyouxi.com/website/orange/img/common/share/qzone.png" />
+                    <div>QQ空间</div>
+                </li>
+                <li data-share="qq">
+                    <img src="//c1.cgyouxi.com/website/orange/img/common/share/QQ.png" />
+                    <div>QQ</div>
+                </li>
+                <li data-share="wechat">
+                    <img src="//c1.cgyouxi.com/website/orange/img/common/share/wechat.png" />
+                    <div>微信</div>
+                </li>
+            </ul>
+        </div>
+        <div class="box2_1 clearfix" style="font-family: '微软雅黑'">
+            <div class="box2_1_tit">额外奖励</div>
+            <div class="box2_1_r"><p>分享内容每次被用户浏览后都会获得<em>50积分</em>奖励</p></div>
+        </div>
+    </div>
+</div>
+<!--
+<script type="text/javascript" src="//c2.cgyouxi.com/website/hfplayer/v3/lib/eruda.min.js?v=202609070003"></script>
+<script>
+    //$("#think_page_trace_open").hide();
+    eruda.init();
+</script>
+-->
+</body>
+</html>

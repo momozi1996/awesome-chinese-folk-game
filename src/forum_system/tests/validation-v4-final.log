@@ -1,0 +1,94 @@
+
+> weiming-forum-borrowed-light@4.0.0 test:all
+> npm run test:content && npm test && npm run test:responsive && npm run test:frontend && npm run test:anthology && npm run test:serial
+
+
+> weiming-forum-borrowed-light@4.0.0 test:content
+> node tests/content-integrity.cjs
+
+bridal PASS: 10 clues reachable; 5 links, assets, references and answers valid
+caravan PASS: 10 clues reachable; 5 links, assets, references and answers valid
+snow PASS: 10 clues reachable; 5 links, assets, references and answers valid
+shadowplay PASS: 10 clues reachable; 5 links, assets, references and answers valid
+lamplife PASS: 12 clues reachable; 6 links, assets, references and answers valid
+mirrorname PASS: 12 clues reachable; 6 links, assets, references and answers valid
+wellpost PASS: 12 clues reachable; 6 links, assets, references and answers valid
+homecoming PASS: 12 clues reachable; 6 links, assets, references and answers valid
+PASS: all nine case definitions and all eight anthology progression graphs.
+
+> weiming-forum-borrowed-light@4.0.0 test
+> node tests/playthrough.cjs
+
+PASS: complete investigation, incorrect inputs, both endings, persistence, export, invalid import, search, filters, mobile and file://. No browser errors.
+
+> weiming-forum-borrowed-light@4.0.0 test:responsive
+> node tests/responsive.cjs
+
+┌─────────┬───────┬────────┬────────────┬──────────┬──────────────────┬─────────────┬───────────────────┬─────────────┬─────────────┬────────────────┐
+│ (index) │ width │ height │ view       │ overflow │ documentOverflow │ controlsFit │ controlsClickable │ hotspotsFit │ contentFits │ documentScroll │
+├─────────┼───────┼────────┼────────────┼──────────┼──────────────────┼─────────────┼───────────────────┼─────────────┼─────────────┼────────────────┤
+│ 0       │ 320   │ 640    │ 'forum'    │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 1       │ 320   │ 640    │ 'scene'    │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 2       │ 320   │ 640    │ 'messages' │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 3       │ 320   │ 640    │ 'board'    │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 4       │ 320   │ 640    │ 'post'     │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 5       │ 375   │ 812    │ 'forum'    │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 6       │ 375   │ 812    │ 'scene'    │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 7       │ 375   │ 812    │ 'messages' │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 8       │ 375   │ 812    │ 'board'    │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 9       │ 375   │ 812    │ 'post'     │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 10      │ 390   │ 844    │ 'forum'    │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 11      │ 390   │ 844    │ 'scene'    │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 12      │ 390   │ 844    │ 'messages' │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 13      │ 390   │ 844    │ 'board'    │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 14      │ 390   │ 844    │ 'post'     │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 15      │ 768   │ 900    │ 'forum'    │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 16      │ 768   │ 900    │ 'scene'    │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 17      │ 768   │ 900    │ 'messages' │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 18      │ 768   │ 900    │ 'board'    │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 19      │ 768   │ 900    │ 'post'     │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 20      │ 1024  │ 768    │ 'forum'    │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 21      │ 1024  │ 768    │ 'scene'    │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 22      │ 1024  │ 768    │ 'messages' │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 23      │ 1024  │ 768    │ 'board'    │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 24      │ 1024  │ 768    │ 'post'     │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 25      │ 1440  │ 720    │ 'forum'    │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 26      │ 1440  │ 720    │ 'scene'    │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 27      │ 1440  │ 720    │ 'messages' │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 28      │ 1440  │ 720    │ 'board'    │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 29      │ 1440  │ 720    │ 'post'     │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 30      │ 1920  │ 1080   │ 'forum'    │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 31      │ 1920  │ 1080   │ 'scene'    │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 32      │ 1920  │ 1080   │ 'messages' │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 33      │ 1920  │ 1080   │ 'board'    │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 34      │ 1920  │ 1080   │ 'post'     │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 35      │ 844   │ 390    │ 'forum'    │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 36      │ 844   │ 390    │ 'scene'    │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 37      │ 844   │ 390    │ 'messages' │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 38      │ 844   │ 390    │ 'board'    │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+│ 39      │ 844   │ 390    │ 'post'     │ 0        │ 0                │ true        │ true              │ true        │ true        │ 0              │
+└─────────┴───────┴────────┴────────────┴──────────┴──────────────────┴─────────────┴───────────────────┴─────────────┴─────────────┴────────────────┘
+PASS: 40 game views + 8 settings dialogs; anchored controls, inner scroll, hotspots and viewport bounds.
+
+> weiming-forum-borrowed-light@4.0.0 test:frontend
+> node tests/frontend-v2.cjs
+
+PASS: v2 story receipt/time, anchored viewport, delayed replies, duplicate guard, draft/focus preservation, modal isolation, full screen, v1 import, mobile labels, and offline scene.
+
+> weiming-forum-borrowed-light@4.0.0 test:anthology
+> node tests/anthology-smoke.cjs
+
+bridal OK 0
+caravan OK 0
+snow OK 0
+shadowplay OK 0
+PASS: four independent anthology cases, evidence chains, field puzzles, reports, and alternate endings.
+
+> weiming-forum-borrowed-light@4.0.0 test:serial
+> node tests/serial-v4.cjs
+
+lamplife PASS: gates, 12 clues, two scenes, six interpreted links, wrong answers, both endings, reload
+mirrorname PASS: gates, 12 clues, two scenes, six interpreted links, wrong answers, both endings, reload
+wellpost PASS: gates, 12 clues, two scenes, six interpreted links, wrong answers, both endings, reload
+homecoming PASS: gates, 12 clues, two scenes, six interpreted links, wrong answers, both endings, reload
+PASS V4: four connected cases, full UI path, gates/no spoilers, mistakes, archive imports, 64 responsive views, offline assets, no errors

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#12181a"/>
+  <path fill="#202b2a" d="M0 520h1200v180H0zM105 520V260l170-112 180 112v260z"/>
+  <path fill="#303c37" d="M66 280 275 105l220 175-35 35-185-145L102 315z"/>
+  <path fill="#151d1e" d="M205 305h140v215H205zM370 345h120v175H370z"/>
+  <path fill="#b17b60" d="M250 390h55v130h-55zM221 418h113v18H221z"/>
+  <path fill="none" stroke="#a06b59" stroke-width="3" d="M730 508q58-130 120 0M705 508q82-176 170 0M682 508q105-220 218 0"/>
+  <path fill="#725345" d="M775 510h170l-25-78-67-33-65 33z"/>
+  <path fill="#9b7864" d="M806 399h106l-8-74H815z"/>
+  <path fill="none" stroke="#d1ac83" stroke-width="5" d="M858 325v-95M858 230l-24 31M858 230l25 31"/>
+  <circle cx="858" cy="210" r="15" fill="#bf755f"/>
+  <text x="58" y="68" fill="#c6b894" font-size="24" font-family="serif" letter-spacing="8">BAIYU / EMPTY SEDAN</text>
+  <text x="58" y="108" fill="#7d9388" font-size="15" font-family="monospace">THE DOOR OPENS TOWARD THE STREET</text>
+</svg>

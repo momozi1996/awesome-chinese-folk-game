@@ -1,0 +1,72 @@
+/Users/jyxc-dz-0100378/TESTBMK/awesome-chinese-folk-game/src/forum_system/art/source/build_scenes.py:11: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name); m.diffuse_color=(*a,1); m.use_nodes=True
+BlenderMCP: cannot start server in background mode (blender -b) - commands would never execute
+BlenderMCP: run Blender with a GUI, or use a virtual display: xvfb-run -a blender
+BlenderMCP addon registered
+BUILD lamp
+/Users/jyxc-dz-0100378/TESTBMK/awesome-chinese-folk-game/src/forum_system/art/source/build_scenes.py:258: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world=bpy.data.worlds.new('blue hour');bpy.context.scene.world=world;world.use_nodes=True;world.node_tree.nodes['Background'].inputs[0].default_value=(.14,.2,.25,1);world.node_tree.nodes['Background'].inputs[1].default_value=.065
+RENDER lamp GPU build seconds 0.19
+00:37.896  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/awesome-chinese-folk-game/src/forum_system/assets/scenes/lamp.jpg'
+Info: Saved as "latest-set.blend"
+DONE lamp total seconds 36.78
+BUILD wall
+RENDER wall GPU build seconds 0.58
+01:01.778  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/awesome-chinese-folk-game/src/forum_system/assets/scenes/wall.jpg'
+Info: Saved as "latest-set.blend"
+DONE wall total seconds 23.88
+BUILD mirror
+RENDER mirror GPU build seconds 0.42
+01:23.972  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/awesome-chinese-folk-game/src/forum_system/assets/scenes/mirror.jpg'
+Info: Saved as "latest-set.blend"
+DONE mirror total seconds 22.18
+BUILD wardrobe
+RENDER wardrobe GPU build seconds 0.42
+01:45.687  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/awesome-chinese-folk-game/src/forum_system/assets/scenes/wardrobe.jpg'
+Info: Saved as "latest-set.blend"
+DONE wardrobe total seconds 21.72
+BUILD well
+RENDER well GPU build seconds 0.68
+02:06.059  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/awesome-chinese-folk-game/src/forum_system/assets/scenes/well.jpg'
+Info: Saved as "latest-set.blend"
+DONE well total seconds 20.37
+BUILD postroom
+RENDER postroom GPU build seconds 0.36
+02:29.546  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/awesome-chinese-folk-game/src/forum_system/assets/scenes/postroom.jpg'
+Info: Saved as "latest-set.blend"
+DONE postroom total seconds 23.49
+BUILD gate
+RENDER gate GPU build seconds 0.55
+02:51.185  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/awesome-chinese-folk-game/src/forum_system/assets/scenes/gate.jpg'
+Info: Saved as "latest-set.blend"
+DONE gate total seconds 21.64
+BUILD attic
+RENDER attic GPU build seconds 0.42
+03:16.438  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/awesome-chinese-folk-game/src/forum_system/assets/scenes/attic.jpg'
+Info: Saved as "latest-set.blend"
+DONE attic total seconds 25.25
+BUILD bridal
+RENDER bridal GPU build seconds 0.34
+03:38.038  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/awesome-chinese-folk-game/src/forum_system/assets/scenes/bridal.jpg'
+Info: Saved as "latest-set.blend"
+DONE bridal total seconds 21.6
+BUILD caravan
+RENDER caravan GPU build seconds 0.31
+04:03.759  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/awesome-chinese-folk-game/src/forum_system/assets/scenes/caravan.jpg'
+Info: Saved as "latest-set.blend"
+DONE caravan total seconds 25.72
+BUILD snow
+RENDER snow GPU build seconds 3.24
+05:02.936  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/awesome-chinese-folk-game/src/forum_system/assets/scenes/snow.jpg'
+Info: Saved as "latest-set.blend"
+DONE snow total seconds 59.19
+BUILD shadowplay
+RENDER shadowplay GPU build seconds 0.82
+05:30.732  render           | Saved: '/Users/jyxc-dz-0100378/TESTBMK/awesome-chinese-folk-game/src/forum_system/assets/scenes/shadowplay.jpg'
+Info: Saved as "latest-set.blend"
+DONE shadowplay total seconds 27.78
+BlenderMCP server stopped
+BlenderMCP addon unregistered
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

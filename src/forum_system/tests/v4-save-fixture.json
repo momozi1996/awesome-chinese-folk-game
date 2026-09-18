@@ -1,0 +1,372 @@
+{
+  "format": "weiming-library",
+  "version": 4,
+  "activeCase": "homecoming",
+  "lantern": {
+    "version": 1,
+    "clues": [],
+    "read": [],
+    "asked": {},
+    "replies": {},
+    "chats": {
+      "north": [],
+      "rain": []
+    },
+    "links": [],
+    "notes": "",
+    "ending": null,
+    "endings": [],
+    "sound": false,
+    "volume": 30,
+    "ambience": 55,
+    "effects": 65,
+    "motion": true,
+    "openedSafe": false
+  },
+  "cases": {
+    "bridal": {
+      "version": 1,
+      "clues": [],
+      "read": [],
+      "asked": {},
+      "chats": {
+        "north": [],
+        "rain": []
+      },
+      "links": [],
+      "notes": "",
+      "ending": null,
+      "endings": [],
+      "scene": [],
+      "puzzle": false,
+      "reportChecked": false
+    },
+    "caravan": {
+      "version": 1,
+      "clues": [],
+      "read": [],
+      "asked": {},
+      "chats": {
+        "north": [],
+        "rain": []
+      },
+      "links": [],
+      "notes": "",
+      "ending": null,
+      "endings": [],
+      "scene": [],
+      "puzzle": false,
+      "reportChecked": false
+    },
+    "snow": {
+      "version": 1,
+      "clues": [],
+      "read": [],
+      "asked": {},
+      "chats": {
+        "north": [],
+        "rain": []
+      },
+      "links": [],
+      "notes": "",
+      "ending": null,
+      "endings": [],
+      "scene": [],
+      "puzzle": false,
+      "reportChecked": false
+    },
+    "shadowplay": {
+      "version": 1,
+      "clues": [],
+      "read": [],
+      "asked": {},
+      "chats": {
+        "north": [],
+        "rain": []
+      },
+      "links": [],
+      "notes": "",
+      "ending": null,
+      "endings": [],
+      "scene": [],
+      "puzzle": false,
+      "reportChecked": false
+    },
+    "lamplife": {
+      "version": 1,
+      "clues": [
+        "signal",
+        "custom",
+        "record",
+        "schedule",
+        "address",
+        "trace",
+        "register",
+        "contradiction",
+        "sealed",
+        "transfer",
+        "witness",
+        "echo"
+      ],
+      "read": [
+        "opening",
+        "customs",
+        "archive",
+        "watch",
+        "dispute",
+        "followup"
+      ],
+      "asked": {
+        "opening": [
+          0
+        ],
+        "customs": [
+          0
+        ],
+        "archive": [
+          0
+        ],
+        "watch": [
+          0
+        ]
+      },
+      "chats": {
+        "north": [
+          "archive"
+        ],
+        "rain": [
+          "identity"
+        ]
+      },
+      "links": [
+        "mechanism",
+        "meaning",
+        "timeline",
+        "testimony",
+        "correction",
+        "handoff"
+      ],
+      "notes": "",
+      "ending": "silence",
+      "endings": [
+        "truth",
+        "silence"
+      ],
+      "scene": [
+        "trace",
+        "register",
+        "sealed",
+        "transfer"
+      ],
+      "puzzle": true,
+      "reportChecked": true
+    },
+    "mirrorname": {
+      "version": 1,
+      "clues": [
+        "signal",
+        "custom",
+        "record",
+        "schedule",
+        "address",
+        "trace",
+        "register",
+        "contradiction",
+        "sealed",
+        "transfer",
+        "witness",
+        "echo"
+      ],
+      "read": [
+        "opening",
+        "customs",
+        "archive",
+        "watch",
+        "dispute",
+        "followup"
+      ],
+      "asked": {
+        "opening": [
+          0
+        ],
+        "customs": [
+          0
+        ],
+        "archive": [
+          0
+        ],
+        "watch": [
+          0
+        ]
+      },
+      "chats": {
+        "north": [
+          "archive"
+        ],
+        "rain": [
+          "identity"
+        ]
+      },
+      "links": [
+        "mechanism",
+        "meaning",
+        "timeline",
+        "testimony",
+        "correction",
+        "handoff"
+      ],
+      "notes": "",
+      "ending": "silence",
+      "endings": [
+        "truth",
+        "silence"
+      ],
+      "scene": [
+        "trace",
+        "register",
+        "sealed",
+        "transfer"
+      ],
+      "puzzle": true,
+      "reportChecked": true
+    },
+    "wellpost": {
+      "version": 1,
+      "clues": [
+        "signal",
+        "custom",
+        "record",
+        "schedule",
+        "address",
+        "trace",
+        "register",
+        "contradiction",
+        "sealed",
+        "transfer",
+        "witness",
+        "echo"
+      ],
+      "read": [
+        "opening",
+        "customs",
+        "archive",
+        "watch",
+        "dispute",
+        "followup"
+      ],
+      "asked": {
+        "opening": [
+          0
+        ],
+        "customs": [
+          0
+        ],
+        "archive": [
+          0
+        ],
+        "watch": [
+          0
+        ]
+      },
+      "chats": {
+        "north": [
+          "archive"
+        ],
+        "rain": [
+          "identity"
+        ]
+      },
+      "links": [
+        "mechanism",
+        "meaning",
+        "timeline",
+        "testimony",
+        "correction",
+        "handoff"
+      ],
+      "notes": "",
+      "ending": "silence",
+      "endings": [
+        "truth",
+        "silence"
+      ],
+      "scene": [
+        "trace",
+        "register",
+        "sealed",
+        "transfer"
+      ],
+      "puzzle": true,
+      "reportChecked": true
+    },
+    "homecoming": {
+      "version": 1,
+      "clues": [
+        "signal",
+        "custom",
+        "record",
+        "schedule",
+        "address",
+        "trace",
+        "register",
+        "contradiction",
+        "sealed",
+        "transfer",
+        "witness",
+        "echo"
+      ],
+      "read": [
+        "opening",
+        "customs",
+        "archive",
+        "watch",
+        "dispute",
+        "followup"
+      ],
+      "asked": {
+        "opening": [
+          0
+        ],
+        "customs": [
+          0
+        ],
+        "archive": [
+          0
+        ],
+        "watch": [
+          0
+        ]
+      },
+      "chats": {
+        "north": [
+          "archive"
+        ],
+        "rain": [
+          "identity"
+        ]
+      },
+      "links": [
+        "mechanism",
+        "meaning",
+        "timeline",
+        "testimony",
+        "correction",
+        "handoff"
+      ],
+      "notes": "",
+      "ending": "silence",
+      "endings": [
+        "truth",
+        "silence"
+      ],
+      "scene": [
+        "trace",
+        "register",
+        "sealed",
+        "transfer"
+      ],
+      "puzzle": true,
+      "reportChecked": true
+    }
+  }
+}

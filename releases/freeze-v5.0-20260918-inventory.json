@@ -1,0 +1,4583 @@
+{
+  "schemaVersion": 1,
+  "scope": "All regular files under project, excluding this generated inventory itself. Hash every file; typed validation where supported. Historical ZIP members CRC-checked, not executed or recursively audited. Pattern scan is not a security guarantee.",
+  "selfExcluded": "releases/freeze-v5.0-20260918-inventory.json",
+  "summary": {
+    "files": 305,
+    "bytes": 130565311,
+    "categories": {
+      "published-source-content-assets": 177,
+      "published-history": 8,
+      "local-release-and-audit": 12,
+      "local-generated-or-debug": 83,
+      "historical-backup": 11,
+      "private-research": 14
+    },
+    "payloadFiles": 185,
+    "payloadFindings": [],
+    "globalErrors": []
+  },
+  "library": {
+    "playable": 9,
+    "themes": 58,
+    "status": "validated; gates, references, graph reachability, serial handoffs"
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 567,
+      "sha256": "add72e6cf4dae04f176c665774b99a59f11da184046fb76d99239ec52df2d71a"
+    },
+    {
+      "path": "NOTICE.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 1849,
+      "sha256": "5fa10b150dbcacdf36896e36fe64e3844c78998265d69687632387a31961f979"
+    },
+    {
+      "path": "README.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 12172,
+      "sha256": "44b437a66671fac48b3c3a4a971921a2539a9fa27b41ec250e19e62fc12e6986"
+    },
+    {
+      "path": "assets/README.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 1139,
+      "sha256": "3c55ed01f3c57ad9c38b63298ee229aad39234408e62de05289ade84c83df172"
+    },
+    {
+      "path": "assets/cover_banner.png",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 491837,
+      "sha256": "7b080b4c2ac22f4fa5b832f07875c2ec6eaebf361b3f6fc71bdc6043047609b0",
+      "image": {
+        "size": [
+          1600,
+          720
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "assets/preview_gif.gif",
+      "category": "published-history",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1241327,
+      "sha256": "3dbb42de91ee8bd4ad9ebe76ccae64ad91ab66a3d61d891a788501b49e80b7aa",
+      "image": {
+        "size": [
+          960,
+          640
+        ],
+        "format": "GIF",
+        "frames": 5
+      }
+    },
+    {
+      "path": "assets/screenshots/case-shelf.png",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1128700,
+      "sha256": "2f7babca7611fb85a11b1100bef2fca8ed72f7f902f7b629781cefe795b09b1a",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "assets/screenshots/ending-spoiler.png",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1008656,
+      "sha256": "b3c42ba16d659c7084d687e5380a6d8dfad045bd24cd91bf9c8867a9374b178f",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "assets/screenshots/evidence-board.png",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1085165,
+      "sha256": "1d841f8a6a8467722a8e9ffcbb3e274f42255e918671a690518c401cc53ea200",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "assets/screenshots/forum-home.png",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1063265,
+      "sha256": "bca5616bbde20a83c439611b22acca759ba26b4b0263e1b572323d9ef10a1dcf",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "assets/screenshots/investigation.png",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1066593,
+      "sha256": "c70780a4bcfbffd81cec8a4eee6759c4370a85f6c0eedeae40027e62b9dbba18",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "assets/screenshots/mobile-forum.png",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 275694,
+      "sha256": "d9812b115c393bf8c83216c24c4da60cc2aec2f4b3be8127910d443de2e7c0c8",
+      "image": {
+        "size": [
+          390,
+          844
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "assets/screenshots/private-message.png",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 802424,
+      "sha256": "9a64eba7a9b0f31fbbe893fc0c3ab0a8fd340a702025a667da07cd74daf7d92f",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "assets/screenshots/reading-post.png",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1031020,
+      "sha256": "d3561af373ca0b6a94d25c8dc53584169bd62fe0ca0389f6a11437f62d1af370",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "assets/screenshots/serial-forum.png",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1018840,
+      "sha256": "6b36e21b87ff58ddfc53e10f62a7c5a7a4f0ac47d3f067cda5c0c20702d5d40b",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "assets/screenshots/sound-settings.png",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 451482,
+      "sha256": "dadeca320af5ab7ea69a1531f6ffb745e67f1d66dabf5e947f9b7f445d2aca59",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "cases/README.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3022,
+      "sha256": "78106bedf564838a08c64426e62e3bb45bf8d5303bede5f49d1004a1082f76f3"
+    },
+    {
+      "path": "cases/authoring/serial/build_serial.py",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "Python AST"
+      ],
+      "findings": [],
+      "bytes": 71666,
+      "sha256": "afb5f909e95d67d4c3db65c7be1726dbb8fb753ea2f7e46a1aae6f836fd507e0"
+    },
+    {
+      "path": "cases/authoring/serial/followup-questions.json",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JSON (unique keys)"
+      ],
+      "findings": [],
+      "bytes": 5514,
+      "sha256": "ee648252232d0734508f64d41db8a8256a481aa8c57027ad058439ad8927ed5b"
+    },
+    {
+      "path": "cases/authoring/serial/puzzles.json",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JSON (unique keys)"
+      ],
+      "findings": [],
+      "bytes": 4948,
+      "sha256": "f97a088d9b5080e7c11b9370e3055760224f115835dab8d2d3ba0bd9815b06a8"
+    },
+    {
+      "path": "cases/catalog.json",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JSON (unique keys)"
+      ],
+      "findings": [],
+      "bytes": 18310,
+      "sha256": "5ae7184617014cac2b39680e9b0c837f6bb8fe24ec637255c0e372221eb2ff64"
+    },
+    {
+      "path": "cases/classic-folk-cases/borrowed-years.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3163,
+      "sha256": "2094d45738eeba34943b36d62f47ed0d6e9dcc70d17ae24e9ef65e621284b5ed"
+    },
+    {
+      "path": "cases/classic-folk-cases/child-bride.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3259,
+      "sha256": "1a22b857c90607225fea7b36c6b7548fe6bb73629e166e07aed1554525d34398"
+    },
+    {
+      "path": "cases/classic-folk-cases/clan-fire.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3110,
+      "sha256": "b5b809c685541dbe639fb67bc1da1985d9ac58f2a1736ffa08f18e5c029e6b99"
+    },
+    {
+      "path": "cases/classic-folk-cases/coffin-fortune.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3181,
+      "sha256": "37861627b6c0be3713b76e257a0deaf6b403f314b4ca32f3c92396e98c148b74"
+    },
+    {
+      "path": "cases/classic-folk-cases/embroidered-shoes.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3208,
+      "sha256": "9a1226422ffe55c922430c0173ef2c51ab0da46084c47ed6376d140501fcceb4"
+    },
+    {
+      "path": "cases/classic-folk-cases/false-sect.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3162,
+      "sha256": "438bbe1bf406ac70e51391ce489535e3a8eee06eba8cd7e8d7638a9fe0747c0a"
+    },
+    {
+      "path": "cases/classic-folk-cases/fate-prison.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3190,
+      "sha256": "79069060ff59753b804cd9ca15112dafed7a5a2d1ba3e06410db9b58c116f594"
+    },
+    {
+      "path": "cases/classic-folk-cases/five-directions.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3185,
+      "sha256": "647b17b154feb15e7d514aefb4a00898b2467e2eacb6313680a5487370f228f6"
+    },
+    {
+      "path": "cases/classic-folk-cases/fox-shrine.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3210,
+      "sha256": "0584a6872ad43fdd12a12fa937fea3b3a982d50e120a776ba895b0488e6ab83f"
+    },
+    {
+      "path": "cases/classic-folk-cases/grave-contract.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3190,
+      "sha256": "0245bc64e0d79e4e74fa9d62d3b4c7fcb1ffb69db75478cc33d75c2e8ae76e2f"
+    },
+    {
+      "path": "cases/classic-folk-cases/green-lantern.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3162,
+      "sha256": "92edaf72876910daf08007a4d77a2d12979b4d43bc754b8d995a1837fa5846a0"
+    },
+    {
+      "path": "cases/classic-folk-cases/hidden-talisman.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3164,
+      "sha256": "8494464e62b7e2fe80ac6907bf8ede8cb9cb0ad683c0c29525198e12cf6d4b38"
+    },
+    {
+      "path": "cases/classic-folk-cases/incense-fortune.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3152,
+      "sha256": "e18670553029c86c46178585da7f0584994a51087811868135fa52e687e2c966"
+    },
+    {
+      "path": "cases/classic-folk-cases/living-offering.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3212,
+      "sha256": "a9525dbffd32cbb2b4c3055f2db6c861453031679a01e595720799a367b20da8"
+    },
+    {
+      "path": "cases/classic-folk-cases/midnight-feast.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3178,
+      "sha256": "8b1fafa959d1279ae156b6fb522c149e88da8666f6e00157a5fe2c3f3cb3fa06"
+    },
+    {
+      "path": "cases/classic-folk-cases/mountain-belief.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3155,
+      "sha256": "9d24a00846bdf03f29a423b15e565d53f9037d6294cde207761133804a3d7dc8"
+    },
+    {
+      "path": "cases/classic-folk-cases/mountain-offering.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3236,
+      "sha256": "7d8d2526b54458ca3e153031d0063b1ea6a9ce6b844c7b62cb4a090a6d86ce10"
+    },
+    {
+      "path": "cases/classic-folk-cases/nursery-register.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3216,
+      "sha256": "fc5f534b818a92c4d4cd36f7e06ed80b9d7789914c8d610efca77009b3d387f3"
+    },
+    {
+      "path": "cases/classic-folk-cases/paper-bride.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3397,
+      "sha256": "a33e27ec9d12ab393f33169f83d00970dee509af08f860b09341d96a9727e33d"
+    },
+    {
+      "path": "cases/classic-folk-cases/paper-substitute.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3144,
+      "sha256": "d07f79938bf76024a5989e63d6ea7b5f66971ccce934ae55c980f5855dc26f19"
+    },
+    {
+      "path": "cases/classic-folk-cases/returning-caravan.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3181,
+      "sha256": "ecb606c01aff0973152b976dd0b0fd85a8ee1618b6e61240e0f3cdcacd46ae19"
+    },
+    {
+      "path": "cases/classic-folk-cases/returning-taboo.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3227,
+      "sha256": "570e56ee0901cd8b8c83e500abbe5ec2ca06140eb9b00615e52920f65c5f81a0"
+    },
+    {
+      "path": "cases/classic-folk-cases/root-bound.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3117,
+      "sha256": "e40c532667b4106adddbf5fc3e902a74eb4b763a8833fa6cd880737e2cc18009"
+    },
+    {
+      "path": "cases/classic-folk-cases/shadow-marriage.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3320,
+      "sha256": "6fdbf89c90ed5165d6ff3bd9bc9ab690455047f7c5ffa59ad232d39895038c5b"
+    },
+    {
+      "path": "cases/classic-folk-cases/shadow-record.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3171,
+      "sha256": "d282976160558609b7ee5267f174a27c16691770898af60adb572c39f38568bc"
+    },
+    {
+      "path": "cases/classic-folk-cases/shared-nightmare.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3207,
+      "sha256": "4aad782fc6f3876ba42d90b22c74d1d3fc54fda101482ee9b37501c42a636532"
+    },
+    {
+      "path": "cases/classic-folk-cases/snow-reunion.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3245,
+      "sha256": "3fe21aa35be11044b61f56e42ebb39c0bb2f01e16bd86e2235746cf64fa05a41"
+    },
+    {
+      "path": "cases/classic-folk-cases/water-opera.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3196,
+      "sha256": "16815014dc28862a2d8d95052e6212ec8d0b771031738970c18087f6bf57026a"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/borrowed-child-name.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3251,
+      "sha256": "1099362b78a8cdf0b8f164eef847665dc4a5106f7e6df89871c365475c43f775"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/borrowed-house.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3102,
+      "sha256": "c4c72e259adace0da0fdf0f9520b76d6d68fc42cd879b7aead75c12ea3ada2f0"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/borrowed-sleeves.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3134,
+      "sha256": "8c32920fbd8c14f1b0250036d450e54e8463815eed8a3c3bc3f0e06544907427"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/buried-coins.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3037,
+      "sha256": "3916fd7699a4fa150264758a787af56ad15413c0d363f89daeee79fa061907ab"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/clay-countdown.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3093,
+      "sha256": "a2f9da946885e9e89f621243bce5aa503bc0c38ea7e1dcec8d94d8884db874fe"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/cold-fan.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3093,
+      "sha256": "e8f80088ba4bd57f9f0516b88f796a69c9e55145feecba2fa2cdba4fcf3e6e27"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/falling-petals.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3090,
+      "sha256": "559145fd4679e8797c1a220594a731c31e60e0eca2744f09043a47beb554170e"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/first-snow.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3053,
+      "sha256": "4a51590c2d0ee130b03dfde4b284b8a6fb987700ae0e5fc7b86c5d35a7086438"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/funeral-rice.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3142,
+      "sha256": "168faf716eadc4055373a9a8494cf3938abae04f74ebc1d7deaa7b8cca3304e5"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/hair-net.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3120,
+      "sha256": "3b268532aab432e23d032e0bd7acdcc13d1ac89b7e4ee326914504d0316cdbbe"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/incense-prison.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3120,
+      "sha256": "899625c3051cff8422e9d28de608f30bf0c325a8c88866f80292be8d11826923"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/leftover-rule.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3140,
+      "sha256": "4f2a2cd2845953a42f3e87bb7a8746479890b4675d095abe6c9ff6c0f4879f52"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/letter-receipt.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3075,
+      "sha256": "e6c3caac89434258da42f7af34c385767413b316e60720af6440d49a3278458d"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/measured-opera.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3099,
+      "sha256": "40a80a4fbc91b1bcf685a72b32905c3042a745c66a53c0a83a09e708979524e1"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/midnight-window.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3139,
+      "sha256": "799ed4dd90d080bf336c6167d039df423c81680fea8fbf68dafc5bad77551e4f"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/night-comb.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3101,
+      "sha256": "52121587f424ea0b0090feb5b5884378556306c680d0d535d8b0db96294ce5fa"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/night-debt.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3200,
+      "sha256": "8b0593cc27692368ba9f5c5b9aab3eea33d12b26cd694ca8a02c155a912638fa"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/night-route.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3096,
+      "sha256": "f7e6e2bf908202cde4a4a63a9b1549eccb2f0f90ef4b97a07b8c4608b9838ec1"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/night-watch.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3087,
+      "sha256": "cf4d5144b554a59e05349de9f5d6ddf5afa8dd6c314178738e1cd19369752c16"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/pillow-charm.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3088,
+      "sha256": "9cf16ae9de806800d3a0a778f8747a2e7a9157591ec6f88650ae53a077f8a453"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/returning-lineage.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3234,
+      "sha256": "d9c55d4c5c6cd4a4a99d5688f88467c77abe335d4d78d44e2e39fb07d298beb0"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/roof-cradle.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3198,
+      "sha256": "a0faa5f48aade16279865e8dff70d566b289aca3a459405ae85a37ddb5cc4a39"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/sealed-well.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3129,
+      "sha256": "7ef1d33403074b5013f3af415987a82283f3f5cfc0aa8753bf9ff1cbcca8fe68"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/soul-lamp.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3145,
+      "sha256": "561bd269307e5b419b943e0bdc79682bc80bcfde4458fa776c7eba64ae008cdf"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/soul-mirror.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3249,
+      "sha256": "26f7fcc62f5f867a3f75c6e41f96848d8ae8b06bf95f0071721f04cd4136f706"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/stacked-coffins.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3073,
+      "sha256": "92fc171dea5c02b1b88cb37bb3ce5a04b0c9ac84164aeed59b068e411cda877d"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/stone-register.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3081,
+      "sha256": "d07c4290d505927b4968ef9917b5b9eec9ba1b65d31b70592026814649f64fc7"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/swallow-omen.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3058,
+      "sha256": "d1daadea641659e4ad79ea23f43d9910ea44c5da0544553347c191440cc8b7ff"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/wall-listener.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3155,
+      "sha256": "af953666082ad4289d4df5b5acd168a72930d7c42fa5313c6f6b0cb92864140c"
+    },
+    {
+      "path": "cases/exclusive-folk-cases/white-shoes.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3054,
+      "sha256": "a195bec47a63da0bd68f15be736066a9fa804f0ad8177ad9afd09586c8d2d0f7"
+    },
+    {
+      "path": "cases/playable/bridal/case.json",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JSON (unique keys)"
+      ],
+      "findings": [],
+      "bytes": 28209,
+      "sha256": "72893c1878264ca659c49188b9fa56316e7d4f3e4187e8fa0c2ec5af49668f30"
+    },
+    {
+      "path": "cases/playable/bridal/case.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 917,
+      "sha256": "7214824c3c3bbc91c9bc688812f977b39baa2d3db9d3b3df205b6ba28698b02d"
+    },
+    {
+      "path": "cases/playable/caravan/case.json",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JSON (unique keys)"
+      ],
+      "findings": [],
+      "bytes": 27330,
+      "sha256": "bf197ead3c3e9c279d1f642027085ea44dd6a268c5f8c9eb8568331480ee502b"
+    },
+    {
+      "path": "cases/playable/caravan/case.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 936,
+      "sha256": "aadfb9675eb2603b431722a8d3f648af004beee274ee40fc21db0f46134d1f9f"
+    },
+    {
+      "path": "cases/playable/homecoming/case.json",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JSON (unique keys)"
+      ],
+      "findings": [],
+      "bytes": 35216,
+      "sha256": "d93fcbbab7adea0b66506c974a20c6733502a94f349255b298c256e996cc7a38"
+    },
+    {
+      "path": "cases/playable/homecoming/case.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 980,
+      "sha256": "e34c1416dde34a62f69db33b670983a67877d6c654472500d495c114a4f2b92b"
+    },
+    {
+      "path": "cases/playable/lamplife/case.json",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JSON (unique keys)"
+      ],
+      "findings": [],
+      "bytes": 35035,
+      "sha256": "a7d958be85695e4fae3f1395d7ffdf5859be4deabb8c520e89d00392e8e77674"
+    },
+    {
+      "path": "cases/playable/lamplife/case.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 951,
+      "sha256": "d15bb1666df89c52cfc45ad5433d04d733e6db31a4988e0e64f9dc49b4ca02ed"
+    },
+    {
+      "path": "cases/playable/lantern/case.json",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JSON (unique keys)"
+      ],
+      "findings": [],
+      "bytes": 14020,
+      "sha256": "b9cc8c4ef2bd06f9a1a95f77bdf2f8badd477e4e0944dbc5ede21f134c5c2e7c"
+    },
+    {
+      "path": "cases/playable/lantern/case.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 885,
+      "sha256": "c5d168456e7918990a2808fcf195c5416886206de7521eb452b3757144bcc0ce"
+    },
+    {
+      "path": "cases/playable/mirrorname/case.json",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JSON (unique keys)"
+      ],
+      "findings": [],
+      "bytes": 34028,
+      "sha256": "21ee2c0c3973fb94abb5fe60333c0b50bb3590910db010af2e6de5b7fc09b994"
+    },
+    {
+      "path": "cases/playable/mirrorname/case.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 983,
+      "sha256": "6b8e02e3257e73d6bf50b37a6ee126442971c6754f9ee4bb7612b932ed3937be"
+    },
+    {
+      "path": "cases/playable/shadowplay/case.json",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JSON (unique keys)"
+      ],
+      "findings": [],
+      "bytes": 23800,
+      "sha256": "7a2269e450ebe5ab0e600a09f7c4f9aa1de076f61c4268282605ada37918ab06"
+    },
+    {
+      "path": "cases/playable/shadowplay/case.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 951,
+      "sha256": "b434a8c5220d686b8108d320a0de46be065f5ca4b1e4e1aa5efdd57c2bd334f1"
+    },
+    {
+      "path": "cases/playable/snow/case.json",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JSON (unique keys)"
+      ],
+      "findings": [],
+      "bytes": 23077,
+      "sha256": "c4861ab311323c86ce4ecd9e0c550d1bad1189de574da6096b6e05ad032df641"
+    },
+    {
+      "path": "cases/playable/snow/case.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 951,
+      "sha256": "b7b3a9909e82079ff80d345cbababc6e3626897276feedaf15155d385f73b3fb"
+    },
+    {
+      "path": "cases/playable/wellpost/case.json",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JSON (unique keys)"
+      ],
+      "findings": [],
+      "bytes": 33395,
+      "sha256": "4d3364532a66bbddb389aa172f7c69e81083435194bb1216fae97fdd95296c8d"
+    },
+    {
+      "path": "cases/playable/wellpost/case.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 951,
+      "sha256": "caf7e15866e16a4a9c176af83d04547cedfe46e4d60e07d94bb1518a073d93b3"
+    },
+    {
+      "path": "demo/demo_readme.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 1008,
+      "sha256": "92700308de11ab7debb2febf66d1bc5a92db6e55e93c74df193b60a1b743c988"
+    },
+    {
+      "path": "demo/run_demo.py",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "Python AST"
+      ],
+      "findings": [],
+      "bytes": 234,
+      "sha256": "c304c128708a53bb60f5d74b8581e985e2200a04c6627f231a0d0a1bc70d60af"
+    },
+    {
+      "path": "docs/case_list.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 7151,
+      "sha256": "270ee8391cafe548c1868a063663a0f897199fc254239ce1c3621793f2285e2a"
+    },
+    {
+      "path": "docs/freeze-v5.0.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 8131,
+      "sha256": "55fee0a14172f870857c7c0f23b2f19cc42e6c5622b30c07b186ab75839b7aec"
+    },
+    {
+      "path": "docs/game_manual.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 4765,
+      "sha256": "abf19b5a1385c35b3dcc9ad8b726ed5cd8e688b2de2d0cf9bd77eaa822ffd044"
+    },
+    {
+      "path": "docs/history/README-v4.md",
+      "category": "published-history",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 6409,
+      "sha256": "4785ae9be5db6673100fd7ddc88aff37782f71ccf5811aea38e9c4ff480af285"
+    },
+    {
+      "path": "docs/immersion-v5.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 5141,
+      "sha256": "0e9890a1f36dcd6daf7c0fc21c37ca5cc10f9dfa72976169b1a344ce0bbed4d0"
+    },
+    {
+      "path": "docs/install_guide.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 4213,
+      "sha256": "f75052da2ff238dab4ee3f8d7cf5db81b2f595d06c022cc0489ce33d5313a83a"
+    },
+    {
+      "path": "docs/repository_migration.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 2439,
+      "sha256": "a036dcd304884cad9b8a0bd3ca1befb364efe2b2aa1f9f027fd7534d765199d4"
+    },
+    {
+      "path": "docs/validation.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 2542,
+      "sha256": "d34bafdbf0a2a59efa6120839ca35f577fccc056c5a60599253ac210dc36d1b4"
+    },
+    {
+      "path": "main.py",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "Python AST"
+      ],
+      "findings": [],
+      "bytes": 175,
+      "sha256": "96f55c68b547efcdd32850e2c86c88542706ab1b967684ada6c7ba34b9786396"
+    },
+    {
+      "path": "releases/README.md",
+      "category": "local-release-and-audit",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 1293,
+      "sha256": "5b03d60def8abe963f0986023fbe2391f5fd51f82364ed3887e42e53c404a13c"
+    },
+    {
+      "path": "releases/awesome-chinese-folk-game-v4.1.zip",
+      "category": "local-release-and-audit",
+      "in_payload": false,
+      "checks": [
+        "ZIP all-member CRC + paths"
+      ],
+      "findings": [],
+      "bytes": 14642169,
+      "sha256": "13776b2db8d53c430daebfff3cf6addfccb72641258840a95ce0d3d556dd78f4",
+      "archive": {
+        "entries": 171,
+        "uncompressed_bytes": 15554486
+      }
+    },
+    {
+      "path": "releases/awesome-chinese-folk-game-v4.1.zip.sha256",
+      "category": "local-release-and-audit",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "SHA256 sidecar"
+      ],
+      "findings": [],
+      "bytes": 101,
+      "sha256": "60899c7fdeb52eab9d099fa803f7b98ddaaf00979de6bd4edcb645ef82d5a918"
+    },
+    {
+      "path": "releases/awesome-chinese-folk-game-v5.0-freeze-20260918.zip",
+      "category": "local-release-and-audit",
+      "in_payload": false,
+      "checks": [
+        "ZIP all-member CRC + paths"
+      ],
+      "findings": [],
+      "bytes": 18932206,
+      "sha256": "98ee9b1e40a3298c447fe48549e64f0c0d21143346bcb45f1b4e283af2c9a7ef",
+      "archive": {
+        "entries": 186,
+        "uncompressed_bytes": 19914241
+      }
+    },
+    {
+      "path": "releases/awesome-chinese-folk-game-v5.0-freeze-20260918.zip.sha256",
+      "category": "local-release-and-audit",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "SHA256 sidecar"
+      ],
+      "findings": [],
+      "bytes": 117,
+      "sha256": "db57bedbd7637a4a003b4e9ab6aff9014de6658a70e627d0416f42e34d752c2f"
+    },
+    {
+      "path": "releases/awesome-chinese-folk-game-v5.0.zip",
+      "category": "local-release-and-audit",
+      "in_payload": false,
+      "checks": [
+        "ZIP all-member CRC + paths"
+      ],
+      "findings": [],
+      "bytes": 18885844,
+      "sha256": "3edf2f6a2b36426fd950a93b3e72eddb27223b1cca74fbb9d0a99f7cbf1c6c6f",
+      "archive": {
+        "entries": 181,
+        "uncompressed_bytes": 19826117
+      }
+    },
+    {
+      "path": "releases/awesome-chinese-folk-game-v5.0.zip.sha256",
+      "category": "local-release-and-audit",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "SHA256 sidecar"
+      ],
+      "findings": [],
+      "bytes": 101,
+      "sha256": "cad99da5c0328787b92a43898c27960b8dfaf00da48485ffc67c4b8e415e76b9"
+    },
+    {
+      "path": "releases/legacy/未明论坛-借灯人-v2.zip",
+      "category": "local-release-and-audit",
+      "in_payload": false,
+      "checks": [
+        "ZIP all-member CRC + paths"
+      ],
+      "findings": [],
+      "bytes": 1569050,
+      "sha256": "093ffd8201989b070f1665e71f29c2476d4f5731a49de113b287e7ca2b14e160",
+      "archive": {
+        "entries": 21,
+        "uncompressed_bytes": 1905221
+      }
+    },
+    {
+      "path": "releases/legacy/未明论坛-借灯人-多案卷-v3.zip",
+      "category": "local-release-and-audit",
+      "in_payload": false,
+      "checks": [
+        "ZIP all-member CRC + paths"
+      ],
+      "findings": [],
+      "bytes": 2255469,
+      "sha256": "ede12c5ce28d941794dcac038444a17aa8631ca84f4981b2b53c54245d5a74e0",
+      "archive": {
+        "entries": 32,
+        "uncompressed_bytes": 2672881
+      }
+    },
+    {
+      "path": "releases/legacy/未明论坛-借灯人.zip",
+      "category": "local-release-and-audit",
+      "in_payload": false,
+      "checks": [
+        "ZIP all-member CRC + paths"
+      ],
+      "findings": [],
+      "bytes": 893069,
+      "sha256": "f2f229d7a92cc4a6c3f3fbf04733502492fa9c630942d1846eec0ea3b7cc272d",
+      "archive": {
+        "entries": 18,
+        "uncompressed_bytes": 1166617
+      }
+    },
+    {
+      "path": "releases/未明旧案柜-V4-寄名簿.zip",
+      "category": "local-release-and-audit",
+      "in_payload": false,
+      "checks": [
+        "ZIP all-member CRC + paths"
+      ],
+      "findings": [],
+      "bytes": 5641565,
+      "sha256": "817fecc53227cbf92a0c46823514e79edaaeefe90a3bc8694c375dea39febdcf",
+      "archive": {
+        "entries": 65,
+        "uncompressed_bytes": 6250949
+      }
+    },
+    {
+      "path": "releases/未明旧案柜-V4-寄名簿.zip.sha256",
+      "category": "local-release-and-audit",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "SHA256 sidecar"
+      ],
+      "findings": [],
+      "bytes": 99,
+      "sha256": "d8c0cd75d7799b6c18b63934a2616e84235a1188d661219a75653f8e6368b51d"
+    },
+    {
+      "path": "requirements.txt",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 301,
+      "sha256": "862ebea9ab99553ea999766bc7f4d23d2e3436793fcd1a24c629024818650422"
+    },
+    {
+      "path": "src/__init__.py",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "Python AST"
+      ],
+      "findings": [],
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/case_engine/README.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 655,
+      "sha256": "933f4f134f78e30cd896d081b22cf54557d41ac4c59709f5edc2249ac7a586ab"
+    },
+    {
+      "path": "src/case_engine/engine.js",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JavaScript syntax (not executed)"
+      ],
+      "findings": [],
+      "bytes": 2449,
+      "sha256": "574c4763a54ea0f51a1b5b0af6a2f807b376ed0f84e781e5085f456ca66c1bba"
+    },
+    {
+      "path": "src/folk_parser/README.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 1089,
+      "sha256": "accc8fa9ddb526b7f3e91f8b56372f1df39324e380a9ec0fc5a313446bb71cd5"
+    },
+    {
+      "path": "src/folk_parser/__init__.py",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "Python AST"
+      ],
+      "findings": [],
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/folk_parser/__main__.py",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "Python AST"
+      ],
+      "findings": [],
+      "bytes": 739,
+      "sha256": "cd53bf3c36ed0a7688becb907389cfba86c523fa05185755d98bf8243273657e"
+    },
+    {
+      "path": "src/folk_parser/library.py",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "Python AST"
+      ],
+      "findings": [],
+      "bytes": 8287,
+      "sha256": "29fe8c9cb09c4c68dce452195a52b84b6498a22b37260d24982675c9534f270f"
+    },
+    {
+      "path": "src/forum_system/.DS_Store",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [],
+      "findings": [],
+      "bytes": 6148,
+      "sha256": "0d7a6acbc3f612fb55ad60ed6fa5af84bfdfd0022bf9109d9237b444e5d6376a"
+    },
+    {
+      "path": "src/forum_system/DESIGN.md",
+      "category": "published-history",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 6224,
+      "sha256": "f8b1807d1f0cff67f687cc188c2c0b46743bf1b6f95b36ac7b162e2eae532a0f"
+    },
+    {
+      "path": "src/forum_system/README.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 760,
+      "sha256": "a68b8391a494e93f4bc4f594a1de23a8379ad27065d0ffce9c118eddadd83916"
+    },
+    {
+      "path": "src/forum_system/STORY-BIBLE-V4.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 6679,
+      "sha256": "a72d6cd099bfb8fcbd6f2037d31a6515d67b5b7129d7c0e5640caf26dc1bf53d"
+    },
+    {
+      "path": "src/forum_system/TEST-REPORT.md",
+      "category": "published-history",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 8622,
+      "sha256": "b02af806b802e584ae4edd08cddcffe1c288af055a76204cc71d6d926eb87222"
+    },
+    {
+      "path": "src/forum_system/WALKTHROUGH.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 6518,
+      "sha256": "c1888f3b784eb21d8ce3c2c2acbfe69d1831214ba6ebdadec544843988557c3b"
+    },
+    {
+      "path": "src/forum_system/app.js",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JavaScript syntax (not executed)"
+      ],
+      "findings": [],
+      "bytes": 107056,
+      "sha256": "d4a2d9bb5b30191d141d78c3d9eaf23bd09a4212365f2f3449f46d28e1fa8019"
+    },
+    {
+      "path": "src/forum_system/art/README.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 3703,
+      "sha256": "2ea089b2c7a411a863741a84b31d9764ca0e2ae26369c4cec8d84488416089fc"
+    },
+    {
+      "path": "src/forum_system/art/contact-sheet-v5.jpg",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 365487,
+      "sha256": "4eecfb9df66c7166c75dd1466de65c1fd43808cbeda67f43c72879a21d9a976b",
+      "image": {
+        "size": [
+          1440,
+          1320
+        ],
+        "format": "JPEG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/art/render-v5-fast.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [
+        "machine-home-path: line 1 (value omitted)",
+        "machine-home-path: line 7 (value omitted)",
+        "machine-home-path: line 10 (value omitted)"
+      ],
+      "bytes": 1265,
+      "sha256": "e104dc596596204c2811e670286284d38b1ef9c880b01a64b35fc6fdd217a3ad"
+    },
+    {
+      "path": "src/forum_system/art/render-v5-final.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [
+        "machine-home-path: line 1 (value omitted)",
+        "machine-home-path: line 7 (value omitted)",
+        "machine-home-path: line 10 (value omitted)",
+        "machine-home-path: line 15 (value omitted)",
+        "machine-home-path: line 20 (value omitted)",
+        "machine-home-path: line 25 (value omitted)",
+        "machine-home-path: line 30 (value omitted)",
+        "machine-home-path: line 35 (value omitted)",
+        "machine-home-path: line 40 (value omitted)",
+        "machine-home-path: line 45 (value omitted)",
+        "machine-home-path: line 50 (value omitted)",
+        "machine-home-path: line 55 (value omitted)",
+        "machine-home-path: line 60 (value omitted)",
+        "machine-home-path: line 65 (value omitted)"
+      ],
+      "bytes": 4057,
+      "sha256": "a5909101aa5fea58ae2aca6d9adb28548f1b82dc47efea07a977d95ad773df35"
+    },
+    {
+      "path": "src/forum_system/art/render-v5-lamp.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [
+        "machine-home-path: line 1 (value omitted)",
+        "machine-home-path: line 3 (value omitted)",
+        "machine-home-path: line 5 (value omitted)"
+      ],
+      "bytes": 1188,
+      "sha256": "91eef310d1156b6b56c658d4923786b0f7fbeb97ca07f64fc44ea640eadeb92e"
+    },
+    {
+      "path": "src/forum_system/art/render-v5.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [
+        "machine-home-path: line 1 (value omitted)",
+        "machine-home-path: line 3 (value omitted)",
+        "machine-home-path: line 5 (value omitted)",
+        "machine-home-path: line 6 (value omitted)",
+        "machine-home-path: line 7 (value omitted)"
+      ],
+      "bytes": 1093,
+      "sha256": "6ce4ffb39d71d0839b46c76dcbd8762f8334e4dfb4b548e2f7ce083d1245b890"
+    },
+    {
+      "path": "src/forum_system/art/render.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [
+        "machine-home-path: line 1 (value omitted)",
+        "machine-home-path: line 3 (value omitted)",
+        "machine-home-path: line 5 (value omitted)",
+        "machine-home-path: line 6 (value omitted)",
+        "machine-home-path: line 7 (value omitted)",
+        "machine-home-path: line 8 (value omitted)",
+        "machine-home-path: line 9 (value omitted)",
+        "machine-home-path: line 10 (value omitted)",
+        "machine-home-path: line 11 (value omitted)",
+        "machine-home-path: line 12 (value omitted)",
+        "machine-home-path: line 13 (value omitted)",
+        "machine-home-path: line 14 (value omitted)",
+        "machine-home-path: line 15 (value omitted)",
+        "machine-home-path: line 16 (value omitted)"
+      ],
+      "bytes": 2688,
+      "sha256": "5ac1041d3b40bcba0ee8f5b5d18ce1f0409f4fd89b53f749bdae1a52f6a5cbac"
+    },
+    {
+      "path": "src/forum_system/art/source/build_scenes.py",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "Python AST"
+      ],
+      "findings": [],
+      "bytes": 18619,
+      "sha256": "c5c83b065254725be903d18648718fa99e4e9b76f74a8b0efbd588e11205d21d"
+    },
+    {
+      "path": "src/forum_system/art/source/build_textures.py",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "Python AST"
+      ],
+      "findings": [],
+      "bytes": 1270,
+      "sha256": "b9144c4185fb72d9cb9628f9120e1a8263ee798af9e901f3223f61079152b8b9"
+    },
+    {
+      "path": "src/forum_system/art/source/latest-set.blend",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "Blender container/header (not rendered)"
+      ],
+      "findings": [],
+      "bytes": 377725,
+      "sha256": "7d9df93dc4c4b463c5b7cefc323c403f063c23c351e28f2eb0a6da33ae8d0d7a",
+      "blend": {
+        "uncompressed_bytes": 5539066,
+        "header": "BLENDER17-01"
+      }
+    },
+    {
+      "path": "src/forum_system/art/source/latest-set.blend1",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "Blender container/header (not rendered)"
+      ],
+      "findings": [
+        "embedded machine-home-path in Blender metadata (value omitted)"
+      ],
+      "bytes": 418028,
+      "sha256": "890ce425ccf536ac1c3ca577ba70f636f2eee472d6de2480726c8cfebf7869aa",
+      "blend": {
+        "uncompressed_bytes": 6236234,
+        "header": "BLENDER17-01"
+      }
+    },
+    {
+      "path": "src/forum_system/assets/case-bridal.svg",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "SVG XML"
+      ],
+      "findings": [],
+      "bytes": 1050,
+      "sha256": "f2ef06a34ed8960973ad97c04dd75e7031ec46709a8bbb32acfaafeeed3af2dd"
+    },
+    {
+      "path": "src/forum_system/assets/case-caravan.svg",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "SVG XML"
+      ],
+      "findings": [],
+      "bytes": 1006,
+      "sha256": "fd4fbaf2187f92b0005c96c2615a494fd5d152a4f0fa3b39685a6fd218d4268b"
+    },
+    {
+      "path": "src/forum_system/assets/case-shadowplay.svg",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "SVG XML"
+      ],
+      "findings": [],
+      "bytes": 839,
+      "sha256": "9357d2840f8d959fc976a0fb082c73dfa0554ca7b423a226d9fd2d00c6db5310"
+    },
+    {
+      "path": "src/forum_system/assets/case-snow.svg",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "SVG XML"
+      ],
+      "findings": [],
+      "bytes": 844,
+      "sha256": "aaf9e2924d9705629d77e30c06249608ec2f5649dd538cb3841e39a86c008640"
+    },
+    {
+      "path": "src/forum_system/assets/draw_scene.py",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "Python AST"
+      ],
+      "findings": [],
+      "bytes": 8340,
+      "sha256": "9eacbf8120c51c99d49ade2c211013ba8b12a58c88c70f06d0e4aa64d16222be"
+    },
+    {
+      "path": "src/forum_system/assets/favicon.svg",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "SVG XML"
+      ],
+      "findings": [],
+      "bytes": 301,
+      "sha256": "90e188def0a3501869ad4ce1e071dd4560362160291f942ddfde2017f6d14525"
+    },
+    {
+      "path": "src/forum_system/assets/knocks.wav",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "audio metadata + full decode"
+      ],
+      "findings": [],
+      "bytes": 224952,
+      "sha256": "0a2b82f4faf140e997991774ea24964eee8f74bae4d6f0f43784fbeba6c7a096",
+      "audio": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "pcm_s16le",
+            "sample_rate": "22050",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "5.099955"
+        }
+      }
+    },
+    {
+      "path": "src/forum_system/assets/last-recording.mp3",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "audio metadata + full decode"
+      ],
+      "findings": [],
+      "bytes": 52159,
+      "sha256": "bd65b71a69f9cda0e54f958a6ed711e0d30d41267e35d2a304aa6b2f4255fc28",
+      "audio": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "sample_rate": "22050",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "12.777732"
+        }
+      }
+    },
+    {
+      "path": "src/forum_system/assets/scenes/attic.jpg",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 257129,
+      "sha256": "f2fad30fd30d32249b83e0098b03dee386c4d50f9f62f6a794bf8cb550a2b8b9",
+      "image": {
+        "size": [
+          1920,
+          1200
+        ],
+        "format": "JPEG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/assets/scenes/bridal.jpg",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 274094,
+      "sha256": "246c71843d9a22c0efcc0a86b7668bf2f32243f6b789ab282aa5a71949b13cc1",
+      "image": {
+        "size": [
+          1920,
+          1200
+        ],
+        "format": "JPEG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/assets/scenes/caravan.jpg",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 288672,
+      "sha256": "5dc24ba13a1560c170846dc40668851b5c41842fd01d3ee7be57a609cf2dfd36",
+      "image": {
+        "size": [
+          1920,
+          1200
+        ],
+        "format": "JPEG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/assets/scenes/gate.jpg",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 295511,
+      "sha256": "790e920abb3d5eaeb837cbe132fbaffbd052f496b03f85b22c16175318825dac",
+      "image": {
+        "size": [
+          1920,
+          1200
+        ],
+        "format": "JPEG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/assets/scenes/lamp.jpg",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 310311,
+      "sha256": "23058be1aaf7bedb3c6c14353a7b1e0922592cea4f1d2ab0efff11565ff33f6a",
+      "image": {
+        "size": [
+          1920,
+          1200
+        ],
+        "format": "JPEG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/assets/scenes/mirror.jpg",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 323980,
+      "sha256": "beba12dca713490ed2da86ae80f09e9b040cab643afcc72103997106d296faf3",
+      "image": {
+        "size": [
+          1920,
+          1200
+        ],
+        "format": "JPEG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/assets/scenes/postroom.jpg",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 307524,
+      "sha256": "c6c75b5757cb6ebed3492d93310c43c869b53d2b470affdc9c5d784e2daf66e2",
+      "image": {
+        "size": [
+          1920,
+          1200
+        ],
+        "format": "JPEG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/assets/scenes/shadowplay.jpg",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 299598,
+      "sha256": "893df96c03624075ba6ab2ad33aa9a6d0fd139da4c45083cb0a78d801f196031",
+      "image": {
+        "size": [
+          1920,
+          1200
+        ],
+        "format": "JPEG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/assets/scenes/snow.jpg",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 312199,
+      "sha256": "3753a3db426d1e53d4d924836ae3a7542a726ebfcbfcd3519ce5b0a3a19ff25b",
+      "image": {
+        "size": [
+          1920,
+          1200
+        ],
+        "format": "JPEG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/assets/scenes/wall.jpg",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 291488,
+      "sha256": "16ec090b64cafa8869cbe82c5d0c20a26e4e91d50c59d1ad785b84fb47fe3b63",
+      "image": {
+        "size": [
+          1920,
+          1200
+        ],
+        "format": "JPEG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/assets/scenes/wardrobe.jpg",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 315673,
+      "sha256": "7324c821cdd783d33746693fdb3811510ffb193a6466f4217bc8cf6084f858ec",
+      "image": {
+        "size": [
+          1920,
+          1200
+        ],
+        "format": "JPEG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/assets/scenes/well.jpg",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 297072,
+      "sha256": "ff1419ba07b3eb79bd313d7654d0b36e3003d1d709e46feb1e82d98ccad4c470",
+      "image": {
+        "size": [
+          1920,
+          1200
+        ],
+        "format": "JPEG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/assets/textures/archive-cloth.webp",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 5894,
+      "sha256": "0ad7e816ab6e8dfebfdc3616999994d86f5be13ef43746045dee917607530384",
+      "image": {
+        "size": [
+          512,
+          512
+        ],
+        "format": "WEBP",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/assets/textures/paper-fibers.webp",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 18460,
+      "sha256": "95b6389a46b9c6de061720475ea2ff2fc7eba96a18e4ca9be10a1841f6642ea2",
+      "image": {
+        "size": [
+          512,
+          512
+        ],
+        "format": "WEBP",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/assets/town-night.jpg",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 531108,
+      "sha256": "6ee14c9296439797d7bc1e1c004c3ddde888526dd9d3c8d8621b6212d0d9d86b",
+      "image": {
+        "size": [
+          1800,
+          1050
+        ],
+        "format": "JPEG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/backups/before-anthology-v3.zip",
+      "category": "historical-backup",
+      "in_payload": false,
+      "checks": [
+        "ZIP all-member CRC + paths"
+      ],
+      "findings": [],
+      "bytes": 52134,
+      "sha256": "df09c0faeda14af432cfb29cdff0e9767b91bc578a85eaad94f61455928b4b9c",
+      "archive": {
+        "entries": 8,
+        "uncompressed_bytes": 159529
+      }
+    },
+    {
+      "path": "src/forum_system/backups/frontend-v1-before-redesign.zip",
+      "category": "historical-backup",
+      "in_payload": false,
+      "checks": [
+        "ZIP all-member CRC + paths"
+      ],
+      "findings": [],
+      "bytes": 33521,
+      "sha256": "4d2cd1de1e6cdfc9169b1ae6e8fc76c4cc24cf11e73599432986c0bf98d6a4cb",
+      "archive": {
+        "entries": 4,
+        "uncompressed_bytes": 95393
+      }
+    },
+    {
+      "path": "src/forum_system/backups/latest-set-v4-before-final.blend",
+      "category": "historical-backup",
+      "in_payload": false,
+      "checks": [
+        "Blender container/header (not rendered)"
+      ],
+      "findings": [
+        "embedded machine-home-path in Blender metadata (value omitted)"
+      ],
+      "bytes": 444314,
+      "sha256": "c856d06a4ea54424ad39caf7fad11077c9893304a3379b10dd7e9b4ad8faade6",
+      "blend": {
+        "uncompressed_bytes": 6231521,
+        "header": "BLENDER17-01"
+      }
+    },
+    {
+      "path": "src/forum_system/backups/migration-v4-cases.json",
+      "category": "historical-backup",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JSON (unique keys)"
+      ],
+      "findings": [],
+      "bytes": 267388,
+      "sha256": "e6da7371a6cf9c81b00dc245840a7670159d983f81bee458031afb2b335db7ff"
+    },
+    {
+      "path": "src/forum_system/backups/migration-v4-hashes.json",
+      "category": "historical-backup",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JSON (unique keys)"
+      ],
+      "findings": [],
+      "bytes": 7030,
+      "sha256": "5bdb858b917ffb6e2886e84baaaa27d84c313198cb93c2aa22ec2036b6109483"
+    },
+    {
+      "path": "src/forum_system/backups/v3-before-v4.zip",
+      "category": "historical-backup",
+      "in_payload": false,
+      "checks": [
+        "ZIP all-member CRC + paths"
+      ],
+      "findings": [],
+      "bytes": 2465893,
+      "sha256": "906b31941026d9a468cab22662ca639cf3d2c756bc72d55e66121a33f012d7ff",
+      "archive": {
+        "entries": 28,
+        "uncompressed_bytes": 2859462
+      }
+    },
+    {
+      "path": "src/forum_system/backups/v4-before-repository-migration.zip",
+      "category": "historical-backup",
+      "in_payload": false,
+      "checks": [
+        "ZIP all-member CRC + paths"
+      ],
+      "findings": [],
+      "bytes": 157327,
+      "sha256": "f694f5c02872dce37cf7f7ae2647a8051c7b76831054ed26cfcf5a0cf8b8b8e3",
+      "archive": {
+        "entries": 16,
+        "uncompressed_bytes": 413870
+      }
+    },
+    {
+      "path": "src/forum_system/backups/v4.1-before-immersion.zip",
+      "category": "historical-backup",
+      "in_payload": false,
+      "checks": [
+        "ZIP all-member CRC + paths"
+      ],
+      "findings": [],
+      "bytes": 1840810,
+      "sha256": "f51722b788c38127ffc1572adeb80c5180c7686427e93d7109a6033eace0cae3",
+      "archive": {
+        "entries": 19,
+        "uncompressed_bytes": 2001089
+      }
+    },
+    {
+      "path": "src/forum_system/backups/v5-before-freeze-audit.zip",
+      "category": "historical-backup",
+      "in_payload": false,
+      "checks": [
+        "ZIP all-member CRC + paths"
+      ],
+      "findings": [],
+      "bytes": 40535,
+      "sha256": "3787d5e54b74ef89230bf22d8b13d775fd9f832e88bffafcccaec90bec069ca4",
+      "archive": {
+        "entries": 7,
+        "uncompressed_bytes": 119984
+      }
+    },
+    {
+      "path": "src/forum_system/backups/v5-before-freeze-metadata.blend",
+      "category": "historical-backup",
+      "in_payload": false,
+      "checks": [
+        "Blender container/header (not rendered)"
+      ],
+      "findings": [
+        "embedded machine-home-path in Blender metadata (value omitted)"
+      ],
+      "bytes": 382239,
+      "sha256": "4ac06a93fee8294279d290731c334d5123ac3345a4662d753775c3b00ce928dc",
+      "blend": {
+        "uncompressed_bytes": 5539066,
+        "header": "BLENDER17-01"
+      }
+    },
+    {
+      "path": "src/forum_system/backups/v5-render-draft.py",
+      "category": "historical-backup",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "Python AST"
+      ],
+      "findings": [],
+      "bytes": 14610,
+      "sha256": "d535184a99f10704361d4160db481ca7b489b84dcee4d19ba9b450e391d42949"
+    },
+    {
+      "path": "src/forum_system/chapters/README.md",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 365,
+      "sha256": "a642c09288fa7fed96f120cc8ecc9ca36c223b31a6bd2cf64f9832a8a9d033e7"
+    },
+    {
+      "path": "src/forum_system/data.js",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JavaScript syntax (not executed)"
+      ],
+      "findings": [],
+      "bytes": 267532,
+      "sha256": "7d5ae14d8c3ff5179a0e3e2c956776a2b53bfd0ffc86aead90c39aa3b24a0c5d"
+    },
+    {
+      "path": "src/forum_system/immersion.css",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 12434,
+      "sha256": "783d6833818c1be710eccc58722fc2bbfca0fe4c3411b7ce4841d535380c7ab4"
+    },
+    {
+      "path": "src/forum_system/index.html",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 1160,
+      "sha256": "8d05581eefb51ce9bfbafc6df5879b1a6ce3396cf114ef6cadcd37b0eaea2940"
+    },
+    {
+      "path": "src/forum_system/package.json",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JSON (unique keys)"
+      ],
+      "findings": [],
+      "bytes": 1096,
+      "sha256": "e6ba1e33ab93f5f60fc0cc4c4bab959e865736d38ed950fc32cc893b2a1a5d05"
+    },
+    {
+      "path": "src/forum_system/preview-v2.png",
+      "category": "published-history",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1043554,
+      "sha256": "74c87b69e561fdd5531cccd0322c308367bf8c24210975c787d9145d2ec2b9e1",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/preview-v3.png",
+      "category": "published-history",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 638438,
+      "sha256": "c72f2d0d0810fd86133a501f5539f4777241569eacf8150dd37c6a48acb5ac33",
+      "image": {
+        "size": [
+          1280,
+          720
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/preview-v4.png",
+      "category": "published-history",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 890325,
+      "sha256": "74f06a24b154e30844ffaa7de426efb0a016365b207c6ec8e6b046c1409c7a19",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/preview.jpg",
+      "category": "published-history",
+      "in_payload": true,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 226509,
+      "sha256": "d76a94082fdab10dc99ff6eebce7ceb933197bf8f595f9afaabfd71e23ae7e80",
+      "image": {
+        "size": [
+          1440,
+          1050
+        ],
+        "format": "JPEG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/research/README.md",
+      "category": "private-research",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 595,
+      "sha256": "f6df3e559255b7de6cd9e234d28630657f214ca283a8c2bd341eb71766dc045a"
+    },
+    {
+      "path": "src/forum_system/research/china.jpg",
+      "category": "private-research",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 565681,
+      "sha256": "da78709cef5031ce12a293084d7658a2c14d3fd41809513a178a856eea3f97b0",
+      "image": {
+        "size": [
+          1800,
+          1200
+        ],
+        "format": "JPEG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/research/image-licenses.json",
+      "category": "private-research",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JSON (unique keys)"
+      ],
+      "findings": [],
+      "bytes": 9011,
+      "sha256": "1d502405af87e4732b16cbd0b14bbb7f677899536eaf82ab85420d81914ec5d5"
+    },
+    {
+      "path": "src/forum_system/research/image-test.jpg",
+      "category": "private-research",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1019838,
+      "sha256": "721e1d883d57fbf52ff47548f574843961550f155e3af7876e1612a341a03021",
+      "image": {
+        "size": [
+          1600,
+          2067
+        ],
+        "format": "JPEG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/research/orange.html",
+      "category": "private-research",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 18682,
+      "sha256": "15ee49064f66421d7008f32f458ec0640705f8b6c27cf61155e9f3efbc700315"
+    },
+    {
+      "path": "src/forum_system/research/photos.response.html",
+      "category": "private-research",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 7602,
+      "sha256": "ea54a1bd37d13f8bc591b73560ea371b363215c4475264b0a04f0c4a5dc921a6"
+    },
+    {
+      "path": "src/forum_system/research/reference-0.jpg",
+      "category": "private-research",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 216720,
+      "sha256": "b0c0ebc7e7b69338279fbbe8de1fdf74e91719c8bc5a436d9f00f8f8ea5fd8a7",
+      "image": {
+        "size": [
+          1920,
+          1080
+        ],
+        "format": "JPEG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/research/reference-1.jpg",
+      "category": "private-research",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 165568,
+      "sha256": "7ca7d15ac2b47c52026eaf5854da8bbab8cf0a5069434ff55aeb0a56d2296257",
+      "image": {
+        "size": [
+          1920,
+          1080
+        ],
+        "format": "JPEG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/research/reference-3.jpg",
+      "category": "private-research",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 260984,
+      "sha256": "791f47dfbf756ed6e842187993afcb5f7729aeefce5eb0d048e0bfc741e18cbf",
+      "image": {
+        "size": [
+          1920,
+          1080
+        ],
+        "format": "JPEG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/research/search.html",
+      "category": "private-research",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 91141,
+      "sha256": "da90d36251ec3434a1a368b2870e96488f5a81839baf32daf5225fa2321f24ba"
+    },
+    {
+      "path": "src/forum_system/research/steam.json",
+      "category": "private-research",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JSON (unique keys)"
+      ],
+      "findings": [],
+      "bytes": 24527,
+      "sha256": "c63bf78784f3ef84b73edfe249fbd8ca70c891c40c41307e47a718c03aefcc04"
+    },
+    {
+      "path": "src/forum_system/research/unsplash.response.html",
+      "category": "private-research",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 7603,
+      "sha256": "fa51e86669fe20db3702ae312eb1d1eb23f37b336c23684d2fd24df3dae605bd"
+    },
+    {
+      "path": "src/forum_system/research/voice-original.mp3",
+      "category": "private-research",
+      "in_payload": false,
+      "checks": [
+        "audio metadata + full decode"
+      ],
+      "findings": [],
+      "bytes": 40295,
+      "sha256": "69e6ad97b435097201ee3cc73119bf86236f23b37a816d9ab528a0a8366b0178",
+      "audio": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "sample_rate": "22050",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "7.677778"
+        }
+      }
+    },
+    {
+      "path": "src/forum_system/research/wiki.json",
+      "category": "private-research",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JSON (unique keys)"
+      ],
+      "findings": [],
+      "bytes": 7710,
+      "sha256": "5650b5a6bcbd1f440d0bdc34d2462a4d3a7640713d0197de64c26ac7a8caaafa"
+    },
+    {
+      "path": "src/forum_system/soundscape.js",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JavaScript syntax (not executed)"
+      ],
+      "findings": [],
+      "bytes": 10188,
+      "sha256": "221f4ec7facf76509ab9a61522aca22eb3bab86ab860b7f8ec5a436b374f0046"
+    },
+    {
+      "path": "src/forum_system/style.css",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "literal local document/style/HTML references"
+      ],
+      "findings": [],
+      "bytes": 78610,
+      "sha256": "0f1c0a992175162757221944765c2061757b8dcf3c0451d5a43bf8faaf4beb9e"
+    },
+    {
+      "path": "src/forum_system/tests/anthology-smoke.cjs",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JavaScript syntax (not executed)"
+      ],
+      "findings": [],
+      "bytes": 5048,
+      "sha256": "6e6a6dd448824b7af31d2a949a8e2fcdc8c2258bee1f02a7faeb6937f1e627dd"
+    },
+    {
+      "path": "src/forum_system/tests/audio-debug.cjs",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JavaScript syntax (not executed)"
+      ],
+      "findings": [],
+      "bytes": 664,
+      "sha256": "634da26697fd78087d083a86d08383b73b45338a6a48278df44b5267852053b6"
+    },
+    {
+      "path": "src/forum_system/tests/content-integrity.cjs",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JavaScript syntax (not executed)"
+      ],
+      "findings": [],
+      "bytes": 3456,
+      "sha256": "aea9a0f044f43c636bd894ad9690824c8412dcc8ff4f9b684d522063a857c6b1"
+    },
+    {
+      "path": "src/forum_system/tests/freeze-saves.cjs",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JavaScript syntax (not executed)"
+      ],
+      "findings": [],
+      "bytes": 3260,
+      "sha256": "ee13d4246426863e8a4f18520bcb0129cec9fd008036d9c860a701a087614270"
+    },
+    {
+      "path": "src/forum_system/tests/frontend-v2.cjs",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JavaScript syntax (not executed)"
+      ],
+      "findings": [],
+      "bytes": 8162,
+      "sha256": "2e99524a8d2915f83b393c6026fcf91e3c545087aef6ab3ccfb3d2d8eac9bd66"
+    },
+    {
+      "path": "src/forum_system/tests/immersion-v5-results.json",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JSON (unique keys)"
+      ],
+      "findings": [],
+      "bytes": 1978,
+      "sha256": "d7916afddc57398c7ec370a33edb06ef897617255ca0204a44c856042abe70ed"
+    },
+    {
+      "path": "src/forum_system/tests/immersion-v5.cjs",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JavaScript syntax (not executed)"
+      ],
+      "findings": [],
+      "bytes": 14686,
+      "sha256": "638d123d0783fb75e61cc856889ad73e3603331604a1413e289a062e78c070b3"
+    },
+    {
+      "path": "src/forum_system/tests/playthrough.cjs",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JavaScript syntax (not executed)"
+      ],
+      "findings": [],
+      "bytes": 8755,
+      "sha256": "2741f0241aef522e7a33b9dc5a8430ff087754082be8ce61599fcd6a031317b1"
+    },
+    {
+      "path": "src/forum_system/tests/responsive-results.json",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JSON (unique keys)"
+      ],
+      "findings": [],
+      "bytes": 9758,
+      "sha256": "1926af7d7a54fc428bb2f4bcb81b33c23ddbcbba6bf37e79b8e30b313f1f508a"
+    },
+    {
+      "path": "src/forum_system/tests/responsive.cjs",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JavaScript syntax (not executed)"
+      ],
+      "findings": [],
+      "bytes": 4926,
+      "sha256": "c2a4aa1a3816d6448539b97306071f8fd1d654c39ecefdb79c86ddc19d5f7ef0"
+    },
+    {
+      "path": "src/forum_system/tests/screenshots/01-forum-desktop.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1169744,
+      "sha256": "1d8a0ac2ea16a8c4563e43fd2e975169febf48851b2656c5196337b481cef7d6",
+      "image": {
+        "size": [
+          1440,
+          1050
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots/02-thread.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1048079,
+      "sha256": "ca97d303b69655ef5d7f09375b1327903db872c97b09df9d7d7e5a3a3ce60754",
+      "image": {
+        "size": [
+          1440,
+          1050
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots/03-messages.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 892141,
+      "sha256": "1a305edaf92e30839b1336a857107fc810319c462e3aefef40035c7822b6735e",
+      "image": {
+        "size": [
+          1440,
+          1050
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots/04-scene.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1570875,
+      "sha256": "72af5bed5ec524fe8ba83dc248dca318868f0bf44c1c808eb317a366c0aca932",
+      "image": {
+        "size": [
+          1440,
+          1050
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots/05-board.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1282154,
+      "sha256": "6a2ba0960db2ad5692eb69d2611400f5d1eafb8d0de9ea7270f4fbf7ff45b888",
+      "image": {
+        "size": [
+          1440,
+          1050
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots/06-ending.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1102863,
+      "sha256": "2eef1fa04aaf05076dee953c81bab5713196ee18b4f6c7991e88655ffd63a8e3",
+      "image": {
+        "size": [
+          1440,
+          1050
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots/07-forum-mobile.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 268232,
+      "sha256": "c5c73800350d8c7f84be949af935e3796300cca6bbd3402a3dfab10718cd2919",
+      "image": {
+        "size": [
+          390,
+          844
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots/08-scene-mobile.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 494505,
+      "sha256": "e7be3f327bf47d23d8bc4254b342d264a0eb536e654678594df2e4cece59f6f8",
+      "image": {
+        "size": [
+          390,
+          1142
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots/casebook-final.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 776676,
+      "sha256": "80ece1d4980be983ac4b04f244e26edbb9d2ed526b940b8e39a901018ba9c93c",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots/casebook-mobile.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 214697,
+      "sha256": "18c5e9510bb3579aab4b8e9bc94e01844413f5e6a219e9096b1c008c1fc4ac3e",
+      "image": {
+        "size": [
+          390,
+          844
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots/casebook.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 783853,
+      "sha256": "aec91e92ef75155edf3ca164c66388019beacf941fc8957a8e282027f8de859e",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots/v2-chat.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 791269,
+      "sha256": "bf61a0f9a1b88ac0b6a400f44467c040742a77f4cb69a4d4b1c2c428107257f7",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots/v2-dossier.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1115940,
+      "sha256": "7ca0a91efdf5b2b8f17f8d252a035170068ebef8e5ab72f1ec72b827766fd855",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots/v2-mobile-board.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 306645,
+      "sha256": "40a99e36bce37e9102218eb5e3492ad207fdea43a2386cee5f6d60016f2534ac",
+      "image": {
+        "size": [
+          390,
+          844
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots/v2-mobile-messages.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 195139,
+      "sha256": "eb2350012e9f9265f80e4e05732fe8806aef5d527407631f07eadf4d0f2d263d",
+      "image": {
+        "size": [
+          390,
+          844
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots/v2-mobile-scene.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 327429,
+      "sha256": "fda5ca5ecf9875a43ab13fe4e5baecef221011c6d42295f798ca77e1ec3e55f5",
+      "image": {
+        "size": [
+          390,
+          844
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots/v2-mobile.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 265065,
+      "sha256": "f630eea514e35e7549c082f4fac499e3199523bd56be9cd924014f4dd99c0598",
+      "image": {
+        "size": [
+          390,
+          844
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots/v2-reading.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 990806,
+      "sha256": "c6c8816c23a59dc1b9cf69964e8810c4517fc0a3c3599c3de71caacc998733f6",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots/v2-receipt.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 339791,
+      "sha256": "17e1041bc75e42162e20c0fb734c04fd3abfaa2da6dd3919f989afc1ab1256aa",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots/v2-short-desktop.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 791705,
+      "sha256": "00011a8b2b7bce44371de69e8efeff9ec2df9479e8385d266e7df7924f1a74d2",
+      "image": {
+        "size": [
+          1440,
+          720
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots/v2-wide-scene.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 2166639,
+      "sha256": "c71271a6b0ea90f7b4e7c3ea2901dd2c9d276bf7d49663af28070200de845dba",
+      "image": {
+        "size": [
+          1920,
+          1080
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots/viewport.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1114409,
+      "sha256": "075961e6c5c83655d162dabb59947523efa8a909cc183b33ca56a44a75587633",
+      "image": {
+        "size": [
+          1440,
+          1000
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v4/01-shelf.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1091466,
+      "sha256": "cbb4b747aef7895eba6d980197f950ffdbffec168f900ad4e980af4580fca33e",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v4/homecoming-ending.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1048693,
+      "sha256": "85f64e5d4a20c9555133e9cb1bc776a9754634f7d9c8a1639d93a9bd8e640557",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v4/homecoming-mobile.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 246580,
+      "sha256": "cbba0a0aa56b500cbe02b823515b400759b270296b2ada0275f5bed6aa10693b",
+      "image": {
+        "size": [
+          390,
+          900
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v4/homecoming-scene-a.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1037174,
+      "sha256": "3aa3f0a4b58cf0d6a0de1fe9879cad14701f3f71fb8ebfaf5661c92e340b981e",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v4/homecoming-scene-b.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1047785,
+      "sha256": "8f503a51348f007e04ee7faac99464b5796395f9be48a36d4813a5eb75dfbf51",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v4/lamplife-ending.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1009046,
+      "sha256": "cdea1663bd848289a9a03ab27ddd5c518085a88c0a166b7c1fd833bef11fcf5e",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v4/lamplife-mobile.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 247265,
+      "sha256": "20077a363a87ec163dafbf6e0c324185087df0e30af4bef267df147bd444cbdd",
+      "image": {
+        "size": [
+          390,
+          900
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v4/lamplife-scene-a.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1037256,
+      "sha256": "05f2ec8eea1c8b5fb085f101c37fdaf5056d719cf44070e6c36beddc4e9776e1",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v4/lamplife-scene-b.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1059708,
+      "sha256": "d30847940dc009f9e8fdab32db97debcf6ea493cd4ac8f0ba7f6edb1f148f959",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v4/mirror-experiment.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 280752,
+      "sha256": "93599747dd5e104691def22f1f1ef9f71c5e7e6ef039cab2fd2655669d56f04f",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v4/mirrorname-ending.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1030105,
+      "sha256": "3f037aab0ff7f0348cef50daff4443ce62d1c18398eba061bf89633d3301f55d",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v4/mirrorname-mobile.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 248651,
+      "sha256": "1fb85867e2fd3cade79fb82523ed79393f2747a456026613f65cba3347c98a8f",
+      "image": {
+        "size": [
+          390,
+          900
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v4/mirrorname-scene-a.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1056503,
+      "sha256": "96a727930800bd1786ac7ad9211eb3e6d89c9c2c83d1f5f4a86c5717812f82c7",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v4/mirrorname-scene-b.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1087028,
+      "sha256": "159bd7358030e23d6759c7586e08e528f5a8697e687fa73512d8355e3cae2ad3",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v4/wellpost-ending.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1011837,
+      "sha256": "de97252fd03788f095b36d00a1174b9b921edb46bb0fee429f9747dffd74ce1a",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v4/wellpost-mobile.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 244862,
+      "sha256": "99ba5fbfc659ae04e7a312201edad4c0162a80d1cf0b2e399b518b89e7793da4",
+      "image": {
+        "size": [
+          390,
+          900
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v4/wellpost-scene-a.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1033017,
+      "sha256": "5fbc6c3f7bab2efa5d8402a1b0a2e8546f6be77ca8121c2ee96aa209166e6378",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v4/wellpost-scene-b.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1060540,
+      "sha256": "247d62295b751909f6f465df11c5508084d352be8a461b4809b9a784cb673af5",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v5/caravan-scene.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1092460,
+      "sha256": "5a6b4a12328c09a1009b7b6b72bd1e4318d46e41893298a1db9fe5c38982b2e9",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v5/lamplife-scene.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1058385,
+      "sha256": "b01a915af05e7a589e6ba74ccab62aee865f69a1c0b5da5454e78aecc2c4a922",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v5/mobile-forum.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 276322,
+      "sha256": "51e24d9b89ac2d7171537644b36f7e75351a0f42ed39cd21c9f24a80124f0ae1",
+      "image": {
+        "size": [
+          390,
+          844
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v5/mobile-settings.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 165158,
+      "sha256": "8281f278ab9bfe8da1f97fe0de2fc50bcfb69304e88efa3578fc398d22196d96",
+      "image": {
+        "size": [
+          390,
+          844
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v5/shadowplay-scene.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1101204,
+      "sha256": "8a7296f451a90a440776b6cd918928dc3997612b681ba29a728e319f5f3ec649",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v5/snow-scene.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1114540,
+      "sha256": "463b2fb3176deac5ad45980df8d2b51948b32e046851f4f2d152600da523dac6",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v5/sound-settings.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 431970,
+      "sha256": "8fc2c97e54ea95791e354eba37ddaf9838d93a32b8ae3599bc0a804d7c49a7f0",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/screenshots-v5/wellpost-scene.png",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "image decode (all animation frames)"
+      ],
+      "findings": [],
+      "bytes": 1048522,
+      "sha256": "12f619d520562e2234d36e0016b0635d7a95b0c701172f31e264b295c4f645e7",
+      "image": {
+        "size": [
+          1440,
+          960
+        ],
+        "format": "PNG",
+        "frames": 1
+      }
+    },
+    {
+      "path": "src/forum_system/tests/serial-v4.cjs",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JavaScript syntax (not executed)"
+      ],
+      "findings": [],
+      "bytes": 10580,
+      "sha256": "278a8b5ea91be7b3ed7dca22f8b57f7b65d736b0519e33111f989dbcd5a4a1b4"
+    },
+    {
+      "path": "src/forum_system/tests/v4-edge.cjs",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JavaScript syntax (not executed)"
+      ],
+      "findings": [],
+      "bytes": 3904,
+      "sha256": "46a2646ac2c44b75f34434861bb97af6ebee1039a63bbe131ecba68f305d450c"
+    },
+    {
+      "path": "src/forum_system/tests/v4-results.json",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JSON (unique keys)"
+      ],
+      "findings": [],
+      "bytes": 260,
+      "sha256": "b4644988ac3fa41e2d2ec143fdba96d5c7c3d6e6556c7f054165ef3c53575438"
+    },
+    {
+      "path": "src/forum_system/tests/v4-save-fixture.json",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JSON (unique keys)"
+      ],
+      "findings": [],
+      "bytes": 6390,
+      "sha256": "e1d8280006222dce6298cfe86a31661e4a91a00d7fa09f827bfccc2708c9d040"
+    },
+    {
+      "path": "src/forum_system/tests/v4-single-fixture.json",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JSON (unique keys)"
+      ],
+      "findings": [],
+      "bytes": 1096,
+      "sha256": "5bf1d12010629256886b8fcf1c9a464b916dd9d7214e34cd1b118ef6d6417df6"
+    },
+    {
+      "path": "src/forum_system/tests/validation-freeze-blend-sanitize.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [
+        "machine-home-path: line 1 (value omitted)"
+      ],
+      "bytes": 385,
+      "sha256": "f3bc6d64e5b36291e4dde1592cad44a2d6d3fe6fb2d04fe58870a7739cdb675f"
+    },
+    {
+      "path": "src/forum_system/tests/validation-freeze-blend.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [
+        "machine-home-path: line 1 (value omitted)"
+      ],
+      "bytes": 559,
+      "sha256": "f587f448f18629068ec9c507efc6128cf08ffa88d01a92184fb8535839959a4e"
+    },
+    {
+      "path": "src/forum_system/tests/validation-freeze-browser.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 11876,
+      "sha256": "9925d7bcf5dac3e111f973e3d697b2a2ae42d4d86900e95226c7ddff912e0080"
+    },
+    {
+      "path": "src/forum_system/tests/validation-freeze-cleanup.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [
+        "machine-home-path: line 10 (value omitted)",
+        "machine-home-path: line 15 (value omitted)",
+        "machine-home-path: line 16 (value omitted)"
+      ],
+      "bytes": 1766,
+      "sha256": "f7876dae25d5be634a11df18a060a8311a855b6c002cac5ebbd7c9e9d2651419"
+    },
+    {
+      "path": "src/forum_system/tests/validation-freeze-files.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 2708,
+      "sha256": "7ff3e0dda96ebc38439c8e34770be728782e29ea4c62ea748288f919c4e397ce"
+    },
+    {
+      "path": "src/forum_system/tests/validation-freeze-package-guards.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 161,
+      "sha256": "cf89bdc85460d339f4400cfa5a1ee12d2ae38a917d88dc858309935109dc64cd"
+    },
+    {
+      "path": "src/forum_system/tests/validation-freeze-package.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 141,
+      "sha256": "a04b2f738dc6a4a6d5eb7cb30ee1ae6b547a6bb795c1d5942f14237836b77169"
+    },
+    {
+      "path": "src/forum_system/tests/validation-freeze-reproducible.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [
+        "machine-home-path: line 1 (value omitted)"
+      ],
+      "bytes": 213,
+      "sha256": "8f86d0f0fd49a53b1f4d4f55ed2e0cb36b32932fd46abef36013a9245e5b14a6"
+    },
+    {
+      "path": "src/forum_system/tests/validation-freeze-unit.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 1009,
+      "sha256": "d67701d4b8000def2824e22892030d358f0165bfface6480f406eb5c2334c4c1"
+    },
+    {
+      "path": "src/forum_system/tests/validation-migration.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 11337,
+      "sha256": "92d9bfeb6dc93461824cbd8e8c847eba21f8019bb3b475a11bdc201ea0062823"
+    },
+    {
+      "path": "src/forum_system/tests/validation-v2.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 9320,
+      "sha256": "12be491205cfd1bdb8b98c2459a07e8fcf8220e559855c1582738c580af05411"
+    },
+    {
+      "path": "src/forum_system/tests/validation-v3.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 9588,
+      "sha256": "697da26579cbace136785d0eff8997e1b286cf93fe965626792e7aed726e8f83"
+    },
+    {
+      "path": "src/forum_system/tests/validation-v4-content.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 723,
+      "sha256": "d89648a8868dd0ece43d1b260ba7091b3bfe2d6425cf205d1184b6c28bcd9343"
+    },
+    {
+      "path": "src/forum_system/tests/validation-v4-edge.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 141,
+      "sha256": "c14391fd5f669264a81138b0e4c86bea27082f54c74a58f8630270750cd91a70"
+    },
+    {
+      "path": "src/forum_system/tests/validation-v4-final.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 11077,
+      "sha256": "55208cd2a1ea5fd33656787d11731e1a81e179d49ce301d9845fe9bdf02d84c5"
+    },
+    {
+      "path": "src/forum_system/tests/validation-v4-legacy.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 155,
+      "sha256": "84d1f12c85fb8e2e26f0f63220f8986db0c28028b77fb92e948e91d18dec44ed"
+    },
+    {
+      "path": "src/forum_system/tests/validation-v4-package.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 82,
+      "sha256": "50f5ee3f59a72658e96d649b059ae4e0e9c6e40aa1cfac423f7700993a839c32"
+    },
+    {
+      "path": "src/forum_system/tests/validation-v4-regression.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 9588,
+      "sha256": "697da26579cbace136785d0eff8997e1b286cf93fe965626792e7aed726e8f83"
+    },
+    {
+      "path": "src/forum_system/tests/validation-v4.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 554,
+      "sha256": "2143dd22a819d53d008bdf2e32f67a70126eb21a302758d3b71bc036435ef434"
+    },
+    {
+      "path": "src/forum_system/tests/validation-v5-baseline.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 11337,
+      "sha256": "92d9bfeb6dc93461824cbd8e8c847eba21f8019bb3b475a11bdc201ea0062823"
+    },
+    {
+      "path": "src/forum_system/tests/validation-v5-final.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 11631,
+      "sha256": "e447c34baf83d6822076cd4572c4f1465424c046edb593f16949195ba433b849"
+    },
+    {
+      "path": "src/forum_system/tests/validation-v5-immersion.log",
+      "category": "local-generated-or-debug",
+      "in_payload": false,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan"
+      ],
+      "findings": [],
+      "bytes": 181,
+      "sha256": "ddfac263df064a7a0d026dc3b600555efc9d3eb72fd393014caf2424555d4b2f"
+    },
+    {
+      "path": "src/forum_system/启动游戏.command",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "zsh syntax (not executed)"
+      ],
+      "findings": [],
+      "bytes": 87,
+      "sha256": "d270b890aaa38cf6dafb0ae97b9490ff15b53f3e08f5b94a0b9da8e6d99d9041"
+    },
+    {
+      "path": "src/utils/__init__.py",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "Python AST"
+      ],
+      "findings": [],
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/utils/config.js",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JavaScript syntax (not executed)"
+      ],
+      "findings": [],
+      "bytes": 152,
+      "sha256": "27968d34d3dab4b344a657403f1621bea1425f2b2e110aae5bf81bdee4cab688"
+    },
+    {
+      "path": "src/utils/paths.py",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "Python AST"
+      ],
+      "findings": [],
+      "bytes": 212,
+      "sha256": "5dd23b2f3436fdf2833b796b7d883acecedd6810438d6acf1b5b3f06a46f9aed"
+    },
+    {
+      "path": "src/utils/server.py",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "Python AST"
+      ],
+      "findings": [],
+      "bytes": 2881,
+      "sha256": "b4de77d1d1650f04256221ff76b03f8511ba99c0a4916fc7ed60d34895bd3b9f"
+    },
+    {
+      "path": "tests/engine.cjs",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JavaScript syntax (not executed)"
+      ],
+      "findings": [],
+      "bytes": 1622,
+      "sha256": "0994fac55476038bf002ae8fd628a107cac7ba6c73b14cee1f99d62a6f1bc030"
+    },
+    {
+      "path": "tests/test_launcher.py",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "Python AST"
+      ],
+      "findings": [],
+      "bytes": 2225,
+      "sha256": "c02dea13d72c978d9339fda7b754c4772b1b5cb2858a561132b24711a93072c6"
+    },
+    {
+      "path": "tests/test_library.py",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "Python AST"
+      ],
+      "findings": [],
+      "bytes": 2610,
+      "sha256": "408377e90e51130de3693dbe58815219ccc77eff6726f77eb9cc24efd3ca10b1"
+    },
+    {
+      "path": "tests/test_packaging.py",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "Python AST"
+      ],
+      "findings": [],
+      "bytes": 1550,
+      "sha256": "75ca46d6c5d2883f581c68cd845f469d6e8ad07fefda35601c730ba92cacf470"
+    },
+    {
+      "path": "tools/audit_freeze.py",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "Python AST"
+      ],
+      "findings": [],
+      "bytes": 10420,
+      "sha256": "5e00938c8ed06e070579b0ab9176199d59d768be3058bd28e301e32db8b23d27"
+    },
+    {
+      "path": "tools/build_showcase.py",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "Python AST"
+      ],
+      "findings": [],
+      "bytes": 2635,
+      "sha256": "9ce5e247813c8655454314e138c74f45b83d4b16e67d7b9381b1fb1d33ecb1b3"
+    },
+    {
+      "path": "tools/capture_showcase.cjs",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JavaScript syntax (not executed)"
+      ],
+      "findings": [],
+      "bytes": 2423,
+      "sha256": "c3b7efb4f84b65d8f0c28de0f707464c2fec3a9cd860f1b583916c52ba007796"
+    },
+    {
+      "path": "tools/package_release.py",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "Python AST"
+      ],
+      "findings": [],
+      "bytes": 4521,
+      "sha256": "5f14e320168cc7cb7cb948a61931546c6bc8441729e8d779917f1bbe2af2c5a4"
+    },
+    {
+      "path": "tools/sanitize_blend.py",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "Python AST"
+      ],
+      "findings": [],
+      "bytes": 1694,
+      "sha256": "6b159a1dcd53033a0eb760c9073f4eaa4ada81401a2c3ea63ddc19a4309f8097"
+    },
+    {
+      "path": "tools/verify_package.cjs",
+      "category": "published-source-content-assets",
+      "in_payload": true,
+      "checks": [
+        "UTF-8",
+        "conflict/credential/home-path pattern scan",
+        "JavaScript syntax (not executed)"
+      ],
+      "findings": [],
+      "bytes": 5246,
+      "sha256": "62687fd96d44697c4388b3661aa2a6031ef2dac9d8f669ed76e68dc6dac14399"
+    }
+  ]
+}

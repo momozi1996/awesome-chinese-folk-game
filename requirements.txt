@@ -1,0 +1,4 @@
+# Game launcher and folk_parser: Python 3.9+ standard library only.
+# No pip install is required to play, validate, or build the case library.
+# Optional showcase generation: python3 -m pip install Pillow
+# Optional browser tests: cd src/forum_system && npm install && npx playwright install chromium

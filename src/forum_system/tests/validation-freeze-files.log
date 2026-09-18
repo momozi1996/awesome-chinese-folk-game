@@ -1,0 +1,26 @@
+{
+  "files": 292,
+  "bytes": 111163767,
+  "categories": {
+    "published-source-content-assets": 174,
+    "published-history": 8,
+    "local-release-and-audit": 10,
+    "local-generated-or-debug": 77,
+    "historical-backup": 10,
+    "private-research": 13
+  },
+  "payloadFiles": 182,
+  "payloadFindings": [
+    "src/forum_system/style.css"
+  ],
+  "globalErrors": []
+}
+src/forum_system/art/render-v5-fast.log ['machine-home-path: line 1 (value omitted)', 'machine-home-path: line 7 (value omitted)', 'machine-home-path: line 10 (value omitted)']
+src/forum_system/art/render-v5-final.log ['machine-home-path: line 1 (value omitted)', 'machine-home-path: line 7 (value omitted)', 'machine-home-path: line 10 (value omitted)', 'machine-home-path: line 15 (value omitted)', 'machine-home-path: line 20 (value omitted)', 'machine-home-path: line 25 (value omitted)', 'machine-home-path: line 30 (value omitted)', 'machine-home-path: line 35 (value omitted)', 'machine-home-path: line 40 (value omitted)', 'machine-home-path: line 45 (value omitted)', 'machine-home-path: line 50 (value omitted)', 'machine-home-path: line 55 (value omitted)', 'machine-home-path: line 60 (value omitted)', 'machine-home-path: line 65 (value omitted)']
+src/forum_system/art/render-v5-lamp.log ['machine-home-path: line 1 (value omitted)', 'machine-home-path: line 3 (value omitted)', 'machine-home-path: line 5 (value omitted)']
+src/forum_system/art/render-v5.log ['machine-home-path: line 1 (value omitted)', 'machine-home-path: line 3 (value omitted)', 'machine-home-path: line 5 (value omitted)', 'machine-home-path: line 6 (value omitted)', 'machine-home-path: line 7 (value omitted)']
+src/forum_system/art/render.log ['machine-home-path: line 1 (value omitted)', 'machine-home-path: line 3 (value omitted)', 'machine-home-path: line 5 (value omitted)', 'machine-home-path: line 6 (value omitted)', 'machine-home-path: line 7 (value omitted)', 'machine-home-path: line 8 (value omitted)', 'machine-home-path: line 9 (value omitted)', 'machine-home-path: line 10 (value omitted)', 'machine-home-path: line 11 (value omitted)', 'machine-home-path: line 12 (value omitted)', 'machine-home-path: line 13 (value omitted)', 'machine-home-path: line 14 (value omitted)', 'machine-home-path: line 15 (value omitted)', 'machine-home-path: line 16 (value omitted)']
+src/forum_system/research/photos.json ['JSON (unique keys): JSONDecodeError: Expecting value: line 1 column 1 (char 0)']
+src/forum_system/research/unsplash.json ['JSON (unique keys): JSONDecodeError: Expecting value: line 1 column 1 (char 0)']
+src/forum_system/style.css ['missing local reference: %23g']
+src/forum_system/tests/validation-freeze-files.log ['empty file']

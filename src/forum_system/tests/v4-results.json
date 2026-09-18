@@ -1,0 +1,17 @@
+{
+  "cases": [
+    "lamplife",
+    "mirrorname",
+    "wellpost",
+    "homecoming"
+  ],
+  "scenes": 8,
+  "clues": 48,
+  "interpretedLinks": 24,
+  "endings": 8,
+  "viewChecks": 64,
+  "errors": [],
+  "assetErrors": [],
+  "offline": true,
+  "saveRoundtrip": true
+}

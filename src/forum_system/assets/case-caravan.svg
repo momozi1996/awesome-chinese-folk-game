@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#0e171b"/>
+  <path fill="#1a292c" d="M0 490 240 260l160 180 180-230 240 280 180-170 200 170v210H0z"/>
+  <path fill="none" stroke="#718783" stroke-width="4" d="M90 570Q300 440 505 555t370-25q140-70 250 24"/>
+  <path fill="#283a3b" d="M425 490h350v105H425zM400 490l200-105 200 105z"/>
+  <path fill="#8e6d55" d="M488 515h54v80h-54zM580 515h54v80h-54zM672 515h54v80h-54z"/>
+  <path fill="none" stroke="#b99465" stroke-width="7" d="M520 400v-108M616 400v-108M712 400v-108"/>
+  <path fill="#a17c59" d="M477 290h87l-14-37-30-19-30 19zM573 290h87l-14-37-30-19-30 19zM669 290h87l-14-37-30-19-30 19z"/>
+  <circle cx="235" cy="170" r="50" fill="#d0c49e" opacity=".12"/>
+  <text x="58" y="68" fill="#c6b894" font-size="24" font-family="serif" letter-spacing="8">WUHENG PASS / THREE BELLS</text>
+  <text x="58" y="108" fill="#7d9388" font-size="15" font-family="monospace">THE ROAD GOES OUT, NOT HOME</text>
+</svg>

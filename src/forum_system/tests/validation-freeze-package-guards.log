@@ -1,0 +1,2 @@
+PASS: existing differing V5 archive rejected without overwriting.
+PASS: verification of a nonexistent archive failed as expected; no .verify-* directory leaked.
