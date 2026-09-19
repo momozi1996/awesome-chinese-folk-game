@@ -6,9 +6,17 @@
 **完全开源 × 论坛推理游戏 × 可扩展民俗悬疑资料库**  
 **📦 零依赖 · 🎭 9 个完整案卷 · 📖 58 个储备主题 · 🔒 纯本地运行**
 
-[开始游玩](#开始游玩) · [完整案卷目录](docs/case_list.md) · [玩法手册](docs/game_manual.md) · [English](#english)
+[![License: MIT](https://img.shields.io/badge/Code-MIT-yellow.svg)](LICENSE)
+[![Content: CC BY-NC-SA 4.0](https://img.shields.io/badge/Content-CC--BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
+[![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](requirements.txt)
+[![Playable Cases](https://img.shields.io/badge/Playable-9%20Cases-red.svg)](docs/case_list.md)
+
+
+[快速开始](#-快速开始) · [完整案卷目录](docs/case_list.md) · [玩法手册](docs/game_manual.md) · [English](#english)
+
 
 ![未明旧案柜封面](assets/cover_banner.png)
+
 
 </div>
 
