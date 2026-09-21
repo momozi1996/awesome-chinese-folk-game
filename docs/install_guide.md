@@ -1,5 +1,7 @@
 # 安装与启动 / Installation
 
+当前为 **V6.2.0-preview**，完整源码是本项目根目录。版本与最新离线包名见根 `CURRENT_VERSION.json`，提交说明见 [提交前检查](publish-check.md)。
+
 ## 推荐：一条命令
 
 Python **3.9 或更高版本**，无需 pip 包、数据库、账号或 API Key。在项目根目录执行：
@@ -67,7 +69,7 @@ npm start                       # 第一个终端
 npm run test:all                 # 第二个终端，同目录
 ```
 
-`CHROME_PATH` 可指定 Chrome 路径；`GAME_URL` 可指定服务 URL；已有 Playwright 可通过 `PLAYWRIGHT_PATH` 指向其模块目录。测试使用独立浏览器上下文，会在测试上下文清空测试存档，不接触日常浏览器档案。
+`CHROME_PATH` 可指定 Chrome 路径；`GAME_URL` 可指定服务 URL；已有 Playwright 可通过 `PLAYWRIGHT_PATH` 指向其模块目录。测试使用独立浏览器上下文，会在测试上下文清空测试存档，不接触日常浏览器档案。V6.1/V6.2 音频资产专项测试还需要 `ffmpeg` 与 `ffprobe`；玩家运行游戏不需要它们。
 
 ## 发布与搬家
 
@@ -75,7 +77,7 @@ npm run test:all                 # 第二个终端，同目录
 python3 tools/package_release.py --output releases/my-build.zip
 ```
 
-输出指定的 `releases/my-build.zip` 和 SHA256，压缩包根目录为 `awesome-chinese-folk-game/`。包括主题库、案卷、页面、运行美术和源码；不带研究抓取、历史备份、用户存档或 node_modules。包内 `FREEZE-MANIFEST.json` 记录每个载荷文件的校验值（不包含清单自身）。已有同名包若内容不同，打包器会拒绝覆盖；继续开发请换文件名。当前冻结包与校验方法见 [冻结报告](freeze-v5.0.md)。
+输出指定的 `releases/my-build.zip` 和 SHA256，压缩包根目录为 `awesome-chinese-folk-game/`。包括主题库、案卷、页面、运行美术和源码；不带研究抓取、历史备份、用户存档或 node_modules。包内 `FREEZE-MANIFEST.json` 记录每个载荷文件的校验值（不包含清单自身）。已有同名包若内容不同，打包器会拒绝覆盖；继续开发请换文件名。最新包以 `CURRENT_VERSION.json` 为准；`python3 tools/package_release.py` 默认生成该包，`node tools/verify_package.cjs` 默认验证该包，详见 [提交前检查](publish-check.md)。
 
 **迁移存档先导出整柜。** `localhost` 和 `127.0.0.1`、不同端口、不同浏览器及 `file://` 之间不共享 localStorage。项目改名不会改变键名，但文件路径变化可能让离线浏览器使用新的存储空间；此时从旧版导出再导入，而不是清除存储。
 

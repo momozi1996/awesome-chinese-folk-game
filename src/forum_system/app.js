@@ -1,5 +1,7 @@
 "use strict";
 (() => {
+  const P = window.WeimingPresentation;
+  const N = window.WeimingNarrative;
   const G = window.GAME,
     KEY = window.ForumConfig.legacySaveKey;
   const defaults = () => ({
@@ -14,6 +16,7 @@
     ending: null,
     endings: [],
     sound: false,
+    music: true,
     volume: 30,
     ambience: 55,
     effects: 65,
@@ -51,7 +54,7 @@
           n.chats[k] = raw.chats[k].filter((x) =>
             ["hello", "archive", "safety", "identity", "lantern"].includes(x),
           );
-    for (const k of ["sound", "motion", "openedSafe"])
+    for (const k of ["sound", "music", "motion", "openedSafe"])
       if (typeof raw[k] === "boolean") n[k] = raw[k];
     if (typeof raw.notes === "string") n.notes = raw.notes.slice(0, 4000);
     if (Number.isFinite(raw.volume))
@@ -97,6 +100,7 @@
     cSave();
     chime();
     toast(`案卷线索已收录：${cClue(id).title}`);
+    P.collected(cClue(id).title);
   };
   function chooseCase(id) {
     if (!owns(CASES, id)) return;
@@ -220,6 +224,7 @@
     save();
     chime();
     toast(`线索已收录：${G.clues[id].title}`);
+    P.collected(G.clues[id].title);
   }
   function navigate(next, id) {
     clearTimeout(toastTimer);
@@ -256,6 +261,7 @@
           : "第一更 · 借灯";
   }
   function render(preserve = true) {
+    P.before();
     const old = document.getElementById("content"),
       y = preserve && old ? old.scrollTop : 0;
     // Same-view updates must not erase a draft or steal keyboard focus when a reply arrives.
@@ -279,22 +285,35 @@
         )
       : [];
     document.body.classList.toggle("reduce-motion", !S.motion);
-    const viewChanged = document.body.dataset.view !== view;
     document.body.dataset.view = view;
     document.body.dataset.haunted = inCase()
       ? "false"
       : has("lamp")
         ? "true"
         : "false";
-    document.getElementById("app").innerHTML =
+    const shellHTML =
       `<div class="night-world" aria-hidden="true"><div class="world-rain"></div><div class="waterline"></div></div><div class="game-shell">${header()}<div class="game-workspace">${inCase() ? (view === "casebook" ? storyRail() : genericStoryRail()) : storyRail()}<section class="terminal" aria-label="未明夜班终端"><div class="terminal-chrome"><span><i class="connection-light"></i> 未明 ${inCase() ? "旧案柜" : "旧站"} / ${view === "scene" ? "现场记录" : view === "board" ? "本地档案" : view === "messages" ? "私人信道" : view === "casebook" ? "案卷目录" : "南湾镜像"}</span><span class="sound-stage" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span class="terminal-filename">${view === "post" ? postId + ".htm" : view + ".htm"}</span><button data-action="letter" aria-label="阅读值夜交接信">${icon("mail")} 交接信</button></div><main id="content" tabindex="-1" class="page-${view}">${main()}</main><div class="terminal-status"><span class="status-story">${inCase() ? `${CS.no}　/　${CS.title}　/　${CSSTATE.clues.length} 份线索` : has("lamp") && !S.ending ? "连接数：7　 /　有效用户名：6" : "用户：夜班记录员　/　只读镜像已连接"}</span><span class="save-label">${storageFailed ? "存储不可用 · 请导出" : "磁盘记录已保存"}</span></div></section></div>${inCase() ? genericFooter() : footer()}</div>`;
+    // Persistent terminal and content roots: presentation and scrolling own their lifecycle.
+    const app = document.getElementById("app");
+    if (!old) app.innerHTML = shellHTML;
+    else {
+      const template = document.createElement("template"); template.innerHTML = shellHTML;
+      for (const selector of [".game-top", ".story-rail", ".terminal-chrome", ".terminal-status", ".game-bottom"]) {
+        const previous = app.querySelector(selector), next = template.content.querySelector(selector);
+        if (previous && next) previous.replaceWith(next);
+      }
+      const next = template.content.querySelector("#content");
+      old.className = next.className;
+      old.innerHTML = next.innerHTML;
+    }
     syncAtmosphere();
-    if(viewChanged && S.motion)document.getElementById("content").classList.add("view-enter");
     for (const d of drafts) {
       const input = document.querySelector(d.selector);
       if (input) input.value = d.value;
     }
     document.getElementById("content").scrollTop = y;
+    P.after({caseId:activeCaseId, view, detail:view === "post" ? postId : view === "messages" ? contact : view === "scene" && inCase() ? cCurrentScene()?.id : "", title:inCase() ? CS.title : "借灯人"}, preserve);
+    N.after({caseId:activeCaseId, view, detail:view === "post" ? postId : view === "scene" ? caseSceneId : "", selected:view === "board" ? (inCase() ? caseSelected : selected) : []});
     if (focused && !activeModal) {
       const target = focusKey
         ? document.getElementById(focusKey)
@@ -328,7 +347,7 @@
     }
   }
   function header() {
-    return `<header class="game-top"><button class="game-wordmark" data-action="${inCase() ? "casebook" : "nav"}" data-view="forum"><span class="small-seal">未</span> 未明 · ${inCase() ? "旧案柜" : "夜班终端"} <small>二〇〇四年</small></button><div class="game-utilities"><button data-action="casebook" aria-label="打开旧案柜">${icon("book")}<span>案卷</span></button><button data-action="sound" class="${S.sound ? "sound-on" : ""}" aria-label="${S.sound ? "关闭" : "开启"}环境音">${icon(S.sound ? "sound" : "mute")}<span>声音${S.sound ? "开" : "关"}</span></button><button data-action="help" aria-label="调查玩法与提示">${icon("help")}<span>玩法</span></button><button data-action="settings" aria-label="设置与存档">${icon("settings")}<span>存档 / 设置</span></button><button data-action="fullscreen" aria-label="切换全屏">${icon("expand")}</button></div></header>`;
+    return `<header class="game-top"><button class="game-wordmark" data-action="${inCase() ? "casebook" : "nav"}" data-view="forum"><span class="small-seal">未</span> 未明 · ${inCase() ? "旧案柜" : "夜班终端"} <small>二〇〇四年</small></button><div class="game-utilities"><button data-action="casebook" aria-label="打开旧案柜">${icon("book")}<span>案卷</span></button><button data-action="sound" class="${S.sound ? "sound-on" : ""}" aria-label="${S.sound ? "关闭" : "开启"}游戏声音">${icon(S.sound ? "sound" : "mute")}<span>声音${S.sound ? "开" : "关"}</span></button><button data-action="help" aria-label="调查玩法与提示">${icon("help")}<span>玩法</span></button><button data-action="settings" aria-label="设置与存档">${icon("settings")}<span>存档 / 设置</span></button><button data-action="fullscreen" aria-label="切换全屏">${icon("expand")}</button></div></header>`;
   }
   function storyRail() {
     return `<aside class="story-rail" aria-label="当前故事"><div class="story-edition">南 湾 异 闻 档 案 <span>卷 · 壹</span></div><button class="story-logo" data-action="nav" data-view="forum" aria-label="回到未明论坛"><span>未</span><span>明</span></button><p class="vertical-whisper">天亮之前，别把名字留在水里。</p><div class="chapter-mark">借<span>灯</span>人</div><div class="rail-water" aria-hidden="true"><svg viewBox="0 0 200 150"><path class="river-rings" d="M14 108q86-25 173 0M0 125q100-29 200 0M25 139q78-19 146 0"/><path class="paper-boat" d="M47 92l49-22 53 20-19 21-68-1zM47 92l58 8 44-10M96 70l9 30 25 11M96 70l-11 26"/><path class="flame" d="M103 81q-16-16-3-39-1 18 8 22 4 9-5 17"/></svg></div><div class="story-clock"><span>${stageLabel()}</span><time>${storyTime()}</time><small>${has("survivor") || S.ending ? "七月二十二日" : "七月二十一日"} · ${S.ending ? "雨将停" : "雨未停"}</small></div><button class="desk-note" data-action="hint"><span class="note-pin"></span><small>守夜人留字</small><p>${task()}</p><span class="note-tip">翻看提示 ↗</span></button></aside>`;
@@ -490,16 +509,17 @@
   function cScene() {
     if (!cSceneOpen()) return `${sectionHead("现场调查", "地址与勘验许可尚未确认。")}${cGuide()}<div class="empty-state"><div class="big-symbol">未至</div><p>从论坛与联系人取得确切地点后再出发，不能只靠攒够线索进入。</p></div>`;
     const scene = cCurrentScene();
+    const art = P.scene(activeCaseId, scene);
     return `${sectionHead(scene.title, `${CS.place} / 现场记录`)}${cGuide()}
     ${CS.scenes ? `<nav class="scene-tabs" aria-label="调查地点">${cScenes().map((sc,i) => `<button data-action="c-scene" data-id="${sc.id}" ${!cUnlocked(sc) ? "disabled" : ""} aria-current="${sc === scene ? "page" : "false"}">${String(i+1).padStart(2,"0")} ${cUnlocked(sc) ? sc.title : "复勘地点 · 先还原前两条脉络"}</button>`).join("")}</nav>` : ""}
-    <div class="scene-frame case-scene-frame"><img class="scene-photo" src="${scene.art || CS.art}" alt="${scene.title}：${scene.caption}"><div class="scene-vignette"></div><div class="scene-particles" aria-hidden="true"></div><div class="scene-caption"><span class="kicker">${CS.no} / FIELD NOTE</span><h3>${scene.caption}</h3></div><div class="scene-counter">已取证 ${scene.hotspots.filter(h => cHas(h.id)).length} / ${scene.hotspots.length}</div>
-    ${scene.hotspots.filter(cUnlocked).map(h => `<button class="hotspot ${cHas(h.id) ? "done" : ""}" style="left:${h.x}%;top:${h.y}%" data-action="c-hotspot" data-id="${h.id}" aria-label="调查${h.title}"><span class="spot"></span><span>${cHas(h.id) ? "✓ " : ""}${h.title}</span></button>`).join("")}
+    <div class="scene-frame case-scene-frame"><img class="scene-photo" src="${art.art || scene.art || CS.art}" data-fallback="${scene.art || CS.art}" alt="${scene.title}：${scene.caption}"><div class="scene-vignette"></div><div class="scene-particles" aria-hidden="true"></div><div class="scene-caption"><span class="kicker">${CS.no} / FIELD NOTE</span><h3>${scene.caption}</h3></div><div class="scene-counter">已取证 ${scene.hotspots.filter(h => cHas(h.id)).length} / ${scene.hotspots.length}</div>
+    ${scene.hotspots.filter(cUnlocked).map(h => `<button class="hotspot ${cHas(h.id) ? "done" : ""}" data-fallback-x="${h.x}" data-fallback-y="${h.y}" style="left:${art.points?.[h.id]?.[0] ?? h.x}%;top:${art.points?.[h.id]?.[1] ?? h.y}%" data-action="c-hotspot" data-id="${h.id}" aria-label="调查${h.title}"><span class="spot"></span><span>${cHas(h.id) ? "✓ " : ""}${h.title}</span></button>`).join("")}
     <div class="scene-bottom"><p>${scene.description}</p><span>${icon("eye")}点击标记查看物件</span></div></div>
     <div class="field-object-list">${scene.hotspots.filter(cUnlocked).map(h => btn(`${cHas(h.id) ? "✓ " : "◎ "}${h.title}`,"c-hotspot","",`data-id="${h.id}"`)).join("")}</div>
     <div class="field-inventory"><span>本次取证</span>${CSSTATE.scene.map(id => `<button class="inventory-item" data-action="c-inspect" data-id="${id}">${icon("file")}${cHotspot(id)?.title || id}</button>`).join("") || '<span class="muted">尚未收集物件</span>'}</div>`;
   }
   function cBoard() {
-    return `${sectionHead("调查手记", `${CS.no} / ${CS.title} · 把口述、物件和时间放在一起。`, `<span class="mono small muted">${CSSTATE.clues.length} / ${Object.keys(CS.clues).length} 线索</span>`)}${cGuide()}<p class="board-intro">点选两份证据，再说明它们共同支持的结论。选错可复核，不扣线索，也不会替你跳过剧情。</p><div class="evidence-board"><div class="evidence-grid">${Object.entries(
+    return `${sectionHead("调查手记", `${CS.no} / ${CS.title} · 把口述、物件和时间放在一起。`, `<span class="mono small muted">${CSSTATE.clues.length} / ${Object.keys(CS.clues).length} 线索</span>`)}${cGuide()}<p class="board-intro">点选两份证据，再说明它们共同支持的结论。选错可复核，不扣线索，也不会替你跳过剧情。</p><div class="evidence-board">${P.comparison(caseSelected, CS.clues)}<div class="evidence-grid">${Object.entries(
       CS.clues,
     )
       .map(([id, c]) =>
@@ -657,7 +677,7 @@
       )}${contact === "north" && unlocked() ? btn(`${icon("map")}前往南湾旧泵房`, "nav", "full", 'data-view="scene"') : ""}${contact === "rain" && has("survivor") ? btn("回到调查手记，拼合线索", "nav", "full", 'data-view="board"') : ""}${options.every(([k]) => S.chats[contact].includes(k)) ? '<small class="muted">对方暂时没有更多消息。</small>' : ""}</div></section></div>`;
   }
   function board() {
-    return `${sectionHead("调查手记", "档案 001 / 借灯人 · 把散落的纸页，拼回同一个夜晚。", `<span class="mono small muted">${S.clues.length} / 8 线索</span>`)}<p class="board-intro">点选两张有关联的线索，再「建立关联」。<br>不是所有相似的细节，都通向同一个答案。${!S.clues.length ? "先回论坛，阅读并标记可疑的信息。" : ""}</p><div class="evidence-board"><div class="evidence-grid">${Object.entries(
+    return `${sectionHead("调查手记", "档案 001 / 借灯人 · 把散落的纸页，拼回同一个夜晚。", `<span class="mono small muted">${S.clues.length} / 8 线索</span>`)}<p class="board-intro">点选两张有关联的线索，再「建立关联」。<br>不是所有相似的细节，都通向同一个答案。${!S.clues.length ? "先回论坛，阅读并标记可疑的信息。" : ""}</p><div class="evidence-board">${P.comparison(selected, G.clues)}<div class="evidence-grid">${Object.entries(
       G.clues,
     )
       .map(([id, c]) =>
@@ -704,6 +724,8 @@
   }
   // Dialogs keep focus contained and return it to the originating control.
   function openModal(title, body, wide = false) {
+    N.modal();
+    P.close();
     if (!activeModal) modalReturn = document.activeElement;
     activeModal = title;
     document.getElementById("modal-root").innerHTML =
@@ -713,12 +735,15 @@
     document.querySelector(".modal-close").focus();
   }
   function closeModal(restore = true) {
+    P.close();
     if (!activeModal) return;
+    N.modal();
     stopTape();
     document.getElementById("modal-root").innerHTML = "";
     document.body.style.overflow = "";
     document.getElementById("app").inert = false;
     activeModal = null;
+    N.dismissModal();
     if (restore && modalReturn?.isConnected)
       modalReturn.focus({ preventScroll: true });
   }
@@ -780,7 +805,7 @@
   function settings() {
     openModal(
       "设置与存档",
-      `<div class="setting-row"><span>环境音<small>分场景声场与操作音效，默认关闭</small></span><button class="toggle" data-action="sound-settings">${S.sound ? "已开启" : "已关闭"}</button></div><div class="setting-row"><label for="volume-range">总音量 <output id="volume-level" for="volume-range">${S.volume}%</output><small>环境、操作音与磁带的总音量</small></label><input id="volume-range" type="range" min="0" max="100" value="${S.volume}"></div><div class="sound-settings-note"><span class="sound-readout">${S.sound ? sound.snapshot().label : "声音已关闭 · 可随时开启"}</span>${btn("试听纸页", "preview-sound", "", S.sound ? "" : "disabled")}</div><div class="setting-row"><label for="ambience-range">环境声 <output id="ambience-level" for="ambience-range">${S.ambience}%</output><small>雨、风、水声 · 切换场景平滑过渡</small></label><input id="ambience-range" type="range" min="0" max="100" value="${S.ambience}"></div><div class="setting-row"><label for="effects-range">操作音 <output id="effects-level" for="effects-range">${S.effects}%</output><small>翻页、收录、私信与推理反馈</small></label><input id="effects-range" type="range" min="0" max="100" value="${S.effects}"></div><div class="setting-row"><span>动态效果<small>雨幕、浮尘、切页过渡；无闪屏惊吓</small></span><button class="toggle" data-action="motion">${S.motion ? "已开启" : "已关闭"}</button></div><div class="setting-row"><span>本地存档<small>${inCase() ? `${CS.title} · ${CSSTATE.clues.length}/${Object.keys(CS.clues).length} 线索 · ${CSSTATE.links.length}/${CS.links.length} 关联` : `${S.clues.length}/8 线索 · ${S.links.length}/3 关联 · ${S.endings.length}/2 结局`}</small></span>${btn("导出存档", "export-save")}</div><div class="setting-row"><span>读取存档<small>使用本作导出的 JSON 文件</small></span>${btn("导入存档", "import-save")}<input class="file-input" id="import-file" type="file" accept="application/json,.json"></div><div class="setting-row"><span>整柜备份<small>包含九案进度、已选归档方向与当前案卷</small></span>${btn("导出整柜", "export-library")}</div><p class="small muted" style="margin-top:20px">${storageFailed ? "当前浏览器不允许本地存储，请导出存档。" : "所有进度仅保存在你的设备中，没有上传服务器。"}关闭声音不影响解谜；所有录音都有文字转写。</p><div class="modal-actions">${btn("重新开始", "reset-confirm", "ghost")}${btn("完成", "close", "primary")}</div>`,
+      `<div class="setting-row"><span>游戏声音<small>悬疑钢琴、旁读与操作音效，默认关闭</small></span><button class="toggle" data-action="sound-settings">${S.sound ? "已开启" : "已关闭"}</button></div><div class="setting-row"><label for="volume-range">总音量 <output id="volume-level" for="volume-range">${S.volume}%</output><small>音乐、操作音、磁带与旁读的总音量</small></label><input id="volume-range" type="range" min="0" max="100" value="${S.volume}"></div><div class="sound-settings-note"><span class="sound-readout">${S.sound ? sound.snapshot().label : "声音已关闭 · 可随时开启"}</span>${btn("试听纸页", "preview-sound", "", S.sound ? "" : "disabled")}${btn("重试音乐", "retry-music", "", sound.snapshot().musicState === "error" ? "" : "hidden")}</div><div class="setting-row"><span>悬疑钢琴 BGM<small>Haunting piano · Emma_MA · CC0<br>无雨声、风声、电流底噪；关闭不影响其他声音</small></span><button class="toggle" data-action="music-settings" aria-pressed="${S.music}">${S.music ? "已开启" : "已关闭"}</button></div><div class="setting-row"><label for="ambience-range">BGM 音量 <output id="ambience-level" for="ambience-range">${S.ambience}%</output><small>本地循环 · 旁读或磁带讲话时自动降低</small></label><input id="ambience-range" type="range" min="0" max="100" value="${S.ambience}"></div><div class="setting-row"><label for="effects-range">操作音 <output id="effects-level" for="effects-range">${S.effects}%</output><small>翻页、收录、私信与推理反馈</small></label><input id="effects-range" type="range" min="0" max="100" value="${S.effects}"></div>${P.settings()}${N.settings()}<div class="setting-row"><span>动态效果<small>雨幕、浮尘、切页过渡；无闪屏惊吓</small></span><button class="toggle" data-action="motion">${S.motion ? "已开启" : "已关闭"}</button></div><div class="setting-row"><span>本地存档<small>${inCase() ? `${CS.title} · ${CSSTATE.clues.length}/${Object.keys(CS.clues).length} 线索 · ${CSSTATE.links.length}/${CS.links.length} 关联` : `${S.clues.length}/8 线索 · ${S.links.length}/3 关联 · ${S.endings.length}/2 结局`}</small></span>${btn("导出存档", "export-save")}</div><div class="setting-row"><span>读取存档<small>使用本作导出的 JSON 文件</small></span>${btn("导入存档", "import-save")}<input class="file-input" id="import-file" type="file" accept="application/json,.json"></div><div class="setting-row"><span>整柜备份<small>包含九案进度、已选归档方向与当前案卷</small></span>${btn("导出整柜", "export-library")}</div><p class="small muted" style="margin-top:20px">${storageFailed ? "当前浏览器不允许本地存储，请导出存档。" : "所有进度仅保存在你的设备中，没有上传服务器。"}关闭声音不影响解谜；所有录音都有文字转写。</p><div class="modal-actions">${btn("重新开始", "reset-confirm", "ghost")}${btn("完成", "close", "primary")}</div>`,
     );
   }
   function inspectClue(id) {
@@ -790,6 +815,7 @@
       `证据 ${c.n} · ${c.title}`,
       `<p class="kicker">${c.source} / ${c.type}</p><div class="letter" style="margin-top:20px">${c.text}</div><div class="modal-actions">${btn("收好证据", "close", "primary")}</div>`,
     );
+    if(has(id)) N.modalClue("lantern",id);
   }
   function hotspot(id) {
     if (id === "door")
@@ -844,7 +870,7 @@
   function credits() {
     openModal(
       "关于未明旧案柜 · 视听增强版",
-      `<p>五宗独立旧案与四夜连续故事《寄名簿》。原创民俗悬疑互动小说。</p><p>玩法受到「用论坛拼合怪谈、通过私信与实地调查还原事件」这一形式的启发。<strong>本作与《頭七》及其开发者无关联</strong>，未使用其角色、故事、对白、标志、截图或音乐作为游戏内容。</p><p>人物、城市、事故、借灯规矩均为本作虚构，不代表真实民俗，也不是对真实事件的记述。</p><h3>美术与声音</h3><p>首案保留原创程序夜景；其余现场采用本项目建模、程序材质与灯光的十二幅 Blender 预渲染，全部本地加载，附可重建源代码，非参考游戏素材。界面图标为本项目绘制。分场景雨、风、水滴、低声电流及翻页、收录、消息反馈由 Web Audio 实时合成，可分别调节环境与操作音；磁带对白为原创文本，通过系统中文语音生成并进行旧磁带处理。</p><h3>技术说明</h3><p>纯 HTML / CSS / JavaScript，无账号、无后端、无追踪。所有互动与存档均在本机完成。离线也可游玩。</p><p class="small muted">提示：内容含死亡、灾难与失踪主题；无血腥图片和贴脸惊吓。建议 16 岁以上玩家体验。</p>${btn("回到今夜", "close", "full")}`,
+      `<p>五宗独立旧案与四夜连续故事《寄名簿》。原创民俗悬疑互动小说。</p><p>玩法受到「用论坛拼合怪谈、通过私信与实地调查还原事件」这一形式的启发。<strong>本作与《頭七》及其开发者无关联</strong>，未使用其角色、故事、对白、标志、截图或音乐作为游戏内容。</p><p>人物、城市、事故、借灯规矩均为本作虚构，不代表真实民俗，也不是对真实事件的记述。</p><h3>美术与声音</h3><p>首案保留原创程序夜景；其余现场采用本项目建模、程序材质与灯光的十二幅 Blender 预渲染，全部本地加载，附可重建源代码，非参考游戏素材。界面图标为本项目绘制。V6.2 已移除持续的雨声、风声、水滴与电流底噪。背景音乐为 Emma_MA 的《Haunting piano》，作者在 OpenGameArt 标注 CC0，并明确声明该录音于 2017 年 1 月进入公有领域；本地版本仅做响度调整、裁剪与循环交叉淡化，来源与许可文本随包提供。翻页、收录、消息音仍由 Web Audio 生成；磁带对白为原创文本，通过系统中文语音生成并进行旧磁带处理。</p><p>V6 另增点验厅、墙后走廊与灯台近景三幅原创预渲染。灯台可选 3D 查看使用本地 Three.js r160（MIT，许可证附在 vendor/LICENSE.three.txt）；模型为程序化结构示意，不替代原始观察与文字证据。</p><p>V6.1 增加灯笼、蜡烛、信件、灯暗、镜影与幕影六组原创 SVG 阅读意象；不是额外证据。11 段帖子与 2 份已获取线索可播放原文旁读，由本机系统中文 TTS 预生成，非演员或现场录音，无声音克隆。默认静音，可在设置中单独开关演出与自动旁读。语音素材的公开分发及商业使用权利仍需发布者确认。</p><h3>技术说明</h3><p>纯 HTML / CSS / JavaScript，无账号、无后端、无追踪。所有互动与存档均在本机完成。离线也可游玩。</p><p class="small muted">提示：内容含死亡、灾难与失踪主题；无血腥图片和贴脸惊吓。建议 16 岁以上玩家体验。</p>${btn("回到今夜", "close", "full")}`,
     );
   }
   function download(name, content, type = "application/json") {
@@ -882,12 +908,13 @@
   }
   function syncAtmosphere() {
     sound.setProfile(ambienceProfile());
-    sound.configure({enabled:S.sound,master:S.volume,ambience:S.ambience,effects:S.effects});
+    sound.configure({enabled:S.sound,master:S.volume,ambience:S.ambience,effects:S.effects,musicEnabled:S.music});
+    N.sync({enabled:S.sound,master:S.volume,motion:S.motion});
     document.body.dataset.sound = S.sound ? "on" : "off";
     document.body.dataset.atmosphere = sound.snapshot().profile;
     document.body.dataset.case = activeCaseId;
-    const source = inCase() ? (view === "scene" && cSceneOpen() ? cCurrentScene().art || CS.art : CS.art) : "assets/town-night.jpg";
-    document.body.style.setProperty("--case-photo", `url("${source}")`);
+    const source = activeCaseId === "lamplife" ? (view === "scene" && cCurrentScene()?.id === "passage" ? "assets/scenes-v6/passage.jpg" : "assets/scenes-v6/hall.jpg") : inCase() ? (view === "scene" && cSceneOpen() ? cCurrentScene().art || CS.art : CS.art) : "assets/town-night.jpg";
+    document.body.style.setProperty("--case-photo", `url("${new URL(source, location.href).href}")`);
     const readout = document.querySelector(".sound-readout");
     if(readout)readout.textContent = S.sound ? sound.snapshot().label : "声音已关闭 · 可随时开启";
   }
@@ -896,7 +923,8 @@
     catch { toast("当前浏览器无法启用声音。文字与解谜不受影响。"); return false; }
   }
   function setVolume() {
-    sound.configure({enabled:S.sound,master:S.volume,ambience:S.ambience,effects:S.effects});
+    sound.configure({enabled:S.sound,master:S.volume,ambience:S.ambience,effects:S.effects,musicEnabled:S.music});
+    N.sync({enabled:S.sound,master:S.volume,motion:S.motion});
     if(tapeAudio)tapeAudio.volume = S.volume / 100;
   }
   async function toggleSound() {
@@ -918,6 +946,7 @@
     document.getElementById("waveform")?.classList.remove("playing");
   }
   function playTape() {
+    N.stopVoice(false);
     if (tapeAudio && !tapeAudio.paused) {
       stopTape();
       const b = document.getElementById("tape-button");
@@ -1042,8 +1071,9 @@
         if (!h || !cHotspotOpen(id)) break;
         openModal(
           h.title,
-          `<div class="evidence-detail-label">${CS.no} / ${h.title} · 原始观察</div><p>${h.body.join("</p><p>")}</p>${h.puzzle ? btn("查看机关", "c-puzzle", "primary", `data-id="${id}"`) : ""}<div class="modal-actions">${!CSSTATE.scene.includes(id) && (!h.puzzle || CSSTATE.puzzle) ? btn("收录现场记录", "c-field-collect", "primary", `data-id="${id}"`) : btn("继续调查", "close", "primary")}</div>`,
+          `${P.detail(activeCaseId,id)}<div class="evidence-detail-label">${CS.no} / ${h.title} · 原始观察</div><p>${h.body.join("</p><p>")}</p>${h.puzzle ? btn("查看机关", "c-puzzle", "primary", `data-id="${id}"`) : ""}<div class="modal-actions">${!CSSTATE.scene.includes(id) && (!h.puzzle || CSSTATE.puzzle) ? btn("收录现场记录", "c-field-collect", "primary", `data-id="${id}"`) : btn("继续调查", "close", "primary")}</div>`,
         );
+        if(cHas(id)) N.modalClue(activeCaseId,id);
         break;
       }
       case "c-field-collect":
@@ -1059,8 +1089,9 @@
         if (h)
           openModal(
             h.title,
-            `<p>${h.body.join("</p><p>")}</p><div class="modal-actions">${btn("收好记录", "close", "primary")}</div>`,
+            `${P.detail(activeCaseId,id)}<p>${h.body.join("</p><p>")}</p><div class="modal-actions">${btn("收好记录", "close", "primary")}</div>`,
           );
+        if(h && cHas(id)) N.modalClue(activeCaseId,id);
         break;
       }
       case "c-puzzle":
@@ -1299,8 +1330,18 @@
         break;
       case "sound":
         if(await toggleSound())toast(
-          S.sound ? "环境音已开启。可以在设置中调节音量。" : "环境音已关闭。",
+          S.sound ? "游戏声音已开启。BGM 可在设置中单独关闭。" : "游戏声音已关闭。",
         );
+        break;
+      case "music-settings":
+        S.music = !S.music;
+        setVolume();save();
+        el.textContent = S.music ? "已开启" : "已关闭";
+        el.setAttribute("aria-pressed",String(S.music));
+        sound.notify();
+        break;
+      case "retry-music":
+        sound.retryMusic();
         break;
       case "sound-settings":
         await toggleSound();
@@ -1360,7 +1401,7 @@
       case "reset": {
         if (inCase()) { casePending = null; CSSTATE = blankCaseState(); caseSelected = []; caseSceneId = null; cSave(); closeModal(false); view = "forum"; render(false); toast("只重新开始了当前案卷。"); break; }
         pendingChat = null;
-        const prefs = { sound: S.sound, volume: S.volume, ambience: S.ambience, effects: S.effects, motion: S.motion };
+        const prefs = { music:S.music, sound: S.sound, volume: S.volume, ambience: S.ambience, effects: S.effects, motion: S.motion };
         S = { ...defaults(), ...prefs };
         selected = [];
         query = "";
@@ -1599,5 +1640,16 @@
     { once: true },
   );
   document.addEventListener("keydown", () => { if(S.sound)ensureAudio(); }, {once:true});
+  N.connect({beforeVoice:stopTape, enableSound:async()=>{
+    // Enable in-place: replacing the post/modal would destroy the requesting control.
+    if(!S.sound){
+      S.sound=true;
+      if(!await ensureAudio())S.sound=false;
+      setVolume();save();syncAtmosphere();
+      const b=document.querySelector('[data-action="sound"]');
+      if(b){b.classList.toggle('sound-on',S.sound);b.setAttribute('aria-label',`${S.sound?'关闭':'开启'}游戏声音`);b.innerHTML=icon(S.sound?'sound':'mute')+`<span>声音${S.sound?'开':'关'}</span>`;}
+    }
+    return S.sound;
+  }});
   render();
 })();

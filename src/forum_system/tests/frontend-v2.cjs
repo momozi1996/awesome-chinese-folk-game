@@ -183,7 +183,7 @@ const KEY = "weiming-lantern-save-v1",
     hasTouch: true,
   });
   await mobile.goto(url);
-  for (const name of ["调查玩法与提示", "设置与存档", "开启环境音", "切换全屏"])
+  for (const name of ["调查玩法与提示", "设置与存档", "开启游戏声音", "切换全屏"])
     assert.equal(
       await mobile.getByRole("button", { name, exact: true }).count(),
       1,

@@ -1,0 +1,161 @@
+/* V6.1 / Quiet cutaways: painted stage, physical props, readable original words. */
+.reading-strip {display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin:20px auto 28px;padding:15px 18px;max-width:850px;border:1px solid #8a927048;background:linear-gradient(100deg,#26352f88,#0a191f66);}
+.reading-mark {font:26px var(--serif);color:#c0a783;border:1px solid #95745188;width:42px;height:46px;display:grid;place-items:center;transform:rotate(-3deg);}
+.reading-copy {flex:1;min-width:190px;}
+.reading-copy small {font:12px/1.6 var(--serif);color:#d3bea0;letter-spacing:1px;}
+.reading-copy p {font:12px/1.8 var(--serif);color:#afbab2;margin:4px 0 0;}
+.reading-controls {display:flex;gap:8px;}
+.reading-controls .btn {font-size:12px;padding:8px 12px;min-height:44px;}
+.reading-transcript {width:100%;font:12px/1.8 var(--serif);color:#c3c8b4;border-top:1px solid #82927830;padding-top:8px;}
+.reading-transcript summary {cursor:pointer;min-height:24px;}
+.reading-transcript p {font-size:16px;line-height:2;margin:12px 0 0;}
+.reading-notice {width:100%;font:13px/1.8 var(--serif);color:#d3c299;margin:0;}
+.clue-reading {font:13px var(--serif);min-height:44px;color:#544734;border-bottom:1px solid #8c7957;text-align:left;}
+.clue-voice-strip {display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;padding:10px 0 18px;border-bottom:1px solid #69796144;margin-bottom:18px!important;}
+.clue-voice-strip span {font:12px/1.8 var(--serif);color:#b4c0b2;}
+.modal:has(.object-exhibit) .clue-voice-strip {grid-column:1/-1;grid-row:1;}
+.modal:has(.clue-voice-strip) .modal-body > .object-exhibit {grid-row:2/span 5;}
+#narrative-root {position:fixed;inset:0;z-index:65;pointer-events:none;}
+#narrative-root:empty {display:none;}
+.narrative-stage {display:grid;place-items:center;padding:76px 24px 102px;background:#03101730;}
+.narrative-stage.suspense {background:radial-gradient(ellipse,#06101820,#02070acf);}
+.narrative-film {position:relative;width:min(960px,90vw);aspect-ratio:12/7;max-height:calc(100dvh - 180px);border:1px solid #9d95765c;box-shadow:0 30px 110px #000c,0 0 0 5px #060e1470;isolation:isolate;background:#0b181e;overflow:hidden;}
+.n-art {position:absolute;inset:0;width:100%;height:100%;object-fit:contain;}
+.n-film-shade {position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#07141aed,#07141a99 45%,transparent 68%),linear-gradient(0deg,#061118a6,transparent 23%,transparent 85%,#061118c0);}
+.n-film-top {position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 22px;z-index:2;}
+.n-film-top > span {font:11px/1.7 var(--mono);letter-spacing:2px;color:#adbaa9;}
+.n-film-top em {font:10px var(--serif);letter-spacing:1px;margin-left:14px;color:#a3ac99;}
+.narrative-film button {pointer-events:auto;min-height:44px;color:#d9c6a3;font:12px/1.6 var(--serif);padding:7px 13px;border:1px solid #ae99725c;background:#14242ce0;}
+.narrative-film button:hover {border-color:#c9b582;background:#39423a;}
+.n-film-copy {position:absolute;top:24%;left:6%;width:42%;max-height:60%;overflow:auto;scrollbar-width:thin;pointer-events:auto;}
+.n-film-index {font:10px var(--mono);letter-spacing:3px;color:#ad9772;}
+.n-film-copy h2 {font:clamp(24px,3.6vw,44px)/1.5 var(--serif);font-weight:400;letter-spacing:8px;color:#e3d5b5;margin:13px 0 19px;}
+.n-film-line {width:40px;height:1px;background:#ab8860;margin-bottom:22px;}
+.n-film-copy blockquote {font:clamp(15px,1.7vw,20px)/2.1 var(--serif);color:#d8dbc9;white-space:pre-line;margin:0 0 22px;}
+.n-film-source {display:block;font:11px/1.8 var(--serif);color:#96aa9c;}
+.n-film-footer {position:absolute;bottom:0;left:0;right:0;display:flex;gap:10px;align-items:center;padding:12px 22px;z-index:2;background:linear-gradient(transparent,#091921d9);}
+.n-film-footer > span {font:11px/1.7 var(--serif);color:#b4b9a3;flex:1;}
+.n-film-footer button:last-child {border-color:transparent;color:#a5ae9f;}
+.n-film-progress {position:absolute;bottom:0;left:0;right:0;height:2px;background:#b8a479;transform-origin:left;opacity:.6;}
+.narrative-stage.animated .narrative-film {animation:n-film-enter .55s cubic-bezier(.2,.7,.2,1) both;}
+.narrative-stage.animated .n-film-progress {animation:n-film-time 5.2s linear forwards;}
+.narrative-stage.manual .n-film-progress {display:none;}
+.narrative-stage.animated .n-hanging {transform-origin:696px 0;animation:n-lantern 5.2s ease-in-out both;}
+.narrative-stage.animated .n-letter {animation:n-paper-rise 1.4s cubic-bezier(.16,1,.3,1) both;transform-box:fill-box;transform-origin:center;}
+.narrative-stage.animated .n-letter-sheet {animation:n-unfold 1.8s .15s cubic-bezier(.16,1,.3,1) both;}
+.narrative-stage.animated .n-flame,.narrative-stage.animated .n-flame-core {transform-box:fill-box;transform-origin:bottom;animation:n-flame-breathe 2.8s ease-in-out 2 alternate;}
+.narrative-stage.animated .n-breath {animation:n-glow-breathe 3s ease-in-out 2 alternate;}
+.narrative-stage.animated.suspense .n-electric-bulb {animation:n-lights-out 5.2s both;}
+.narrative-stage.animated.suspense .n-lamp-halo {animation:n-halo-out 5.2s both;}
+.narrative-stage.animated.suspense .n-window-light {animation:n-halo-out 5.2s both;}
+.narrative-stage.animated.suspense .n-reflection {animation:n-reflection 5.2s ease-in-out both;}
+.narrative-stage.animated .n-puppet {transform-origin:698px 234px;animation:n-shadow-turn 5.2s ease-in-out both;}
+@keyframes n-film-enter {from{opacity:0;transform:translateY(12px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes n-film-time {from{transform:scaleX(1)}to{transform:scaleX(0)}}
+@keyframes n-lantern {0%{transform:rotate(-3deg)}45%{transform:rotate(1.8deg)}100%{transform:rotate(0)}}
+@keyframes n-paper-rise {from{opacity:0;translate:0 25px}to{opacity:1;translate:0 0}}
+@keyframes n-unfold {from{transform:translateY(56px)}to{transform:translateY(0)}}
+@keyframes n-flame-breathe {from{transform:scaleX(.9) rotate(-3deg)}to{transform:scaleX(1.04) rotate(2deg)}}
+@keyframes n-glow-breathe {from{opacity:.8}to{opacity:1}}
+@keyframes n-lights-out {0%,12%{fill:#ead7a6}35%,78%{fill:#4e514c}100%{fill:#acac8c}}
+@keyframes n-halo-out {0%,12%{opacity:.65}35%,78%{opacity:0}100%{opacity:.3}}
+@keyframes n-reflection {0%,25%{opacity:.16;translate:0 0}65%,100%{opacity:.07;translate:-12px 0}}
+@keyframes n-shadow-turn {from{rotate:-2deg}to{rotate:2deg}}
+/* Narration is a separate, bounded local audio channel; subtitle is never animated. */
+#voice-root {position:fixed;right:28px;bottom:102px;width:min(520px,calc(100vw - 32px));z-index:74;}
+#voice-root:empty {display:none;}
+.voice-player {padding:15px 20px;background:#10242bf5;border:1px solid #9d9e777a;box-shadow:0 12px 50px #0009;backdrop-filter:blur(14px);}
+.voice-player header {display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.voice-state {font:12px/1.7 var(--serif);color:#d4c49a;}
+.voice-player header button {font-size:22px;min-width:44px;min-height:44px;margin:-10px -10px -4px 0;color:#bdc5b3;}
+.voice-player > small {font:10px/1.8 var(--serif);color:#9db1a8;display:block;}
+.voice-subtitle {font:16px/1.9 var(--serif);max-height:148px;overflow:auto;color:#e0dfca;margin:12px 0;}
+.voice-player footer {display:flex;gap:10px;align-items:center;}
+.voice-player footer button {font:12px var(--serif);min-height:44px;min-width:44px;color:#dacaa7;border:1px solid #82907b66;padding:6px 10px;}
+.voice-player progress {width:100%;min-width:30px;flex:1;height:3px;accent-color:#bdab7c;}
+.voice-time {font:10px var(--mono);color:#b6c0ab;white-space:nowrap;}
+.modal #voice-root {position:static;grid-column:1/-1!important;width:100%;margin:12px 0 0;}
+.narrative-settings {margin:24px 0;padding:22px 0;border-top:1px solid #8b957958;border-bottom:1px solid #8b957958;}
+.narrative-settings h3 {font:21px var(--serif);color:#dfcba2;margin:0 0 12px;}
+.narrative-settings > p {font:13px/1.9 var(--serif);color:#b7c1af;}
+.narrative-settings select {min-height:44px;max-width:210px;padding:8px;font:14px var(--serif);color:#e5d8b6;background:#102329;border:1px solid #6d806b;}
+.narrative-settings .setting-row label {font-size:15px;}
+body:has(.voice-player) .collection-receipt {display:none;}
+@media(max-width:850px){
+ .reading-controls {width:100%;}.reading-controls .btn {flex:1;}
+ .narrative-stage {padding:70px 16px 92px;}
+ .narrative-film {width:100%;aspect-ratio:1.45;max-height:calc(100dvh - 165px);}
+ .n-film-copy {top:25%;left:6%;width:45%;max-height:55%;}
+ .n-film-copy h2 {font-size:29px;letter-spacing:4px;}
+ .n-film-copy blockquote {font-size:16px;}
+ .n-film-source {font-size:10px;}
+}
+@media(max-width:600px){
+ .reading-strip {padding:13px;gap:10px;}
+ .reading-mark {font-size:21px;width:34px;height:40px;}
+ .reading-copy {min-width:170px;}
+ .reading-copy p {font-size:11px;}
+ .reading-transcript summary {min-height:34px;}
+ .narrative-stage {padding:70px 12px 92px;}
+ .narrative-film {aspect-ratio:auto;height:min(650px,calc(100dvh - 170px));max-height:none;}
+ .n-art {height:55%;width:100%;left:0;top:0;}
+ .n-film-shade {background:linear-gradient(0deg,#091820 0%,#091820f5 40%,transparent 73%);}
+ .n-film-top {padding:10px 13px;gap:8px;}
+ .n-film-top > span {font-size:9px;letter-spacing:1px;}
+ .n-film-top em {display:block;font-size:9px;margin:2px 0 0;}
+ .n-film-top button {padding:6px 10px;font-size:12px;}
+ .n-film-copy {left:8%;right:8%;width:auto;top:45%;max-height:calc(55% - 102px);}
+ .n-film-copy h2 {font-size:28px;letter-spacing:4px;margin:8px 0 12px;}
+ .n-film-index {font-size:9px;letter-spacing:2px;}
+ .n-film-line {margin-bottom:12px;}
+ .n-film-copy blockquote {font-size:16px;line-height:1.95;margin-bottom:12px;}
+ .n-film-source {font-size:10px;}
+ .n-film-footer {padding:10px 14px;flex-wrap:wrap;gap:4px;}
+ .n-film-footer > span {width:100%;flex-basis:100%;font-size:10px;margin-bottom:2px;}
+ .n-film-footer button {font-size:12px;flex:1;padding:6px;}
+ #voice-root {right:12px;bottom:86px;width:calc(100vw - 24px);}
+ .voice-player {padding:12px 15px;}
+ .voice-subtitle {font-size:16px;max-height:125px;}
+ .narrative-settings .setting-row {flex-wrap:wrap;}
+ .narrative-settings select {max-width:100%;font-size:16px;}
+ .narrative-settings input[type=range] {width:120px;}
+ .modal:has(.object-exhibit) .clue-voice-strip {display:flex;}
+}
+@media(max-height:500px) and (min-width:601px){
+ .narrative-stage {padding:30px 110px 65px;}
+ .narrative-film {aspect-ratio:2.3;height:100%;max-height:none;}
+ .n-film-top {padding:6px 14px;}
+ .n-film-top em {display:none;}
+ .n-film-copy {top:23%;max-height:54%;}
+ .n-film-copy h2 {font-size:23px;margin:3px 0 8px;}
+ .n-film-line {display:none;}
+ .n-film-copy blockquote {font-size:14px;line-height:1.7;margin-bottom:6px;}
+ .n-film-footer {padding:3px 14px;}
+ .n-film-footer > span {display:none;}
+ .voice-subtitle {max-height:85px;}
+ #voice-root {bottom:66px;}
+}
+@media(prefers-reduced-motion:reduce){.narrative-stage * {animation:none!important;transition:none!important;}}
+body.reduce-motion .narrative-stage * {animation:none!important;transition:none!important;}
+.narrative-stage.still * {animation:none!important;transition:none!important;}
+
+/* While a cutaway is open, its original quote is the subtitle: one integrated player,
+   never a second popup hiding the words. Closing the cutaway restores the floating player. */
+.narrative-film:has(#voice-root:not(:empty)) .n-film-footer {display:none;}
+.narrative-film #voice-root {position:absolute;inset:auto 0 0;width:100%;pointer-events:auto;}
+.narrative-film .voice-player {padding:9px 22px 12px;border:none;border-top:1px solid #9d9e7738;box-shadow:none;background:#0c1c23ee;}
+.narrative-film .voice-subtitle,.narrative-film .voice-player > small {display:none;}
+.narrative-film .voice-player header {height:25px;margin-bottom:8px;}
+.narrative-film .voice-player header button {font-size:21px;border:0;background:none;}
+.narrative-film:has(#voice-root:not(:empty)) .n-film-copy {max-height:calc(76% - 112px);}
+@media(max-width:600px){
+ .narrative-film .voice-player {padding:10px 15px;}
+ .narrative-film:has(#voice-root:not(:empty)) .n-film-copy {max-height:calc(55% - 104px);}
+}
+@media(max-height:500px) and (min-width:601px){
+ .narrative-film .voice-player {padding:4px 14px;display:flex;gap:16px;align-items:center;}
+ .narrative-film .voice-player header {margin:0;flex:1;height:auto;}
+ .narrative-film .voice-player header button {margin:0;}
+ .narrative-film .voice-player footer {flex:2;}
+ .narrative-film:has(#voice-root:not(:empty)) .n-film-copy {max-height:calc(77% - 70px);}
+}

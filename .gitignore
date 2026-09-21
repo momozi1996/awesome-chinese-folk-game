@@ -22,3 +22,8 @@ src/forum_system/tests/*-results.json
 # Machine-local audit inventories / disposable extracted release checks.
 releases/*-inventory.json
 releases/.verify-*/
+
+# Root-level source-page research is local-only too (licenses live under art/source/).
+/research/
+# Historical autoplay probe, not a maintained test or runtime dependency.
+src/forum_system/tests/audio-debug.cjs

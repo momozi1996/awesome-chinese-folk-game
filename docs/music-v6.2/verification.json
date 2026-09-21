@@ -1,0 +1,72 @@
+{
+  "date": "2026-09-21T11:33:22.606Z",
+  "checks": [
+    "no sound/data before gesture",
+    "one decoded musical loop; zero ambient loops",
+    "BGM-off digital silence, effects and narration retained",
+    "volume zero and independent buses",
+    "no restart on navigation",
+    "duck, hidden tab, loop boundary, persistent off",
+    "single AudioContext and single load",
+    "responsive settings",
+    "load failure, visible retry, other sounds intact",
+    "late decode respects mute",
+    "file:// fully offline decoded signal"
+  ],
+  "measurements": {
+    "asset": {
+      "peak": 0.24473342299461365,
+      "rms": 0.04222830342186359,
+      "seam": 0.005822483450174332
+    },
+    "default": {
+      "peak": 0.01200552936643362,
+      "rms": 0.0045087258561779114
+    },
+    "musicOff": {
+      "peak": 0,
+      "rms": 0
+    },
+    "musicZero": {
+      "peak": 0,
+      "rms": 0
+    },
+    "effectsOff": {
+      "peak": 0.016904350370168686,
+      "rms": 0.004676395719274028
+    },
+    "masterZero": {
+      "peak": 0,
+      "rms": 0
+    },
+    "loop": {
+      "peak": 0.025722529739141464,
+      "rms": 0.008161379667269583
+    },
+    "file": {
+      "peak": 0.00789855606853962,
+      "rms": 0.0022545203149292267
+    }
+  },
+  "dimensions": [
+    {
+      "width": 320,
+      "height": 640,
+      "fit": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "fit": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "fit": true
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "protectedFiles": 12,
+  "scope": "Chrome and emulated viewports; decoded signal tests, not human listening or mobile hardware acceptance"
+}

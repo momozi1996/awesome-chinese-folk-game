@@ -1,0 +1,12 @@
+Source verification, checked 2026-09-21
+URL: https://opengameart.org/content/haunting-piano
+Title: Haunting piano
+Author: Emma_MA
+Published: Saturday, January 7, 2017 - 03:48
+License(s): CC0
+License URL: http://creativecommons.org/publicdomain/zero/1.0/
+Author description excerpt: "A fairly short piano piece with a ghostly/horrorish feel."
+Copyright/Attribution Notice: "This track has been released into the public domain as of January 2017."
+File: https://opengameart.org/sites/default/files/haunting%20piano_0.mp3
+
+The license was checked on the recording's own source page, not inferred from a search result, a generic free-music collection or the composition's age. This is a source-page declaration, not an independent legal guarantee. Source recording and CC0 legal text are retained alongside this file; hashes and processing in manifest.json.

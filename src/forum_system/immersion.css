@@ -181,3 +181,5 @@ body[data-case='snow'] .waterline {opacity:0;}
 @keyframes quiet-snow {to{transform:translate(24px,147px)}}
 .evidence p {font-size:12px;line-height:1.8;}
 .evidence small,.evidence .source {font-size:9px;}
+/* V6.2: .btn has an explicit display rule; respect the music retry state. */
+[data-action="retry-music"][hidden] {display:none;}

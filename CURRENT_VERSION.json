@@ -1,0 +1,12 @@
+{
+  "version": "6.2.0-preview",
+  "label": "V6.2 Preview · CC0 悬疑钢琴 / 无持续环境底噪",
+  "sourceRoot": ".",
+  "entryPoint": "main.py",
+  "demoEntryPoint": "demo/run_demo.py",
+  "offlineEntryPoint": "src/forum_system/index.html",
+  "latestArchive": "releases/awesome-chinese-folk-game-v6.2-source-ready.zip",
+  "archiveBaseline": "V6.2 source-ready / release metadata audit 2026-09-21; gameplay identical to V6.2 preview",
+  "previousArchive": "releases/awesome-chinese-folk-game-v6.2-preview.zip",
+  "note": "Submit this project root as the source repository. The source-ready package only updates release documentation, ignore rules and verification tooling; gameplay and assets match V6.2 preview."
+}

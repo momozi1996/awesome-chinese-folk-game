@@ -17,6 +17,7 @@
     "ending": null,
     "endings": [],
     "sound": false,
+    "music": true,
     "volume": 30,
     "ambience": 55,
     "effects": 65,

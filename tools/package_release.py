@@ -29,11 +29,15 @@ def include_path(rel):
     return True
 
 def main(argv=None):
+    current=json.loads((ROOT/'CURRENT_VERSION.json').read_text(encoding='utf-8'))
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output',default='releases/awesome-chinese-folk-game-v5.0.zip',help='repository-relative new ZIP path; existing differing archives are protected')
+    parser.add_argument('--output',default=current['latestArchive'],help='repository-relative new ZIP path; existing differing archives are protected')
+    parser.add_argument('--baseline',default=current['archiveBaseline'],help='accurate human-readable label for this new archive')
     args=parser.parse_args(argv)
     out=(ROOT/args.output).resolve()
     if ROOT/'releases' not in out.parents or out.suffix!='.zip': parser.error('output must be a .zip inside releases/')
+    package=json.loads((ROOT/'src/forum_system/package.json').read_text(encoding='utf-8'))
+    if package['version']!=current['version']: parser.error('CURRENT_VERSION.json and package.json versions differ')
     compile_library();out.parent.mkdir(parents=True,exist_ok=True)
     payload=[]
     for p in sorted(ROOT.rglob('*')):
@@ -41,7 +45,7 @@ def main(argv=None):
         if not include_path(rel): continue
         if p.is_symlink(): raise ValueError(f'Symlinks cannot enter release: {rel}')
         if p.is_file(): payload.append((rel.as_posix(),p.read_bytes(),0o100755 if p.suffix=='.command' else 0o100644))
-    manifest={'schemaVersion':1,'baseline':'V5.0 / freeze audit 2026-09-18','algorithm':'SHA-256',
+    manifest={'schemaVersion':1,'baseline':args.baseline,'algorithm':'SHA-256',
         'scope':'Every payload file except this manifest; archive checksum is stored in the external .sha256 sidecar.',
         'files':[{'path':name,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'mode':oct(mode)} for name,data,mode in payload]}
     payload.append((MANIFEST,(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n').encode(),0o100644))
@@ -49,7 +53,7 @@ def main(argv=None):
     try:
         with zipfile.ZipFile(temp,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
             for name,data,mode in sorted(payload):
-                info=zipfile.ZipInfo(PREFIX+name,date_time=(2026,9,18,0,0,0))
+                info=zipfile.ZipInfo(PREFIX+name,date_time=(2026,9,21,0,0,0))
                 info.compress_type=zipfile.ZIP_DEFLATED;info.external_attr=mode<<16
                 z.writestr(info,data)
         with zipfile.ZipFile(temp) as z:
@@ -57,7 +61,16 @@ def main(argv=None):
             files=set(z.namelist());htmlbase=PREFIX+'src/forum_system/'
             for src in re.findall(r'(?:src|href)="([^"]+)"',z.read(htmlbase+'index.html').decode()):
                 if not src.startswith('#'): assert posixpath.normpath(htmlbase+src) in files,src
-            for name in ['soundscape.js','immersion.css']: assert htmlbase+name in files
+            for name in ['soundscape.js','immersion.css','presentation/cinematic.js','presentation/cinematic.css','presentation/inspector.js','vendor/three.module.js','vendor/LICENSE.three.txt']: assert htmlbase+name in files
+            readings=json.loads(z.read(htmlbase+'art/source/narrative/readings-manifest.json'))['readings']
+            for cue in readings:
+                assert hashlib.sha256(z.read(htmlbase+cue['audio'])).hexdigest()==cue['sha256'],cue['id']
+            assert len(readings)==13
+            music=json.loads(z.read(htmlbase+'art/source/music/manifest.json'))
+            assert music['license']=='CC0-1.0'
+            assert hashlib.sha256(z.read(htmlbase+music['asset'])).hexdigest()==music['runtimeSHA256']
+            assert htmlbase+'assets/music/music-data.js' in files
+            assert htmlbase+'art/source/music/CC0-1.0.txt' in files
             assert len([x for x in files if '/assets/textures/' in x and x.endswith('.webp')])==2
             assert len([x for x in files if '/assets/scenes/' in x and x.endswith('.jpg')])==12
             assert len([x for x in files if '/cases/classic-folk-cases/' in x and x.endswith('.md')])==28

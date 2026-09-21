@@ -1,6 +1,6 @@
 {
   "name": "awesome-chinese-folk-game-forum",
-  "version": "5.0.0",
+  "version": "6.2.0-preview",
   "private": true,
   "description": "Original offline Chinese folk-horror forum investigation game",
   "scripts": {
@@ -9,14 +9,17 @@
     "test:responsive": "node tests/responsive.cjs",
     "test:frontend": "node tests/frontend-v2.cjs",
     "test:anthology": "node tests/anthology-smoke.cjs",
-    "test:all": "npm run test:content && npm test && npm run test:responsive && npm run test:frontend && npm run test:anthology && npm run test:serial && npm run test:edge && npm run test:immersion && npm run test:freeze",
+    "test:all": "npm run test:content && npm test && npm run test:responsive && npm run test:frontend && npm run test:anthology && npm run test:serial && npm run test:edge && npm run test:immersion && npm run test:freeze && npm run test:cinematic && npm run test:narrative && npm run test:music",
     "test:serial": "node tests/serial-v4.cjs",
     "test:content": "node tests/content-integrity.cjs",
     "test:edge": "node tests/v4-edge.cjs",
     "build:cases": "cd ../.. && python3 -m src.folk_parser build",
     "test:library": "cd ../.. && python3 -m unittest discover -s tests",
     "test:immersion": "node tests/immersion-v5.cjs",
-    "test:freeze": "node tests/freeze-saves.cjs"
+    "test:freeze": "node tests/freeze-saves.cjs",
+    "test:cinematic": "node tests/cinematic-v6.cjs",
+    "test:narrative": "node tests/narrative-v6.cjs",
+    "test:music": "node tests/music-v6.cjs"
   },
   "devDependencies": {
     "playwright": "1.58.2"

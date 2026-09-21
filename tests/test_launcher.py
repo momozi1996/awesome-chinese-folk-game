@@ -26,7 +26,7 @@ class LauncherTests(unittest.TestCase):
         thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
         base=f'http://127.0.0.1:{server.server_port}'
         try:
-            for path in ['/','/data.js','/immersion.css','/soundscape.js','/assets/textures/paper-fibers.webp','/assets/textures/archive-cloth.webp','/case_engine/engine.js','/utils/config.js','/assets/scenes/lamp.jpg']:
+            for path in ['/','/data.js','/immersion.css','/soundscape.js','/assets/textures/paper-fibers.webp','/assets/textures/archive-cloth.webp','/case_engine/engine.js','/utils/config.js','/assets/scenes/lamp.jpg','/presentation/cinematic.css','/presentation/cinematic.js','/presentation/inspector.js','/vendor/three.module.js','/assets/scenes-v6/hall.jpg']:
                 with urlopen(base+path) as r:
                     self.assertEqual(r.status,200,path); r.read()
             for path in ['/backups/migration-v4-cases.json','/research/steam.json','/assets/','/../README.md','/%2e%2e/README.md','/cases/catalog.json']:

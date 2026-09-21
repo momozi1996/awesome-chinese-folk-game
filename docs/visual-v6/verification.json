@@ -1,0 +1,46 @@
+{
+  "date": "2026-09-21T11:32:15.790Z",
+  "protectedFiles": 12,
+  "dimensions": [
+    {
+      "width": 320,
+      "height": 640,
+      "fit": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "fit": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "fit": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "fit": true
+    }
+  ],
+  "checks": [
+    "persistent roots",
+    "opt-in 3D",
+    "one canvas",
+    "keyboard rotation",
+    "commit before receipt",
+    "cleanup",
+    "context loss",
+    "rapid close",
+    "import failure",
+    "view memory",
+    "full-text comparison",
+    "reduced motion",
+    "local-only requests",
+    "image fallback coordinates",
+    "standalone file://",
+    "first visit / revisit transitions"
+  ],
+  "errors": [],
+  "external": []
+}

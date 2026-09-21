@@ -1,4 +1,5 @@
-// V5 presentation/mixer regression; isolated browser, never touches a player's profile.
+// Original presentation/mixer regression, updated in V6.2 for the intentional replacement
+// of four continuous ambience layers with one CC0 piano score. Other assertions retained.
 const {chromium} = require(process.env.PLAYWRIGHT_PATH || 'playwright');
 const assert = require('node:assert/strict');
 const fs = require('node:fs'), path = require('node:path');
@@ -52,13 +53,14 @@ const url = process.env.GAME_URL || 'http://127.0.0.1:4173/';
     assert.equal(await page.evaluate(() => window.audioContextCount),0,'no autoplay context');
     await act('sound');
     await page.waitForFunction(() => window.WeimingSound.snapshot().state === 'running');
-    assert.equal((await snap()).ambienceVoices,4);
+    await page.waitForFunction(() => window.WeimingSound.snapshot().musicVoices === 1);
+    assert.equal((await snap()).ambienceVoices,0);assert.equal((await snap()).noiseLoops,0);
     assert.equal(await page.evaluate(() => window.audioContextCount),1);
     measurements.defaultDesk = await signal();
-    assert.ok(measurements.defaultDesk.rms > .00001,'enabled ambience must have signal');
+    assert.ok(measurements.defaultDesk.rms > .00001,'enabled piano BGM must have signal');
     assert.ok(measurements.defaultDesk.peak < .25,'default is deliberately restrained');
     await act('settings');
-    assert.match(await page.locator('.sound-readout').innerText(),/隔窗细雨/);
+    assert.match(await page.locator('.sound-readout').innerText(),/Haunting piano/);
     await page.locator('#volume-range').focus();await page.keyboard.press('Home');
     assert.equal((await state()).volume,0);
     assert.equal(await page.locator('#volume-level').innerText(),'0%');
@@ -80,7 +82,8 @@ const url = process.env.GAME_URL || 'http://127.0.0.1:4173/';
     await nav('scene');assert.equal((await snap()).profile,'desk','a locked scene must not reveal its sound');
     for(let i=0;i<6;i++){await act('sound');await act('sound');}
     assert.equal(await page.evaluate(() => window.audioContextCount),1);
-    assert.equal((await snap()).ambienceVoices,4);
+    await page.waitForFunction(() => window.WeimingSound.snapshot().musicVoices === 1);
+    assert.equal((await snap()).ambienceVoices,0);assert.equal((await snap()).noiseLoops,0);
     await page.waitForTimeout(100);
     await page.evaluate(() => window.WeimingSound.cue('resolve'));
     await visibility(true);
@@ -121,7 +124,8 @@ const url = process.env.GAME_URL || 'http://127.0.0.1:4173/';
     const locations = [['lamplife','room'],['snow','snow'],['shadowplay','theatre'],['caravan','rain'],['wellpost','well']];
     for(const [id,profile] of locations){
       await act('casebook');await act('select-case',`[data-case="${id}"]`);await nav('scene');assert.equal((await snap()).profile,profile,id);
-      assert.equal((await snap()).ambienceVoices,4);
+      await page.waitForFunction(() => window.WeimingSound.snapshot().musicVoices === 1);
+    assert.equal((await snap()).ambienceVoices,0);assert.equal((await snap()).noiseLoops,0);
       await page.screenshot({path:path.join(out,`${id}-scene.png`)});
     }
     const secondScene = await page.evaluate(() => window.CASES.wellpost.scenes[1].id);
@@ -198,6 +202,6 @@ const url = process.env.GAME_URL || 'http://127.0.0.1:4173/';
     await offline.locator('[data-action="sound"]').click();await offline.waitForFunction(()=>window.WeimingSound.snapshot().state==='running');await offline.close();
     assert.deepEqual(errors,[]);assert.deepEqual(external,[]);
     fs.writeFileSync(path.join(__dirname,'immersion-v5-results.json'),JSON.stringify({measurements,errors,external,contexts:'one per loaded page',visibility:'synthetic browser event; handler + Web Audio suspend/resume verified',offline:true,mobile:true},null,2));
-    console.log('PASS V5: local surfaces, opt-in audio, mixer/zero volume, bounded signals/voices/effects, view profiles, tape duck/lifecycle, saved preferences, reduced motion, mobile and file://.');
+    console.log('PASS V5/V6.2: local surfaces, opt-in audio, mixer/zero volume, bounded signals/voices/effects, view context without restarting the music, tape duck/lifecycle, saved preferences, reduced motion, mobile and file://.');
   } finally {await browser.close();}
 })().catch(e=>{console.error(e);process.exit(1);});

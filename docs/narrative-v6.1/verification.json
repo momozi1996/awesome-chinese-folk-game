@@ -1,0 +1,124 @@
+{
+  "date": "2026-09-21T11:32:54.485Z",
+  "protectedFiles": 12,
+  "checks": [
+    "silent defaults; no voice preload",
+    "auto focus, once, 90s cooldown, max3",
+    "manual keyboard focus",
+    "real media pause/resume/restart/stop; one channel; duck ownership",
+    "off/static/reduced motion",
+    "volume multiplication, zero, rate, mute",
+    "navigation, modal and hidden-tab cleanup",
+    "clue gating; modal enable and focus",
+    "original tape duck unaffected",
+    "request failure preserves reading",
+    "pending cancellation; opt-in auto voice; timed exit",
+    "file:// real media playback",
+    "portrait/tablet/short-landscape layout"
+  ],
+  "dimensions": [
+    {
+      "width": 320,
+      "height": 640,
+      "fit": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "fit": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "fit": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "fit": true
+    }
+  ],
+  "media": [
+    {
+      "id": "river-lantern",
+      "duration": 2.223878,
+      "peak": 0.446748822927475,
+      "rms": 0.07471430398299823
+    },
+    {
+      "id": "missing-half",
+      "duration": 4.580522,
+      "peak": 0.6506133675575256,
+      "rms": 0.07306972584880832
+    },
+    {
+      "id": "six-lights",
+      "duration": 4.010499,
+      "peak": 0.4408394992351532,
+      "rms": 0.07598023783493962
+    },
+    {
+      "id": "left-record",
+      "duration": 8.756531,
+      "peak": 0.6536389589309692,
+      "rms": 0.07267168175576814
+    },
+    {
+      "id": "mirror-turn",
+      "duration": 13.413719,
+      "peak": 0.42610931396484375,
+      "rms": 0.0783413590154312
+    },
+    {
+      "id": "return-letter",
+      "duration": 12.435351,
+      "peak": 0.4806026816368103,
+      "rms": 0.07757179673741375
+    },
+    {
+      "id": "last-seat",
+      "duration": 4.084558,
+      "peak": 0.656730592250824,
+      "rms": 0.07078812179742786
+    },
+    {
+      "id": "red-contract",
+      "duration": 4.007823,
+      "peak": 0.3925896883010864,
+      "rms": 0.0768760686795322
+    },
+    {
+      "id": "road-bell",
+      "duration": 6.09449,
+      "peak": 0.6723695993423462,
+      "rms": 0.07293917819088053
+    },
+    {
+      "id": "snow-vigil",
+      "duration": 6.030544,
+      "peak": 0.4407707452774048,
+      "rms": 0.07701963031079444
+    },
+    {
+      "id": "curtain-shadow",
+      "duration": 4.862608,
+      "peak": 0.666732907295227,
+      "rms": 0.07107557095478784
+    },
+    {
+      "id": "lamp-wire",
+      "duration": 13.124422,
+      "peak": 0.6717138290405273,
+      "rms": 0.0786873517614928
+    },
+    {
+      "id": "duty-note",
+      "duration": 14.159433,
+      "peak": 0.6396435499191284,
+      "rms": 0.07182602488524678
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "scope": "Chrome desktop and emulated viewports; decoded signal and playback tests, not human listening or real mobile device testing"
+}

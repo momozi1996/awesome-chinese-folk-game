@@ -1,0 +1,14 @@
+{
+  "cases/playable/mirrorname/case.json": "21ee2c0c3973fb94abb5fe60333c0b50bb3590910db010af2e6de5b7fc09b994",
+  "cases/playable/shadowplay/case.json": "7a2269e450ebe5ab0e600a09f7c4f9aa1de076f61c4268282605ada37918ab06",
+  "cases/playable/lantern/case.json": "b9cc8c4ef2bd06f9a1a95f77bdf2f8badd477e4e0944dbc5ede21f134c5c2e7c",
+  "cases/playable/homecoming/case.json": "d93fcbbab7adea0b66506c974a20c6733502a94f349255b298c256e996cc7a38",
+  "cases/playable/caravan/case.json": "bf197ead3c3e9c279d1f642027085ea44dd6a268c5f8c9eb8568331480ee502b",
+  "cases/playable/snow/case.json": "c4861ab311323c86ce4ecd9e0c550d1bad1189de574da6096b6e05ad032df641",
+  "cases/playable/lamplife/case.json": "a7d958be85695e4fae3f1395d7ffdf5859be4deabb8c520e89d00392e8e77674",
+  "cases/playable/bridal/case.json": "72893c1878264ca659c49188b9fa56316e7d4f3e4187e8fa0c2ec5af49668f30",
+  "cases/playable/wellpost/case.json": "4d3364532a66bbddb389aa172f7c69e81083435194bb1216fae97fdd95296c8d",
+  "src/forum_system/data.js": "7d5ae14d8c3ff5179a0e3e2c956776a2b53bfd0ffc86aead90c39aa3b24a0c5d",
+  "src/case_engine/engine.js": "574c4763a54ea0f51a1b5b0af6a2f807b376ed0f84e781e5085f456ca66c1bba",
+  "src/utils/config.js": "27968d34d3dab4b344a657403f1621bea1425f2b2e110aae5bf81bdee4cab688"
+}

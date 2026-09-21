@@ -17,7 +17,7 @@ class GameHandler(SimpleHTTPRequestHandler):
         shared={'case_engine/engine.js':ROOT/'src/case_engine/engine.js',
                 'utils/config.js':ROOT/'src/utils/config.js'}
         if route in shared: return str(shared[route])
-        if parts[0] not in {'index.html','app.js','data.js','style.css','immersion.css','soundscape.js','assets'}: return str(denied)
+        if parts[0] not in {'index.html','app.js','data.js','style.css','immersion.css','soundscape.js','assets','presentation','vendor'}: return str(denied)
         candidate=(FORUM/route).resolve()
         if FORUM.resolve() not in candidate.parents: return str(denied)
         return str(candidate)

@@ -5,7 +5,8 @@ const {spawnSync,spawn}=require('node:child_process');
 const {pathToFileURL}=require('node:url');
 (async()=>{
  const root=path.resolve(__dirname,'..');
- const archive=path.resolve(root,process.argv[2]||'releases/awesome-chinese-folk-game-v5.0.zip');
+ const current=JSON.parse(fs.readFileSync(path.join(root,'CURRENT_VERSION.json'),'utf8'));
+ const archive=path.resolve(root,process.argv[2]||current.latestArchive);
  const temp=fs.mkdtempSync(path.join(root,'releases/.verify-'));
  let server,browser;
  try {
@@ -33,6 +34,8 @@ with zipfile.ZipFile(archive) as z:
 `,archive,temp],{encoding:'utf8'});
  assert.equal(r.status,0,r.stderr);
  const packed=path.join(temp,'awesome-chinese-folk-game');
+ const packageVersion=JSON.parse(fs.readFileSync(path.join(packed,'src/forum_system/package.json'),'utf8')).version;
+ if(!process.argv[2])assert.equal(packageVersion,current.version,'latest package version must match source pointer');
  r=spawnSync('python3',[path.join(packed,'demo/run_demo.py'),'--check'],{cwd:temp,encoding:'utf8'});assert.equal(r.status,0,r.stderr);
  r=spawnSync('node',[path.join(packed,'src/forum_system/tests/content-integrity.cjs')],{cwd:temp,encoding:'utf8'});assert.equal(r.status,0,r.stderr);
  server=spawn('python3',[path.join(packed,'main.py'),'--no-browser','--port','4187'],{cwd:temp,stdio:'pipe'});
@@ -57,17 +60,34 @@ with zipfile.ZipFile(archive) as z:
   }
   await page.locator('[data-action="sound"]').click();
   await page.waitForFunction(()=>window.WeimingSound.snapshot().state==='running');
+  if(parseFloat(packageVersion)>=6.2){
+    await page.waitForFunction(()=>window.WeimingSound.snapshot().musicVoices===1);
+    assert.equal(await page.evaluate(()=>window.WeimingSound.snapshot().noiseLoops),0);
+    assert.ok(await page.evaluate(()=>window.WeimingSound.musicBuffer.duration)>50);
+    await page.locator('[data-action="settings"]').click();
+    await page.locator('[data-action="music-settings"]').click();
+    assert.equal(await page.evaluate(()=>window.WeimingSound.snapshot().musicVoices),0);
+    await page.keyboard.press('Escape');
+  }
   await page.locator('[data-action="sound"]').click();
 
   await page.locator('[data-action="casebook"]').first().click();
   await page.locator('[data-action="select-case"][data-case="lamplife"]').click();
   await page.locator('[data-action="c-post"][data-id="opening"]').first().click();
+  if(parseFloat(packageVersion)>=6.1){
+    await page.locator('[data-narrative="replay"]').click();
+    assert.ok(await page.locator('.narrative-film').isVisible());
+    await page.keyboard.press('Escape');
+    await page.locator('.reading-strip [data-narrative="listen"]').click();
+    await page.waitForFunction(()=>window.WeimingNarrative.snapshot().state==='playing');
+    await page.locator('[data-narrative="stop"]').click();
+  }
   await page.locator('[data-action="c-collect"][data-id="signal"]').click();
   await page.reload();
   assert.ok(await page.evaluate(()=>JSON.parse(localStorage.getItem('weiming-case-lamplife-v1')).clues.includes('signal')));
   assert.deepEqual(errors,[]);await context.close();
  }
- console.log('PASS: extracted package, foreign CWD, content checks, HTTP + file://, V5 visual/audio resources, shared engine, clue acquisition and reload.');
+ console.log('PASS: extracted package, foreign CWD, content checks, HTTP + file://, version pointer, local visual/audio resources, V6.2 music/no-noise and narration when available, shared engine, clue acquisition and reload.');
  } finally {
   try {if(browser)await browser.close();} finally {
    if(server && server.exitCode===null){server.kill('SIGTERM');await new Promise(r=>server.once('exit',r));}

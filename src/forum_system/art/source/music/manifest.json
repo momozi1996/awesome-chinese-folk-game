@@ -1,0 +1,15 @@
+{
+  "id": "haunting-piano",
+  "title": "Haunting piano",
+  "artist": "Emma_MA",
+  "license": "CC0-1.0",
+  "source": "https://opengameart.org/content/haunting-piano",
+  "recording": "https://opengameart.org/sites/default/files/haunting%20piano_0.mp3",
+  "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "checked": "2026-09-21",
+  "sourceSHA256": "54721bfb4515ac0d50eb6f29e9176aff58e19f900b52b7cdd52dd422177e7685",
+  "runtimeSHA256": "70e610c07218ca9c44992538e7a398b2208438637c0cc83a608130f864bd20d7",
+  "loopSeconds": 52.85,
+  "processing": "Trim 1.45–55.30s; -25 LUFS / -6 dBTP / LRA8; 1s circular linear crossfade; stereo 44.1kHz MP3 128kbps. No noise layers or additional samples.",
+  "asset": "assets/music/haunting-piano-loop.mp3"
+}

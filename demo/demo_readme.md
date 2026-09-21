@@ -1,5 +1,7 @@
 # 一键体验 Demo
 
+本入口加载项目根目录的 **V6.2.0-preview** 完整游戏，不是另一份旧 Demo。版本信息见 `../CURRENT_VERSION.json`。
+
 ```sh
 python3 demo/run_demo.py
 ```
