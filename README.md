@@ -14,6 +14,7 @@
 
 [快速开始](#-快速开始) · [完整案卷目录](docs/case_list.md) · [玩法手册](docs/game_manual.md) · [English](#english)
 
+🎮 这个游戏已经在bilibili toy发布🎮 可以线上开始玩：👉 [午夜论坛*未明旧案](https://www.bilibili.com/toy/weiming-jiuan/index.html)
 
 ![未明旧案柜封面](assets/cover_banner.png)
 
