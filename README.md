@@ -14,7 +14,6 @@
 
 [快速开始](#-快速开始) · [完整案卷目录](docs/case_list.md) · [玩法手册](docs/game_manual.md) · [English](#english)
 
-🎮 这个游戏已经在bilibili toy发布🎮 可以线上开始玩：👉 [午夜论坛*未明旧案](https://www.bilibili.com/toy/weiming-jiuan/index.html)
 
 ![未明旧案柜封面](assets/cover_banner.png)
 
@@ -26,8 +25,18 @@
 
 这不是一张游戏宣传页。你会真正进入帖子、留下追问、私信相关人，走进线索指向的现场，再把互相矛盾的材料拼回同一个夜晚。我们不替传闻作证，先替没能留下名字的人保管证据。
 
+---
+
+## 🎮直接开始玩（Bilibili Toy）
+٩(๑>◡<๑)۶ 这个游戏已经在bilibili toy发布
+可以线上开始玩：👉 [午夜论坛*未明旧案](https://www.bilibili.com/toy/weiming-jiuan/index.html)
+
+٩(๑>◡<๑)۶ B站游戏链接：
+https://www.bilibili.com/toy/weiming-jiuan/index.html?spm_id_from=333.40252.my_toys.toy_card.click
+
 
 ---
+
 
 ## ✨ 这是什么？
 
